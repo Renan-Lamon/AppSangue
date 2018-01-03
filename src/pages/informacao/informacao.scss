@@ -1,0 +1,42 @@
+page-informacao {
+
+    .posicionamento {
+		position: absolute;
+        right:2px;
+        top:80px; 
+        font-size:8pt;
+    }
+   
+    p{
+        word-wrap: break-word;
+        font-size: 11pt;
+        text-align: justify;
+    }
+    h2{
+        height: 70px;
+        border-radius:4px;
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        box-shadow:4px 4px 4px #CCCCCC;
+        text-align:center;
+        color:rgb(255, 255, 255);
+        background-color:rgb(252, 128, 128);
+        
+    }
+    .dataDoacao{
+        position: fixed;
+        width: 100%;
+        height: 20px;
+        font-size: 10pt;
+        font-weight: bold;
+        text-align: center;
+        background-color: rgb(119, 117, 117);
+        color:rgb(255, 255, 255);
+        bottom: 0px;
+        left: 0px;
+        z-index: 10;
+    }
+    
+    
+    
+}

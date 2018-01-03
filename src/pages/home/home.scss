@@ -1,0 +1,257 @@
+page-home {
+    .estoque{
+        position: relative;
+        width:120px; 
+        height:120px;
+        background-color: #ffffff;
+        background-color:rgb(252, 235, 235);
+    }
+    .nomePerfil{
+        position: absolute;
+        top:60px;
+        font-size: 9pt;
+        color:#ffffff;
+        left:100px;
+    }
+    .divEstoque{
+        position: absolute;
+        border: 1px solid red;
+        top:220px;
+        margin-left:-110px;
+        left: 50%;
+        width:250px;
+        height: 650px;  
+        z-index: 1; 
+    }
+    
+    .tipoAPositivo {
+        position: absolute;
+        top: 185px;
+        left: 28px;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+    .tipoANegativo {
+        position: absolute;
+        top: 185px;
+        left: 155px;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+    .tipoBPositivo {
+        position: absolute;
+        top: 310px;
+        left: 28px;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+    .tipoBNegativo {
+        position: absolute;
+        top: 310px;
+        left: 155px;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+    .tipoABPositivo {
+        position: absolute;
+        top: 435px;
+        left: 28px;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+    .tipoABNegativo {
+        position: absolute;
+        top: 435px;
+        left: 155px;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+    .tipoOPositivo {
+        position: absolute;
+        top: 560px;
+        left: 28px;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+    .tipoONegativo {
+        position: absolute;
+        top: 560px;
+        left: 155px;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+    
+    .levelUsuario{
+        position: absolute;
+        top:90px;
+        font-size: 10;
+        color: yellow;
+        left:102px;
+    }
+    
+    .cor{
+        color:rgb(209, 7, 7);
+        font-weight: bold;
+        font-size: 16pt;
+        text-align: center;
+    }
+    .box1 {
+		position:absolute;
+		top: 400px;
+		left: 100px;
+    }
+
+    .div1 {
+        position:relative;
+        width: 100%;
+        height: 120px;
+        max-height: 100%; 
+        border-radius:4px;
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        box-shadow:4px 4px 4px #CCCCCC;  
+    }
+
+    @media (max-width: 400px) {
+        .div2{
+            position:relative;
+            width: 100%;
+            height: 220px;
+            max-height: 100%; 
+        }
+        .nomePerfil{
+            position: absolute;
+            top:60px;
+            font-size: 9pt;
+            color:#ffffff;
+            left:100px;
+        }
+    }
+  
+   // @media (max-width: 767px) {
+     //   .div2{
+     //       position:relative;
+      //      width: 100%;
+      //      height: 300px;
+     //       max-height: 100%; 
+   //     }
+   // }
+    @media (min-width: 1000px) {
+        .div2{
+            position:relative;
+            width: 100%;
+            height: 1100px;
+            max-height: 100%; 
+        }
+        .tipoBPositivo {
+            position: absolute;
+            top: 40px;
+            left: 277px;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            z-index: 3;
+        }
+        .nomePerfil{
+            position: absolute;
+            top:60px;
+            font-size: 20pt;
+            color:#ffffff;
+            left:100px;
+        }
+    
+        .cor{
+            color:rgb(209, 7, 7);
+            font-weight: bold;
+            font-size: 23pt;
+            text-align: center;
+        }
+        .divEstoque{
+            position: absolute;
+            border: 1px solid red;
+            top:300px;
+            margin-left:-110px;
+            left: 39%;
+            width:500px;
+            height: 400px;  
+            z-index: 1; 
+        }
+    }
+    
+    .imagemPerfil{
+        position: absolute;
+        cursor: hand;
+        width:80px;
+        height:65px;
+        top: 53px;
+        left: 4px;
+        border: 1px solid white;
+    }
+    .imagemPerfil:hover{
+        border: 1px solid white;
+    }
+    .botoes{
+        position: relative;
+        top:10px;
+    }
+
+    .rank{
+        position: absolute;
+        top:50px;
+        right: 2px;
+        width: 70px;
+        height: 70px;
+        background:url(assets/imgs/colunaPerfil.jpg) 0 0 no-repeat;
+    }
+    .rank:hover{
+        border: 1px solid white;
+    }
+    
+    .dataDoacao{
+        position: fixed;
+        width: 100%;
+        height: 20px;
+        font-size: 10pt;
+        font-weight: bold;
+        text-align: center;
+        background-color: rgb(119, 117, 117);
+        color:rgb(255, 255, 255);
+        bottom: 0px;
+        left: 0px;
+        z-index: 10;
+    }
+    .legendaEstoque{
+        position:relative;
+        background-color:rgb(252, 235, 235);
+        width:200px;
+        left: 24px;
+    }
+    
+    
+    
+}

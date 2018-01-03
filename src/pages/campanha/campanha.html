@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Campanhas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color:rgb(252, 235, 235)">
+
+    <button style="color:red; border:1px solid red" ion-button full outline icon-start (click)="chamarCriarCampanha()">
+        <ion-icon name="ios-create-outline"></ion-icon>
+        Criar Campanha
+    </button>
+     
+  <ion-list>
+  <ion-card style="background-color:rgb(255, 255, 255); border-top:2px solid rgb(255, 0, 0);border-bottom:2px solid rgb(255, 0, 0)"   *ngFor="let c of campanhas">
+    <ion-card-header>
+      {{c.titulo}}
+    </ion-card-header>
+  
+    <ion-card-content>
+      <!-- Add card content here! -->
+      <p style="font-size:8pt">
+        <b style="color:red">Sangue:{{c.sangue}}</b>
+        <br/>Local: {{c.hemocentro}} 
+        <br/>Criador: {{c.criador}}
+        <br/>Alvo: {{c.alvo}} 
+        <br/><b>Data Limite: {{c.data}}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+              </b>
+        <span style="right:1px"><ion-icon style="font-size: 20pt" end name="ios-people">{{c.quantidade}}</ion-icon></span>
+      </p>
+     
+    </ion-card-content>
+  </ion-card>
+</ion-list>
+
+<div full class="dataDoacao">
+  <b>Data prevista para a proxima doação: 22/22/2222</b>
+</div>
+
+</ion-content>

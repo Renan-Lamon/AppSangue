@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Criar Campanha</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color:rgb(252, 235, 235)">
+
+  <ion-list>
+    <ion-item style="background-color:rgb(252, 235, 235)">
+      <ion-label style="color:red">Título:</ion-label>
+      <ion-input placeholder="Título da campanha"></ion-input>
+    </ion-item>
+
+    <ion-item style="background-color:rgb(252, 235, 235)">
+      <ion-label style="color:red">Tipo Sanguíneo:</ion-label>
+      <ion-select [(ngModel)]="tipoSangue">
+        <ion-option value="qualquer" selected="true">Qualquer</ion-option>
+        <ion-option value="Ap">A+</ion-option>
+        <ion-option value="An">A-</ion-option>
+        <ion-option value="Bp">B+</ion-option>
+        <ion-option value="Bn">B-</ion-option>
+        <ion-option value="ABp">AB+</ion-option>
+        <ion-option value="ABn">AB-</ion-option>
+        <ion-option value="Op">O+</ion-option>
+        <ion-option value="On">O-</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item style="background-color:rgb(252, 235, 235)">
+      <ion-label style="color:red">Local:</ion-label>
+      <ion-select [(ngModel)]="local">
+        <ion-option value="santaCasa" selected="true">Santa Casa</ion-option>
+        <ion-option value="hospitalH">Hospital Evangélico</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item style="background-color:rgb(252, 235, 235)">
+      <ion-label style="color:red">Date</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" min="2018" max="2018" [(ngModel)]="dataLimite"></ion-datetime>
+    </ion-item>
+
+    <ion-item style="background-color:rgb(252, 235, 235)">
+      <ion-label style="color:red">Algum alvo específico?</ion-label>
+      <ion-select [(ngModel)]="alvo">
+        <ion-option value="comAlvo">Sim</ion-option>
+        <ion-option value="semAlvo" selected="true">Não</ion-option>
+      </ion-select>
+    </ion-item>
+  
+  </ion-list>
+
+  
+  <button style="color:red; border:1px solid red; font-size:10pt" ion-button full outline icon-start (click)="chamarCriarCampanha()">
+    <ion-icon name="ios-create-outline"></ion-icon>
+    Criar Campanha
+  </button>
+
+  <div full class="dataDoacao">
+    <b>Data prevista para a proxima doação: 22/22/2222</b>
+  </div>
+
+</ion-content>
