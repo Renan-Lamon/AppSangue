@@ -7,10 +7,9 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'criarCampanha.html'
 })
 export class criarCampanhaPage {
-  
-  constructor(public navCtrl: NavController) {
-    
-  }
 
+  constructor(public navCtrl: NavController) {
+
+  }
 
 }
