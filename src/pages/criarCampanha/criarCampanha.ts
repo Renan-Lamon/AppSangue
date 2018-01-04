@@ -12,4 +12,7 @@ export class criarCampanhaPage {
 
   }
 
+  adicionarCampanha(titulo: String, tipoSangue:String, local:String, data:Date, alvo:String, nomeAlvo:String, descricao:String){
+
+  }
 }

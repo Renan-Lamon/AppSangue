@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="danger">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -12,7 +12,7 @@
   <ion-list>
     <ion-item style="background-color:rgb(252, 235, 235)">
       <ion-label style="color:red">Título:</ion-label>
-      <ion-input placeholder="Título da campanha"></ion-input>
+      <ion-input [(ngModel)]="titulo" placeholder="Título da campanha"></ion-input>
     </ion-item>
 
     <ion-item style="background-color:rgb(252, 235, 235)">
@@ -40,7 +40,7 @@
 
     <ion-item style="background-color:rgb(252, 235, 235)">
       <ion-label style="color:red">Date</ion-label>
-      <ion-datetime displayFormat="DD/MM/YYYY" min="2018" max="2018" [(ngModel)]="dataLimite"></ion-datetime>
+      <ion-datetime [(ngModel)]="data" displayFormat="DD/MM/YYYY" min="2018" max="2018" [(ngModel)]="dataLimite"></ion-datetime>
     </ion-item>
 
     <ion-item style="background-color:rgb(252, 235, 235)">
@@ -53,20 +53,20 @@
 
     <div  *ngIf="alvo=='comAlvo'" >
     <ion-item style="background-color:rgb(252, 235, 235)">
-        <ion-input placeholder="Nome da pessoa alvo"></ion-input>
+        <ion-input [(ngModel)]="nomeAlvo" placeholder="Nome da pessoa alvo"></ion-input>
     </ion-item>
     </div>
 
     <ion-item style="background-color:rgb(252, 235, 235)">
         <ion-label style="color:red; font-size:12pt" stacked>Descrição:</ion-label>
         <br/>
-      <ion-textarea placeholder="Descrição do motivo da campanha"></ion-textarea>
+      <ion-textarea [(ngModel)]="descricao" placeholder="Descrição do motivo da campanha"></ion-textarea>
     </ion-item>
 
   </ion-list>
 
   
-  <button style="color:red; border:1px solid red; font-size:10pt" ion-button full outline icon-start (click)="chamarCriarCampanha()">
+  <button style="color:red; border:1px solid red; font-size:10pt" ion-button full outline icon-start (click)="adicionarCampanha(titulo, tipoSangue, local, data, alvo, nomeAlvo, descricao)">
     <ion-icon name="ios-create-outline"></ion-icon>
     Criar Campanha
   </button>
