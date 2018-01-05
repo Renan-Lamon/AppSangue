@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { GrupoPage } from '../grupo/grupo';
 
 
 @Component({
@@ -25,6 +26,10 @@ export class AgendamentoPage {
     ];
 
 
+  }
+
+  chamarGrupo(){
+    this.navCtrl.push(GrupoPage);
   }
 
 }

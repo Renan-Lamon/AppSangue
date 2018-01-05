@@ -57,7 +57,7 @@
 
     
     <ion-item *ngIf="(tipoAgendamento=='grupo' && grupo=='nenhum') || (tipoAgendamento=='grupo' && grupo == 0)" style="background-color:rgb(252, 235, 235)">
-      <button style="color:rgb(255, 255, 255); background-color:rgb(85, 84, 84); font-size:9pt" ion-button round icon-start>
+      <button style="color:rgb(255, 255, 255); background-color:rgb(85, 84, 84); font-size:9pt" (click)="chamarGrupo()" ion-button round icon-start>
         Criar Grupo
         <ion-icon name="md-create"></ion-icon>
       </button>
@@ -69,4 +69,9 @@
     <ion-icon name="md-calendar"></ion-icon>
     Agendar Doação
   </button>
+
+  <div full class="dataDoacao">
+    <b>Data prevista para a proxima doação: 22/22/2222</b>
+  </div>
+
 </ion-content>

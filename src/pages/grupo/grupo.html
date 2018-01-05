@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Criar Grupo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color:rgb(252, 235, 235)">
+
+  <ion-item style="background-color:rgb(252, 235, 235)">
+    <ion-label style="color:red">Nome:</ion-label>
+    <ion-input [(ngModel)]="nomeGrupo" placeholder="Nome do Grupo"></ion-input>
+  </ion-item>
+  <br/><br/>
+  <button ion-item style="color:red;background-color: rgb(252, 235, 235)">
+    <ion-icon style="font-size:25pt; color:black" name="md-person-add" item-start></ion-icon>
+    Convidar Amigos
+  </button>
+
+  <ion-card style="border:1px solid red">
+    <ion-card-header style="border:1px solid red">
+      Membros Convidados
+    </ion-card-header>
+
+    <ion-list style="border:1px solid red">
+
+      <!-- *ngFor="let c of convidados"-->
+      <label ion-item *ngFor="let c of convidados">
+        <ion-icon name="md-contact" item-start></ion-icon>
+        <ion-icon *ngIf="c.confirmou" name="md-checkmark-circle-outline" style="color:green" item-end></ion-icon>
+        <ion-icon *ngIf="!c.confirmou" name="md-close" style="color: red" item-end></ion-icon>
+        Antonio Nunes
+      </label>
+
+    </ion-list>
+  </ion-card>
+
+
+ <br/><br/>
+  <button style="color:red; border:1px solid red; font-size:10pt" ion-button full outline icon-start>
+    <ion-icon name="md-calendar"></ion-icon>
+    Agendar Doação
+  </button>
+
+  <div full class="dataDoacao">
+    <b>Data prevista para a proxima doação: 22/22/2222</b>
+  </div>
+</ion-content>
