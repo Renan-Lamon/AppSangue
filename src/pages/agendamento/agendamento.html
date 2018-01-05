@@ -7,12 +7,66 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
- vai carai
-  <p>
-   EDITAR 
-  </p>
+<ion-content padding style="background-color:rgb(252, 235, 235)">
+  <ion-list>
 
-  <button ion-button secondary menuToggle>Cu</button>
+    <ion-item style="background-color:rgb(252, 235, 235)">
+      <ion-label style="color:red">Local:</ion-label>
+      <ion-select [(ngModel)]="local">
+        <ion-option value="santaCasa">Santa Casa</ion-option>
+        <ion-option value="hospitalE" selected="true">Hospital Evangélico</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item style="background-color:rgb(252, 235, 235)">
+      <ion-label style="color:red">Date:</ion-label>
+      <ion-datetime [(ngModel)]="dataAgendamento" displayFormat="DD/MM/YYYY" min="2018" max="2018"></ion-datetime>
+    </ion-item>
+
+    <ion-item style="background-color:rgb(252, 235, 235)">
+      <ion-label style="color:red">Hora:</ion-label>
+      <ion-datetime [(ngModel)]="horaAgendamento" displayFormat="HH:mm" minuteValues="0,30"></ion-datetime>
+    </ion-item>
+
+
+    <ion-item style="background-color:rgb(252, 235, 235)">
+      <ion-label style="color:red">Campanha:</ion-label>
+      <ion-select [(ngModel)]="campanha">
+        <ion-option value="nenhuma" selected="true">Nenhuma</ion-option>
+        <ion-option *ngFor="let c of campanhas" value={{c.cod}}>{{c.titulo}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item style="background-color:rgb(252, 235, 235)">
+      <ion-label style="color:red">Tipo do Agendamento:</ion-label>
+      <ion-select [(ngModel)]="tipoAgendamento">
+        <ion-option value="individual" selected="true">Individual</ion-option>
+        <ion-option value="grupo">Em Grupo</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <div *ngIf="tipoAgendamento =='grupo' && campanha !='nenhuma'">
+      <ion-item style="background-color:rgb(252, 235, 235)">
+        <ion-label style="color:red">Escolher um Grupo:</ion-label>
+        <ion-select [(ngModel)]="grupo">
+          <ion-option value="nenhum" >Nenhum</ion-option>
+          <ion-option *ngFor="let g of grupos" value={{g.cod}}>{{g.nome}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+    
+    <ion-item *ngIf="(tipoAgendamento=='grupo' && grupo=='nenhum') || (tipoAgendamento=='grupo' && grupo == 0)" style="background-color:rgb(252, 235, 235)">
+      <button style="color:rgb(255, 255, 255); background-color:rgb(85, 84, 84); font-size:9pt" ion-button round icon-start>
+        Criar Grupo
+        <ion-icon name="md-create"></ion-icon>
+      </button>
+    </ion-item>
+
+  </ion-list>
+
+  <button style="color:red; border:1px solid red; font-size:10pt" ion-button full outline icon-start>
+    <ion-icon name="md-calendar"></ion-icon>
+    Agendar Doação
+  </button>
 </ion-content>
