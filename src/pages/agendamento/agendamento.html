@@ -32,7 +32,7 @@
     <ion-item style="background-color:rgb(252, 235, 235)">
       <ion-label style="color:red">Campanha:</ion-label>
       <ion-select [(ngModel)]="campanha">
-        <ion-option value="nenhuma" selected="true">Nenhuma</ion-option>
+        <ion-option value="nenhuma" >Nenhuma</ion-option>
         <ion-option *ngFor="let c of campanhas" value={{c.cod}}>{{c.titulo}}</ion-option>
       </ion-select>
     </ion-item>
@@ -56,7 +56,7 @@
     </div>
 
     
-    <ion-item *ngIf="(tipoAgendamento=='grupo' && grupo=='nenhum') || (tipoAgendamento=='grupo' && grupo == 0)" style="background-color:rgb(252, 235, 235)">
+    <ion-item *ngIf="(tipoAgendamento=='grupo' && grupo=='nenhum') || (tipoAgendamento=='grupo' && !grupo)" style="background-color:rgb(252, 235, 235)">
       <button style="color:rgb(255, 255, 255); background-color:rgb(85, 84, 84); font-size:9pt" (click)="chamarGrupo()" ion-button round icon-start>
         Criar Grupo
         <ion-icon name="md-create"></ion-icon>
