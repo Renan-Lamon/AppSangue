@@ -9,29 +9,20 @@
 
 <ion-content padding style="background-color:rgb(252, 235, 235)">
   <ion-list>
-
-    <ion-item style="background-color:rgb(252, 235, 235)">
+    
+    <ion-item *ngIf="grupoSelecionado !='cu'" style="background-color:rgb(252, 235, 235)">
       <ion-label style="color:red">Local:</ion-label>
-      <ion-select [(ngModel)]="local">
+      <ion-select  [(ngModel)]="local" okText="Confirmar" cancelText="Cancelar">
         <ion-option value="santaCasa">Santa Casa</ion-option>
         <ion-option value="hospitalE" selected="true">Hospital Evangélico</ion-option>
       </ion-select>
     </ion-item>
 
-    <ion-item style="background-color:rgb(252, 235, 235)">
-      <ion-label style="color:red">Date:</ion-label>
-      <ion-datetime [(ngModel)]="dataAgendamento" displayFormat="DD/MM/YYYY" min="2018" max="2018"></ion-datetime>
-    </ion-item>
-
-    <ion-item style="background-color:rgb(252, 235, 235)">
-      <ion-label style="color:red">Hora:</ion-label>
-      <ion-datetime [(ngModel)]="horaAgendamento" displayFormat="HH:mm" minuteValues="0,30"></ion-datetime>
-    </ion-item>
-
+    
 
     <ion-item style="background-color:rgb(252, 235, 235)">
       <ion-label style="color:red">Campanha:</ion-label>
-      <ion-select [(ngModel)]="campanha">
+      <ion-select [(ngModel)]="campanha" okText="Confirmar" cancelText="Cancelar">
         <ion-option value="nenhuma" >Nenhuma</ion-option>
         <ion-option *ngFor="let c of campanhas" value={{c.cod}}>{{c.titulo}}</ion-option>
       </ion-select>
@@ -39,7 +30,7 @@
 
     <ion-item style="background-color:rgb(252, 235, 235)">
       <ion-label style="color:red">Tipo do Agendamento:</ion-label>
-      <ion-select [(ngModel)]="tipoAgendamento">
+      <ion-select [(ngModel)]="tipoAgendamento" okText="Confirmar" cancelText="Cancelar">
         <ion-option value="individual" selected="true">Individual</ion-option>
         <ion-option value="grupo">Em Grupo</ion-option>
       </ion-select>
@@ -48,9 +39,9 @@
     <div *ngIf="tipoAgendamento =='grupo' && campanha !='nenhuma'">
       <ion-item style="background-color:rgb(252, 235, 235)">
         <ion-label style="color:red">Escolher um Grupo:</ion-label>
-        <ion-select [(ngModel)]="grupo">
-          <ion-option value="nenhum" >Nenhum</ion-option>
-          <ion-option *ngFor="let g of grupos" value={{g.cod}}>{{g.nome}}</ion-option>
+        <ion-select [(ngModel)]="grupo" okText="Confirmar" cancelText="Cancelar">
+          <ion-option value="nenhum" (ionSelect)="grupoSelecionadoNenhum()">Nenhum</ion-option>
+          <ion-option *ngFor="let g of grupos" (ionSelect)="grupoSelecionadoSet(g)" value={{g.cod}}>{{g.nome}} </ion-option>
         </ion-select>
       </ion-item>
     </div>
@@ -63,13 +54,41 @@
       </button>
     </ion-item>
 
+    <!-- ############ DATA ################-->
+    <ion-item *ngIf="grupoSelecionadoData =='vazio'" style="background-color:rgb(252, 235, 235)">
+      <ion-label style="color:red">Date:</ion-label>
+      <ion-datetime [(ngModel)]="dataAgendamento" displayFormat="DD/MM/YYYY" min="2018" max="2018" doneText="Confirmar" cancelText="Cancelar"></ion-datetime>
+    </ion-item>
+
+        <!-- Caso tenha selecionado um grupo-->
+    <ion-item *ngIf="grupoSelecionadoData !='vazio'" style="background-color:rgb(252, 235, 235)">
+      <ion-label style="color:red">Date:</ion-label>
+      <ion-datetime [(ngModel)]="grupoSelecionadoData" disabled="true" displayFormat="DD/MM/YYYY" doneText="Confirmar" cancelText="Cancelar"></ion-datetime>
+    </ion-item>
+    <!-- ############ DATA ################-->
+
+    <!-- ############ HORA ################-->
+    <ion-item  *ngIf="grupoSelecionadoHorario =='vazio'" style="background-color:rgb(252, 235, 235)">
+      <ion-label style="color:red">Hora:</ion-label>
+      <ion-datetime [(ngModel)]="horaAgendamento" displayFormat="HH:mm" minuteValues="0,30" doneText="Confirmar" cancelText="Cancelar"></ion-datetime>
+    </ion-item>
+        <!-- Caso tenha selecionado um grupo-->
+    <ion-item  *ngIf="grupoSelecionadoHorario !='vazio'" style="background-color:rgb(252, 235, 235)">
+      <ion-label style="color:red">Hora:</ion-label>
+      <ion-datetime [(ngModel)]="grupoSelecionadoHorario" disabled="true" displayFormat="HH:mm"  doneText="Confirmar" cancelText="Cancelar"></ion-datetime>
+    </ion-item>
+
+    <!-- ############ HORA ################-->
+
   </ion-list>
 
   <button style="color:red; border:1px solid red; font-size:10pt" ion-button full outline icon-start>
     <ion-icon name="md-calendar"></ion-icon>
     Agendar Doação
   </button>
-
+  
+  {{grupoSelecionado}}
+  
   <div full class="dataDoacao">
     <b>Data prevista para a proxima doação: 22/22/2222</b>
   </div>
