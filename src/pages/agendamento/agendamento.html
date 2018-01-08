@@ -12,9 +12,9 @@
     
     <ion-item *ngIf="grupoSelecionado !='cu'" style="background-color:rgb(252, 235, 235)">
       <ion-label style="color:red">Local:</ion-label>
-      <ion-select  [(ngModel)]="local" okText="Confirmar" cancelText="Cancelar">
+      <ion-select  [(ngModel)]="local" placeholder="Hemocentro" okText="Confirmar" cancelText="Cancelar">
         <ion-option value="santaCasa">Santa Casa</ion-option>
-        <ion-option value="hospitalE" selected="true">Hospital Evangélico</ion-option>
+        <ion-option value="hospitalE" >Hospital Evangélico</ion-option>
       </ion-select>
     </ion-item>
 
@@ -57,7 +57,7 @@
     <!-- ############ DATA ################-->
     <ion-item *ngIf="grupoSelecionadoData =='vazio'" style="background-color:rgb(252, 235, 235)">
       <ion-label style="color:red">Date:</ion-label>
-      <ion-datetime [(ngModel)]="dataAgendamento" displayFormat="DD/MM/YYYY" min="2018" max="2018" doneText="Confirmar" cancelText="Cancelar"></ion-datetime>
+      <ion-datetime [(ngModel)]="dataAgendamento" placeholder="Data da doação" displayFormat="DD/MM/YYYY" min="2018" max="2018" doneText="Confirmar" cancelText="Cancelar"></ion-datetime>
     </ion-item>
 
         <!-- Caso tenha selecionado um grupo-->
@@ -70,7 +70,7 @@
     <!-- ############ HORA ################-->
     <ion-item  *ngIf="grupoSelecionadoHorario =='vazio'" style="background-color:rgb(252, 235, 235)">
       <ion-label style="color:red">Hora:</ion-label>
-      <ion-datetime [(ngModel)]="horaAgendamento" displayFormat="HH:mm" minuteValues="0,30" doneText="Confirmar" cancelText="Cancelar"></ion-datetime>
+      <ion-datetime [(ngModel)]="horaAgendamento" placeholder="Horário da doação" displayFormat="HH:mm" minuteValues="0,30" doneText="Confirmar" cancelText="Cancelar"></ion-datetime>
     </ion-item>
         <!-- Caso tenha selecionado um grupo-->
     <ion-item  *ngIf="grupoSelecionadoHorario !='vazio'" style="background-color:rgb(252, 235, 235)">
@@ -87,7 +87,6 @@
     Agendar Doação
   </button>
   
-  {{grupoSelecionado}}
   
   <div full class="dataDoacao">
     <b>Data prevista para a proxima doação: 22/22/2222</b>

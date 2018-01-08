@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {criarCampanhaPage} from '../criarCampanha/criarCampanha';
+import { CampanhaSelecionadaPage } from '../campanhaSelecionada/campanhaSelecionada';
 
 @Component({
   selector: 'page-campanha',
@@ -21,6 +22,10 @@ export class CampanhaPage {
   }
   chamarCriarCampanha(){
     this.navCtrl.push(criarCampanhaPage);
+  }
+
+  chamarCampanhaSelecionada(){
+    this.navCtrl.push(CampanhaSelecionadaPage);
   }
 
 }

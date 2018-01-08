@@ -15,6 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { DuvidaPage } from '../pages/duvida/duvida';
 import { criarCampanhaPage } from '../pages/criarCampanha/criarCampanha';
 import { GrupoPage } from '../pages/grupo/grupo';
+import { CampanhaSelecionadaPage } from '../pages/campanhaSelecionada/campanhaSelecionada';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { GrupoPage } from '../pages/grupo/grupo';
     CampanhaPage,
     DuvidaPage,
     criarCampanhaPage,
-    GrupoPage
+    GrupoPage,
+    CampanhaSelecionadaPage
       
   ],
   imports: [
@@ -48,7 +50,8 @@ import { GrupoPage } from '../pages/grupo/grupo';
     CampanhaPage,
     DuvidaPage,
     criarCampanhaPage,
-    GrupoPage
+    GrupoPage,
+    CampanhaSelecionadaPage
   ],
   providers: [
     StatusBar,
