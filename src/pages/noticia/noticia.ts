@@ -7,7 +7,7 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'noticia.html'
 })
 export class NoticiaPage {
-
+local:string='todos';
   constructor(public navCtrl: NavController) {
 
   }

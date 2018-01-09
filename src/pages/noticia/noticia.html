@@ -7,12 +7,25 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
- vai carai
-  <p>
-   EDITAR 
-  </p>
+<ion-content padding  style="background-color:rgb(252, 235, 235)">
+  <ion-item  style="background-color:rgb(252, 235, 235)">
+    <ion-label style="color:red">Local:</ion-label>
+    <ion-select  [(ngModel)]="local" placeholder="Hemocentro" okText="Confirmar" cancelText="Cancelar">
+      <ion-option value="todos" >Todos</ion-option>
+      <ion-option value="santaCasa">Santa Casa</ion-option>
+      <ion-option value="hospitalE" >Hospital Evangélico</ion-option>
+    </ion-select>
+  </ion-item>
+  <br/>
+  <br/>
+  <br/>
+  <ion-list>
+    <button ion-item style="background-color:rgb(252, 235, 235)" >
+        <img style="width:50px" src="../../assets/imgs/coracaoCheio1.png" item-start/>
+        <b style="word-wrap: break-word;">titulo da noticia bem aki.... oooooaa</b>
+      <br/>
+      <span style="color:rgb(97, 96, 96);font-size:10pt">09/01/2018</span>
+    </button>
 
-  <button ion-button secondary menuToggle>Cu</button>
+  </ion-list>
 </ion-content>
