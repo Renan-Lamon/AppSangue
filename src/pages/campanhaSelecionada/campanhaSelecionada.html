@@ -8,25 +8,42 @@
 </ion-header>
 
 <ion-content padding style="background-color:rgb(252, 235, 235)">
+  <button style="color:red; font-size:10pt; border:1px solid red" ion-button block outline >
+    Participar
+  </button>
+  <button style="color:red; font-size:10pt; border:1px solid red" ion-button block outline>
+    Compartilhar para Todos
+  </button>
+  <button style="color:red; font-size:10pt; border:1px solid red" ion-button block outline >
+    Convidar Amigos
+  </button>
   <ion-list>
-    <ion-card  (click)="chamarCampanhaSelecionada()" style="background-color:rgb(255, 255, 255); border-top:2px solid rgb(255, 0, 0);border-bottom:2px solid rgb(255, 0, 0)"   *ngFor="let c of campanhas">
+    <ion-card (click)="chamarCampanhaSelecionada()" style="background-color:rgb(255, 255, 255); border-top:2px solid rgb(255, 0, 0);border-bottom:2px solid rgb(255, 0, 0)"
+      *ngFor="let c of campanhas">
       <ion-card-header style="text-align: center;">
         {{c.titulo}}
       </ion-card-header>
-    
+
       <ion-card-content>
         <!-- Add card content here! -->
         <p style="font-size:11pt">
           <b style="color:red">Sangue:{{c.sangue}}</b>
-          <br/><b>Local:</b> {{c.hemocentro}} 
-          <br/><b>Criador:</b> {{c.criador}}
-          <br/><b>Alvo:</b> {{c.alvo}} 
-          <br/><b>Data Limite:</b> {{c.data}}
-          <br/><b>Participando da campanha:</b> {{c.quantidade}} pessoas
-          <br/><br/><b style="text-align: center;">Descrição:</b> <br/>
-          {{c.descricao}}
+          <br/>
+          <b>Local:</b> {{c.hemocentro}}
+          <br/>
+          <b>Criador:</b> {{c.criador}}
+          <br/>
+          <b>Alvo:</b> {{c.alvo}}
+          <br/>
+          <b>Data Limite:</b> {{c.data}}
+          <br/>
+          <b>Participando da campanha:</b> {{c.quantidade}} pessoas
+          <br/>
+          <br/>
+          <b style="text-align: center;">Descrição:</b>
+          <br/> {{c.descricao}}
         </p>
-       
+
       </ion-card-content>
     </ion-card>
 
@@ -34,18 +51,21 @@
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
     box-shadow:4px 4px 4px #CCCCCC; background-color:white; border:1px solid rgb(255, 0, 0)">
-      <p style="text-align: center;"><b>Informações sobre o Local</b></p>
-      <p style="margin: 5px 10px 10px 10px;">
-      <span style="font-weight: bold;">Atendimento:</span> Segunda a Sexta das 07h às 17:30h / Sábado das 07h às 17h
-      <br/><br/>
-      <span style="font-weight: bold;">Endereço:</span> Rua Anacleto Ramos, 55 Ferroviários - cep 29308-020 Cachoeiro de Itapemirim/ES - Telefone:(28) 3526.6166
+      <p style="text-align: center;">
+        <b>Informações sobre o Local</b>
       </p>
-      <div style="left:37%; top:500px; position:absolute;width:150px;">
+      <p style="margin: 5px 10px 10px 10px;">
+        <span style="font-weight: bold;">Atendimento:</span> Segunda a Sexta das 07h às 17:30h / Sábado das 07h às 17h
+        <br/>
+        <br/>
+        <span style="font-weight: bold;">Endereço:</span> Rua Anacleto Ramos, 55 Ferroviários - cep 29308-020 Cachoeiro de Itapemirim/ES - Telefone:(28) 3526.6166
+      </p>
+      <div style="left:37%; top:620px; position:absolute;width:150px;">
         <button style="left:20%" ion-button icon-only>
-        <ion-icon name="pin"> </ion-icon>
-      </button>
-      <br/>
-      <label style="font-weight: bold">Vizualizar no Mapa</label>
+          <ion-icon name="pin"> </ion-icon>
+        </button>
+        <br/>
+        <label style="font-weight: bold">Vizualizar no Mapa</label>
       </div>
 
       <!--<button style="left:45%" ion-button icon-only>

@@ -3,28 +3,38 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title >Início</ion-title>
+    <ion-title>Nome Hemocentro</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding style="background-color:rgb(252, 235, 235)">
-  <div class="div1">
-    <ion-img style="width: 100%;height:100%" src="../../assets/imgs/colunaPerfil.jpg"></ion-img>
-    <ion-img class="imagemPerfil" src={{imagemPerfil}}></ion-img>
-
-    <ion-label class="nomePerfil">
-      <b>{{nomeUsuario}}</b>
-    </ion-label>
-
-    <ion-label class="levelUsuario">
-      <b>{{levelUsuario}}</b>
-    </ion-label>
-
-    <ion-img class="rank" src="../../assets/imgs/rank1.png"></ion-img>
-  </div>
-
   <div>
     <p class="cor">{{nomeHemocentro}}</p>
+  </div>
+  <div style="border-radius:4px;height:250px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow:4px 4px 4px #CCCCCC; background-color:white; border:1px solid rgb(255, 0, 0)">
+    <p style="text-align: center;">
+      <b>Informações sobre o Local</b>
+    </p>
+    <p style="margin: 5px 10px 10px 10px;">
+      <span style="font-weight: bold;">Atendimento:</span> Segunda a Sexta das 07h às 17:30h / Sábado das 07h às 17h
+      <br/>
+      <br/>
+      <span style="font-weight: bold;">Endereço:</span> Rua Anacleto Ramos, 55 Ferroviários - cep 29308-020 Cachoeiro de Itapemirim/ES - Telefone:(28) 3526.6166
+    </p>
+  </div>
+  <div style="left:37%; top:250px; position:absolute;width:150px;">
+      <button style="left:20%" ion-button icon-only>
+        <ion-icon name="pin"> </ion-icon>
+      </button>
+      <br/>
+      <label style="font-weight: bold">Vizualizar no Mapa</label>
+    </div>
+  <br/>
+  <br/>
+  <div>
     <p style="font-size:8pt; text-align: center;">Atualizado em: 20/01/2018</p>
   </div>
   <div class="divEstoque">
@@ -44,13 +54,13 @@
     &nbsp;&nbsp;&nbsp;
     <img class="estoque" src="../../assets/imgs/coracaoCheio1.png" />
     <div class="tipoBNegativo">B-</div>
-  
+
     <img class="estoque" src="../../assets/imgs/coracaoCheio1.png" />
     <div class="tipoABPositivo">AB+</div>
     &nbsp;&nbsp;&nbsp;
     <img class="estoque" src="../../assets/imgs/coracaoCritico1.png" />
     <div class="tipoABNegativo">AB-</div>
-  
+
     <img class="estoque" src="../../assets/imgs/coracaoBaixo1.png" />
     <div class="tipoOPositivo">O+</div>
     &nbsp;&nbsp;&nbsp;
@@ -64,14 +74,14 @@
   <br/>
   <br/>
 
-  <div style="position: absolute;width:100%; bottom:-320px; left:80px">
+  <div style="position: absolute;width:100%; bottom:-500px; left:80px">
     <ion-buttons>
       <button ion-button color="danger" small (click)="chamarAgendamento()">Agendar Doação</button>
       <button ion-button color="danger" small (click)="chamarNoticia()">Ver Notícias</button>
     </ion-buttons>
   </div>
 
-  <div style="position:absolute; bottom:-350px;height:50px; border:1px solid rgb(255, 255, 255)"></div>
+  <div style="position:absolute; bottom:-530px;height:50px; border:1px solid rgb(255, 255, 255)"></div>
   <div full class="dataDoacao">
     <b>Data prevista para a proxima doação: 22/22/2222</b>
   </div>

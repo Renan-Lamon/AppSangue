@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { NoticiaPage } from '../noticia/noticia';
+import { HemocentroSelecionadoPage } from '../hemocentroSelecionado/hemocentroSelecionado';
+
 
 @Component({
   selector: 'page-hemocentro',
@@ -36,7 +37,7 @@ export class HemocentroPage {
     }
   }
 
-  chamarNoticia(){
-    this.navCtrl.push(NoticiaPage);
+  chamarHemocentroSelecionado(){
+    this.navCtrl.push(HemocentroSelecionadoPage);
   }
 }
