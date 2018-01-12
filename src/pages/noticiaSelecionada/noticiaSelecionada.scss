@@ -12,5 +12,11 @@ page-noticiaSelecionada{
         left: 0px;
         z-index: 10;
     }
+
+    @media(min-width:1000px){
+        .imagemNoticia{
+            width: 700px;
+        }
+    }
     
 }

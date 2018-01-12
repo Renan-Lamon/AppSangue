@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content padding style="background-color:rgb(252, 235, 235)">
-  <ion-item style="background-color:rgb(252, 235, 235)">
+  <ion-item class="itemNoticia">
     <ion-label style="color:red">Local:</ion-label>
     <ion-select [(ngModel)]="local" placeholder="Hemocentro" okText="Confirmar" cancelText="Cancelar">
       <ion-option value="todos">Todos</ion-option>
@@ -21,17 +21,17 @@
   <br/>
   <ion-list>
     <button (click)="chamarNoticiaSelecionada()" ion-item style="background-color:rgb(252, 235, 235)">
-      <img style="width:80px" src="http://jornaldaqui.com.br/wp-content/uploads/2016/09/doa%C3%A7%C3%A3o-810x470.jpg" item-start/>
-      <b style="word-wrap: break-word;">titulo da noticia bem aki.... oooooaa</b>
+      <img class="imagem" src="http://jornaldaqui.com.br/wp-content/uploads/2016/09/doa%C3%A7%C3%A3o-810x470.jpg" item-start/>
+      <b class="tituloNoticia">titulo da noticia bem aki.... oooooaa</b>
       <br/>
-      <span style="color:rgb(97, 96, 96);font-size:10pt">09/01/2018</span>
+      <span class="dataNoticia">09/01/2018</span>
     </button>
 
     <button  (click)="chamarNoticiaSelecionada()" ion-item style="background-color:rgb(252, 235, 235)">
-      <img style="width:50px" src="../../assets/imgs/coracaoCheio1.png" item-start/>
-      <b style="word-wrap: break-word;">titulo da noticia bem aki.... oooooaa</b>
+      <img class="imagem" src="../../assets/imgs/coracaoCheio1.png" item-start/>
+      <b class="tituloNoticia">titulo da noticia bem aki.... oooooaa</b>
       <br/>
-      <span style="color:rgb(97, 96, 96);font-size:10pt">09/01/2018</span>
+      <span class="dataNoticia">09/01/2018</span>
     </button>
 
   </ion-list>

@@ -12,4 +12,35 @@ page-noticia{
         left: 0px;
         z-index: 10;
     }
+    .itemNoticia{
+        background-color:rgb(252, 235, 235); 
+    }
+    .imagem{
+        width: 50px;
+    }
+    .tituloNoticia{
+        word-wrap: break-word;
+    }
+    .dataNoticia{
+        color:rgb(97, 96, 96);
+        font-size:10pt;
+    }
+
+    @media (min-width: 1000px ){
+        .itemNoticia{
+            background-color:rgb(252, 235, 235); 
+            font-size:14pt;
+        }
+        .tituloNoticia{
+            word-wrap: break-word;
+            font-size: 18pt;
+        }
+        .dataNoticia{
+            color:rgb(97, 96, 96);
+            font-size:14pt;
+        }
+        .imagem{
+            width: 160px;
+        }
+    }
 }
