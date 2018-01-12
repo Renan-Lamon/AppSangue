@@ -15,10 +15,10 @@
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
     box-shadow:4px 4px 4px #CCCCCC; background-color:white; border:1px solid rgb(255, 0, 0)">
-    <p style="text-align: center;">
+    <p class="textoTitulo">
       <b>Informações sobre o Local</b>
     </p>
-    <p style="margin: 5px 10px 10px 10px;">
+    <p class="texto">
       <span style="font-weight: bold;">Atendimento:</span> Segunda a Sexta das 07h às 17:30h / Sábado das 07h às 17h
       <br/>
       <br/>
@@ -35,7 +35,7 @@
   <br/>
   <br/>
   <div>
-    <p style="font-size:8pt; text-align: center;">Atualizado em: 20/01/2018</p>
+    <p class="tituloAtualizacao">Atualizado em: 20/01/2018</p>
   </div>
   <div class="divEstoque">
     <div style="border-bottom-style: groove;">
@@ -54,13 +54,13 @@
     &nbsp;&nbsp;&nbsp;
     <img class="estoque" src="../../assets/imgs/coracaoCheio1.png" />
     <div class="tipoBNegativo">B-</div>
-
+  
     <img class="estoque" src="../../assets/imgs/coracaoCheio1.png" />
     <div class="tipoABPositivo">AB+</div>
     &nbsp;&nbsp;&nbsp;
     <img class="estoque" src="../../assets/imgs/coracaoCritico1.png" />
     <div class="tipoABNegativo">AB-</div>
-
+  
     <img class="estoque" src="../../assets/imgs/coracaoBaixo1.png" />
     <div class="tipoOPositivo">O+</div>
     &nbsp;&nbsp;&nbsp;
@@ -74,14 +74,14 @@
   <br/>
   <br/>
 
-  <div style="position: absolute;width:100%; bottom:-500px; left:80px">
+  <div class="botoes">
     <ion-buttons>
       <button ion-button color="danger" small (click)="chamarAgendamento()">Agendar Doação</button>
       <button ion-button color="danger" small (click)="chamarNoticia()">Ver Notícias</button>
     </ion-buttons>
   </div>
 
-  <div style="position:absolute; bottom:-530px;height:50px; border:1px solid rgb(255, 255, 255)"></div>
+  <div style="height:20px"></div>
   <div full class="dataDoacao">
     <b>Data prevista para a proxima doação: 22/22/2222</b>
   </div>

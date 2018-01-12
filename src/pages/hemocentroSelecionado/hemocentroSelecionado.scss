@@ -14,16 +14,18 @@ page-hemocentroSelecionado {
         left:100px;
     }
     .divEstoque{
-        position: absolute;
+        position: relative;
         border-style: groove;
-        top:400px;
-        margin-left:-120px;
+       
+        margin-left:-135px;
         left: 50%;
         width:270px;
         height: 650px;  
         z-index: 1; 
     }
-    
+    .botoes{
+        text-align:right;
+    }
     .tipoAPositivo {
         position: absolute;
         top: 185px;
@@ -105,36 +107,27 @@ page-hemocentroSelecionado {
         z-index: 3;
     }
     
-    .levelUsuario{
-        position: absolute;
-        top:90px;
-        font-size: 10;
-        color: yellow;
-        left:102px;
+    .textoTitulo{
+        font-size: 11pt;
+        text-align: center;
+    }
+    .texto{
+        margin: 5px 10px 10px 10px;
     }
     
+    .tituloAtualizacao{
+        font-size:8pt; 
+        text-align: center;
+    }
     .cor{
         color:rgb(209, 7, 7);
         font-weight: bold;
         font-size: 16pt;
         text-align: center;
     }
-    .box1 {
-		position:absolute;
-		top: 400px;
-		left: 100px;
-    }
+    
 
-    .div1 {
-        position:relative;
-        width: 100%;
-        height: 120px;
-        max-height: 100%; 
-        border-radius:4px;
-        -moz-border-radius:4px;
-        -webkit-border-radius:4px;
-        box-shadow:4px 4px 4px #CCCCCC;  
-    }
+    
 
     @media (max-width: 400px) {
         .div2{
@@ -161,45 +154,84 @@ page-hemocentroSelecionado {
    //     }
    // }
     @media (min-width: 1000px) {
-        .div2{
-            position:relative;
-            width: 100%;
-            height: 1100px;
-            max-height: 100%; 
+        .textoTitulo{
+            font-size: 14pt;
+            text-align: center;
         }
-        .tipoBPositivo {
-            position: absolute;
-            top: 40px;
-            left: 277px;
-            font-size: 2.0em;
-            width: 100%;
-            font-weight: bold;
-            color: rgb(0, 0, 0);
-            z-index: 3;
+        .texto{
+            margin: 5px 10px 10px 10px;
+            font-size: 12pt;
         }
-        .nomePerfil{
-            position: absolute;
-            top:60px;
-            font-size: 20pt;
-            color:#ffffff;
-            left:100px;
-        }
-    
         .cor{
             color:rgb(209, 7, 7);
             font-weight: bold;
             font-size: 23pt;
             text-align: center;
         }
+        .tituloAtualizacao{
+            font-size:10pt; 
+            text-align: center;
+        }
         .divEstoque{
-            position: absolute;
-            border: 1px solid red;
-            top:300px;
-            margin-left:-110px;
-            left: 39%;
-            width:500px;
+            position: relative;
+            border-style: groove; 
+            margin-left:-275px;
+            left: 50%;
+            width:550px;
             height: 400px;  
             z-index: 1; 
+        }
+
+        .legendaEstoque{
+            position:relative;
+            background-color:rgb(252, 235, 235);
+            width:200px;
+            margin-left: 150px;
+            
+        }
+
+        .tipoABPositivo {
+            position: absolute;
+            top: 185px;
+            left: 288px;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            z-index: 3;
+        }
+        .tipoABNegativo {
+            position: absolute;
+            top: 185px;
+            left: 428px;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            z-index: 3;
+        }
+        .tipoOPositivo {
+            position: absolute;
+            top: 310px;
+            left: 288px;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            z-index: 3;
+        }
+        .tipoONegativo {
+            position: absolute;
+            top: 310px;
+            left: 428px;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            z-index: 3;
+        }
+        .botoes{
+            text-align:center;
         }
     }
     
