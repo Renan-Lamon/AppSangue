@@ -1,9 +1,29 @@
 <ion-header>
-  <ion-navbar color="danger">
-    <button ion-button menuToggle>
+  <ion-navbar class="tamNav" color="danger">
+    <button class="desktopMenu" ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Agendamento</ion-title>
+    <div class="desktop">
+      <img style="width:60px;position:absolute; top:13px" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"
+      />
+      <div style="text-align:center; font-size:20pt">
+        <button (click)="chamarHome()" ion-button clear class="botoesMenu">INÍCIO</button>
+        <button (click)="chamarCampanha()" ion-button clear class="botoesMenu">CAMPANHAS</button>
+        <button (click)="chamarHemocentro()" ion-button clear class="botoesMenu">HEMOCENTROS</button>
+        <button (click)="chamarNoticia()" ion-button clear class="botoesMenu">NOTÍCIAS</button>
+        <button ion-button clear class="botoesMenu botoesMenuSelecionado">AGENDAR DOAÇÃO</button>
+        <button (click)="chamarInformacoes()" ion-button clear class="botoesMenu">INFORMAÇÕES GERAIS</button>
+        <button (click)="chamarIdentificador()" ion-button clear class="botoesMenu">MEU IDENTIFICADOR</button>
+      </div>
+
+
+      <div style="position:absolute;top:17px;right:5px;">
+        <button ion-button icon-only clear>
+          <ion-icon style=" color:white; font-size:24pt" name="ios-contact"></ion-icon>
+        </button>
+      </div>
+    </div>
+    <ion-title class="desktopMenu" >Agendar Doação</ion-title>
   </ion-navbar>
 </ion-header>
 

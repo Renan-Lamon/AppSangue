@@ -1,4 +1,29 @@
 page-identificador {
+    .botoesMenu{
+        color:white;
+    }
+    .botoesMenu:hover{
+        border:2px solid white;
+    }
+    .botoesMenuSelecionado{
+        color:white;
+        border:2px solid white;
+    }
+    .desktop{
+        display: none;
+    }
+    @media (min-width: 1000px) {
+        .desktopMenu{
+            display: none;
+        }
+        .tamNav{
+            height:80px;
+        }
+        .desktop{
+            display: inline;
+        }
+    }
+    
     h2{
         border-radius:4px;
         -moz-border-radius:4px;

@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HemocentroSelecionadoPage } from '../hemocentroSelecionado/hemocentroSelecionado';
-
+import { CampanhaPage } from '../campanha/campanha';
+import {IdentificadorPage} from '../identificador/identificador';
+import {NoticiaPage} from '../noticia/noticia';
+import {AgendamentoPage} from '../agendamento/agendamento';
+import { InformacaoPage } from '../informacao/informacao';
+import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-hemocentro',
@@ -35,6 +40,25 @@ export class HemocentroPage {
         return (item.toLowerCase().indexOf(val.toLowerCase()) > -1);
       })
     }
+  }
+
+  chamarHome(){
+    this.navCtrl.setRoot(HomePage);
+  }
+  chamarCampanha(){
+    this.navCtrl.setRoot(CampanhaPage);
+  }
+  chamarNoticia(){
+    this.navCtrl.setRoot(NoticiaPage);
+  }
+  chamarAgendamento(){
+    this.navCtrl.setRoot(AgendamentoPage);
+  }
+  chamarInformacoes(){
+    this.navCtrl.setRoot(InformacaoPage);
+  }
+  chamarIdentificador(){
+    this.navCtrl.setRoot(IdentificadorPage);
   }
 
   chamarHemocentroSelecionado(){

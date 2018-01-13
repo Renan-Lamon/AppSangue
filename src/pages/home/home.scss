@@ -1,4 +1,17 @@
 page-home {
+    .botoesMenu{
+        color:white;
+    }
+    .botoesMenu:hover{
+        border:2px solid white;
+    }
+    .botoesMenuSelecionado{
+        color:white;
+        border:2px solid white;
+    }
+    .desktop{
+        display: none;
+    }
     .estoque{
         position: relative;
         width:120px; 
@@ -169,7 +182,15 @@ page-home {
    //     }
    // }
     @media (min-width: 1000px) {
-
+        .desktopMenu{
+            display: none;
+        }
+        .tamNav{
+            height:80px;
+        }
+        .desktop{
+            display: inline;
+        }
         .tituloAtualizacao{
             font-size:10pt; 
             text-align: center;

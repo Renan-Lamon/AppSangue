@@ -3,7 +3,9 @@ import { NavController } from 'ionic-angular';
 import {IdentificadorPage} from '../identificador/identificador';
 import {NoticiaPage} from '../noticia/noticia';
 import {AgendamentoPage} from '../agendamento/agendamento';
-import { DesktopPage } from '../desktop/desktop';
+import { CampanhaPage } from '../campanha/campanha';
+import { HemocentroPage } from '../hemocentro/hemocentro';
+import { InformacaoPage } from '../informacao/informacao';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -18,16 +20,30 @@ export class HomePage {
     
   }
 
+  chamarCampanha(){
+    this.navCtrl.setRoot(CampanhaPage);
+  }
+  chamarHemocentro(){
+    this.navCtrl.setRoot(HemocentroPage);
+  }
   chamarNoticia(){
-    this.navCtrl.push(NoticiaPage);
+    this.navCtrl.setRoot(NoticiaPage);
   }
   chamarAgendamento(){
-    this.navCtrl.push(AgendamentoPage);
+    this.navCtrl.setRoot(AgendamentoPage);
+  }
+  chamarInformacoes(){
+    this.navCtrl.setRoot(InformacaoPage);
   }
   chamarIdentificador(){
-    this.navCtrl.push(IdentificadorPage);
+    this.navCtrl.setRoot(IdentificadorPage);
   }
-  desktopTeste(){
-    this.navCtrl.push(DesktopPage);
+  
+  chamarNoticiaPush(){
+    this.navCtrl.push(NoticiaPage);
   }
+  chamarAgendamentoPush(){
+    this.navCtrl.push(AgendamentoPage);
+  }
+  
 }

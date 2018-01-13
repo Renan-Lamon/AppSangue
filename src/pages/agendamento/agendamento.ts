@@ -2,7 +2,12 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { GrupoPage } from '../grupo/grupo';
 import { Time } from '@angular/common/src/i18n/locale_data_api';
-
+import { CampanhaPage } from '../campanha/campanha';
+import {IdentificadorPage} from '../identificador/identificador';
+import {NoticiaPage} from '../noticia/noticia';
+import { HemocentroPage } from '../hemocentro/hemocentro';
+import { InformacaoPage } from '../informacao/informacao';
+import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-agendamento',
@@ -36,6 +41,25 @@ export class AgendamentoPage {
     ];
 
 
+  }
+
+  chamarHome(){
+    this.navCtrl.setRoot(HomePage);
+  }
+  chamarHemocentro(){
+    this.navCtrl.setRoot(HemocentroPage);
+  }
+  chamarNoticia(){
+    this.navCtrl.setRoot(NoticiaPage);
+  }
+  chamarCampanha(){
+    this.navCtrl.setRoot(CampanhaPage);
+  }
+  chamarInformacoes(){
+    this.navCtrl.setRoot(InformacaoPage);
+  }
+  chamarIdentificador(){
+    this.navCtrl.setRoot(IdentificadorPage);
   }
 
   chamarGrupo(){
