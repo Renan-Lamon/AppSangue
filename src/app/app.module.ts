@@ -18,6 +18,7 @@ import { GrupoPage } from '../pages/grupo/grupo';
 import { CampanhaSelecionadaPage } from '../pages/campanhaSelecionada/campanhaSelecionada';
 import { HemocentroSelecionadoPage } from '../pages/hemocentroSelecionado/hemocentroSelecionado';
 import { NoticiaSelecionadaPage } from '../pages/noticiaSelecionada/noticiaSelecionada';
+import { DesktopPage } from '../pages/desktop/desktop';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { NoticiaSelecionadaPage } from '../pages/noticiaSelecionada/noticiaSelec
     GrupoPage,
     CampanhaSelecionadaPage,
     HemocentroSelecionadoPage,
-    NoticiaSelecionadaPage
+    NoticiaSelecionadaPage,
+    DesktopPage
       
   ],
   imports: [
@@ -57,7 +59,8 @@ import { NoticiaSelecionadaPage } from '../pages/noticiaSelecionada/noticiaSelec
     GrupoPage,
     CampanhaSelecionadaPage,
     HemocentroSelecionadoPage,
-    NoticiaSelecionadaPage
+    NoticiaSelecionadaPage,
+    DesktopPage
   ],
   providers: [
     StatusBar,

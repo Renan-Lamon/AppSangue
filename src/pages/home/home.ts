@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import {IdentificadorPage} from '../identificador/identificador';
 import {NoticiaPage} from '../noticia/noticia';
 import {AgendamentoPage} from '../agendamento/agendamento';
+import { DesktopPage } from '../desktop/desktop';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -25,5 +26,8 @@ export class HomePage {
   }
   chamarIdentificador(){
     this.navCtrl.push(IdentificadorPage);
+  }
+  desktopTeste(){
+    this.navCtrl.push(DesktopPage);
   }
 }
