@@ -1,4 +1,32 @@
 page-duvida{
+  .botoesMenu{
+    color:white;
+  }
+  .botoesMenu:hover{
+    border:2px solid white;
+  }
+  .botoesMenuSelecionado{
+    color:white;
+    border:2px solid white;
+  }
+  .desktop{
+    display: none;
+  }
+
+    .botoesMenu{
+        color:white;
+    }
+    .botoesMenu:hover{
+        border:2px solid white;
+    }
+    .botoesMenuSelecionado{
+        color:white;
+        border:2px solid white;
+    }
+    .desktop{
+        display: none;
+    }
+
     .question {
         border-bottom: 1px solid #ccc;
         padding: 10px 0
@@ -8,14 +36,42 @@ page-duvida{
       .question .answer { display: none }
       
       .question label {
+        font-size: 12pt;
         display: inline-block;
         font-weight: bold;
         margin-bottom: 5px;
-        width: 100%
+        width: 100%;
+        
       }
       
       .question input:checked ~ .answer {
         display: block
+      }
+
+      @media (min-width: 1000px) {
+        .desktopMenu{
+          display: none;
+        }
+        .tamNav{
+          height:80px;
+        }
+        .desktop{
+          display: inline;
+        }
+
+        .question label {
+          font-size: 15pt;
+          display: inline-block;
+          font-weight: bold;
+          margin-bottom: 5px;
+          width: 100%;
+          
+        }
+        
+        .question input:checked ~ .answer {
+          font-size: 13pt;
+          display: block
+        }
       }
 
       .dataDoacao{

@@ -1,9 +1,29 @@
 <ion-header>
-  <ion-navbar color="danger">
-    <button ion-button menuToggle>
+  <ion-navbar class="tamNav" color="danger">
+    <button class="desktopMenu" ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Dúvidas Frequentes</ion-title>
+    <div class="desktop">
+      <img style="width:60px;position:absolute; top:13px" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"
+      />
+      <div style="text-align:center; font-size:20pt">
+        <button (click)="chamarHome()" ion-button clear class="botoesMenu">INÍCIO</button>
+        <button (click)="chamarCampanha()" ion-button clear class="botoesMenu">CAMPANHAS</button>
+        <button (click)="chamarHemocentro()" ion-button clear class="botoesMenu">HEMOCENTROS</button>
+        <button (click)="chamarNoticia()" ion-button clear class="botoesMenu">NOTÍCIAS</button>
+        <button (click)="chamarAgendamento()" ion-button clear class="botoesMenu">AGENDAR DOAÇÃO</button>
+        <button ion-button clear class="botoesMenu botoesMenuSelecionado">INFORMAÇÕES GERAIS</button>
+        <button (click)="chamarIdentificador()" ion-button clear class="botoesMenu">MEU IDENTIFICADOR</button>
+      </div>
+
+
+      <div style="position:absolute;top:17px;right:5px;">
+        <button ion-button icon-only clear>
+          <ion-icon style=" color:white; font-size:24pt" name="ios-contact"></ion-icon>
+        </button>
+      </div>
+    </div>
+    <ion-title class="desktopMenu" >Dúvidas Frequentes</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,7 +31,7 @@
 
   <div class="question">
     <input type="checkbox" id="question-1">
-    <label for="question-1" style="font-size:12pt">Quem pode doar?</label>
+    <label for="question-1" >Quem pode doar?</label>
     <div class="answer">
       Qualquer pessoa com idade entre 18 e 67 anos que pese mais de 50 quilos. Jovens de 16 ou 17 anos também estão aptos, desde
       que tenham o consentimento dos pais ou dos responsáveis.
@@ -20,7 +40,7 @@
 
   <div class="question">
     <input type="checkbox" id="question-2">
-    <label for="question-2" style="font-size:12pt">Quanto tempo demora?</label>
+    <label for="question-2" >Quanto tempo demora?</label>
     <div class='answer'>
       A coleta do sangue é bem rápida: leva de 8 a 12 minutos. Antes, o doador faz uma triagem e passa algumas informações de saúde
       para os funcionários do local.
@@ -29,7 +49,7 @@
 
   <div class="question">
     <input type="checkbox" id="question-3">
-    <label for="question-3" style="font-size:12pt">O procedimento oferece algum perigo?</label>
+    <label for="question-3">O procedimento oferece algum perigo?</label>
     <div class='answer'>
       Não. A doação é totalmente segura e não apresenta nenhum risco. Os materiais utilizados, como a agulha e os cateteres, são
       descartáveis.
@@ -38,7 +58,7 @@
 
   <div class="question">
     <input type="checkbox" id="question-4">
-    <label for="question-4" style="font-size:12pt">Quanto sangue é retirado?</label>
+    <label for="question-4" >Quanto sangue é retirado?</label>
     <div class='answer'>
       São 450 mililitros. Esse volume pode salvar a vida de até quatro pessoas.
     </div>
@@ -46,7 +66,7 @@
 
   <div class="question">
     <input type="checkbox" id="question-5">
-    <label for="question-5" style="font-size:12pt">Existem algumas doenças que impedem a doação de sangue?</label>
+    <label for="question-5" >Existem algumas doenças que impedem a doação de sangue?</label>
     <div class='answer'>
       Sim. Doenças infecciosas, como a gripe, e inflamatórias, como aquelas que atacam o intestino, exigem que a doação seja postergada
       para outra data. Em caso de dúvida, converse com o profissional de saúde do hemocentro para saber se tudo está ok.
@@ -55,7 +75,7 @@
 
   <div class="question">
     <input type="checkbox" id="question-6">
-    <label for="question-6" style="font-size:12pt">E o que eu preciso levar no dia da doação?</label>
+    <label for="question-6">E o que eu preciso levar no dia da doação?</label>
     <div class='answer'>
       Apenas um documento original com foto.
     </div>
@@ -63,7 +83,7 @@
 
   <div class="question">
     <input type="checkbox" id="question-7">
-    <label for="question-7" style="font-size:12pt">E depois de doar sangue? Devo seguir alguma recomendação médica?</label>
+    <label for="question-7">E depois de doar sangue? Devo seguir alguma recomendação médica?</label>
     <div class='answer'>
       Sim. Evite esforços físicos, beba bastante água, não fume por duas horas e evite ingerir álcool pelo resto do dia. Também
       é importante não praticar esportes radicais, como paraquedismo ou mergulho, ou dirigir veículos de grande porte.
@@ -72,7 +92,7 @@
 
   <div class="question">
     <input type="checkbox" id="question-8">
-    <label for="question-8" style="font-size:12pt">E quanto tempo eu tenho que esperar entre uma doação e outra?</label>
+    <label for="question-8">E quanto tempo eu tenho que esperar entre uma doação e outra?</label>
     <div class='answer'>
       Os homens podem visitar o banco de sangue a cada 60 dias. Já as mulheres devem aguardar três meses.
     </div>
