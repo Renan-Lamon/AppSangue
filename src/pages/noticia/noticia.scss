@@ -12,6 +12,16 @@ page-noticia{
     .desktop{
         display: none;
     }
+    .textoListaNoticia{
+        word-wrap: break-word;
+        font-weight: bold;
+        font-size:12pt; 
+        color:rgb(0, 49, 122);
+    }
+    .textoSublinhado:hover{
+        text-decoration: underline rgb(0, 49, 122);
+        background-color:rgb(252, 235, 235);
+    }
     .dataDoacao{
         position: fixed;
         width: 100%;
