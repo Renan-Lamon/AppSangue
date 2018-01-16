@@ -10,7 +10,7 @@
         <button (click)="chamarHome()" ion-button clear class="botoesMenu">INÍCIO</button>
         <button (click)="chamarCampanha()" ion-button clear class="botoesMenu">CAMPANHAS</button>
         <button (click)="chamarHemocentro()" ion-button clear class="botoesMenu">HEMOCENTROS</button>
-        <button  ion-button clear class="botoesMenu botoesMenuSelecionado">NOTÍCIAS</button>
+        <button ion-button clear class="botoesMenu botoesMenuSelecionado">NOTÍCIAS</button>
         <button (click)="chamarAgendamento()" ion-button clear class="botoesMenu">AGENDAR DOAÇÃO</button>
         <button (click)="chamarInformacoes()" ion-button clear class="botoesMenu">INFORMAÇÕES GERAIS</button>
         <button (click)="chamarIdentificador()" ion-button clear class="botoesMenu">MEU IDENTIFICADOR</button>
@@ -23,27 +23,111 @@
         </button>
       </div>
     </div>
-    <ion-title class="desktopMenu" >Notícias</ion-title>
+    <ion-title class="desktopMenu">Notícias</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding style="background-color:rgb(252, 235, 235)">
   
-  <ion-card class="imagemNoticia">
-    <img class="imagemNoticia" src="http://jornaldaqui.com.br/wp-content/uploads/2016/09/doa%C3%A7%C3%A3o-810x470.jpg"/>
+  <ion-card class="imagemNoticia desktopMenu">
+    <img src="http://jornaldaqui.com.br/wp-content/uploads/2016/09/doa%C3%A7%C3%A3o-810x470.jpg" />
     <ion-card-content>
-      <ion-card-title>
-        Titulo da nóticia lalalalalalaaaaaaaaaaaaaaaa
-        </ion-card-title>
-      <p>
-        Adolf Hitler nasceu em 20 de abril de 1889 em Braunau am Inn, uma cidade da Áustria-Hungria (hoje em dia localizada na Áustria), próximo a fronteira do Império Alemão. Ele era um dos seis filhos nascidos de Alois Hitler e Klara Pölzl (1860–1907).
+        <ion-card-title>
+            Titulo da nóticia lalalalalalaaaaaaaaaaaaaaaa
+          </ion-card-title>
+      <p class="textoNoticia">
+        Materiais e equipamentos que não eram mais utilizados e estavam amontoados foram vendidos e o dinheiro revertido em melhorias
+        na instituição. Ao todo, foram arrecadados R$ 140 mil só em 2017.
+        <br/>O trabalho é feito pela Comissão de Avaliação de Bens Inservíveis, designada para levantar e avaliar os bens móveis
+        e equipamentos do hospital. O grupo avalia aqueles que se encontram obsoletos e deteriorados, classificados como
+        inservíveis por ultrapassar o período de vida útil ou sem condições de reparo.
+        <br/>Após o levantamento dos bens, são gerados laudos técnicos que justificam a inviabilidade para utilização. Em seguida,
+        são encaminhados para discussão em reunião, para definição de preço justo, de acordo com as condições de cada item
+        avaliado.
+        <br/>De acordo com o presidente Genivaldo Dalmázio, todas as vendas ocorrem de forma legal, com emissão de notas fiscais,
+        seja pessoa física ou jurídica.
+        <br/>Os recursos captados com as vendas são destinados a projetos específicos definidos pela diretoria. Inicialmente temos
+        em andamento o Projeto de Prevenção e Combate a Incêndio e a aquisição de Storarge para o setor de tecnologia da
+        Informação.
+        <br/>“De forma bastante responsável, superamos as expectativas de vendas neste ano de 2017. Estamos estudando os próximos
+        lotes a serem leiloados, visando contribuir com os projetos atuais e idealização de novos para o ano 2018”, afirma
+        Genivaldo.
+        <br/>Atualmente a Comissão conta com seis membros. São eles, Genivaldo Dalmázio do setor de Engenharia Clínica, Tonny
+        Correa Machado e Matheus Vazzoler da Captação de Recursos, Lafaiete Pinheiro da Tecnologia da Informação, Nilzete
+        Falcon de Freitas do Departamento de Patrimônio e Wilians Ramos Silva do Serviço de Apoio.
       </p>
-      <div  style="text-align: right;color:rgb(146, 145, 145)"> 09/01/2018</div>
+      <div style="text-align: right;color:rgb(146, 145, 145)"> 09/01/2018</div>
     </ion-card-content>
   </ion-card>
+
+  <label style="position:absolute; left:110px; font-size:20pt">Venda de equipamentos descartados arrecada R$ 140 mil</label>
+  
+  <ion-icon style="position:absolute; top:70px; font-size:30pt; left:110px;color:blue" name="logo-facebook"></ion-icon>
+
+  <ion-card class="imagemNoticia desktop">
+    <img src="http://jornaldaqui.com.br/wp-content/uploads/2016/09/doa%C3%A7%C3%A3o-810x470.jpg" />
+    <ion-card-content>
+      
+      <p class="textoNoticia">
+        Materiais e equipamentos que não eram mais utilizados e estavam amontoados foram vendidos e o dinheiro revertido em melhorias
+        na instituição. Ao todo, foram arrecadados R$ 140 mil só em 2017.
+        <br/>O trabalho é feito pela Comissão de Avaliação de Bens Inservíveis, designada para levantar e avaliar os bens móveis
+        e equipamentos do hospital. O grupo avalia aqueles que se encontram obsoletos e deteriorados, classificados como
+        inservíveis por ultrapassar o período de vida útil ou sem condições de reparo.
+        <br/>Após o levantamento dos bens, são gerados laudos técnicos que justificam a inviabilidade para utilização. Em seguida,
+        são encaminhados para discussão em reunião, para definição de preço justo, de acordo com as condições de cada item
+        avaliado.
+        <br/>De acordo com o presidente Genivaldo Dalmázio, todas as vendas ocorrem de forma legal, com emissão de notas fiscais,
+        seja pessoa física ou jurídica.
+        <br/>Os recursos captados com as vendas são destinados a projetos específicos definidos pela diretoria. Inicialmente temos
+        em andamento o Projeto de Prevenção e Combate a Incêndio e a aquisição de Storarge para o setor de tecnologia da
+        Informação.
+        <br/>“De forma bastante responsável, superamos as expectativas de vendas neste ano de 2017. Estamos estudando os próximos
+        lotes a serem leiloados, visando contribuir com os projetos atuais e idealização de novos para o ano 2018”, afirma
+        Genivaldo.
+        <br/>Atualmente a Comissão conta com seis membros. São eles, Genivaldo Dalmázio do setor de Engenharia Clínica, Tonny
+        Correa Machado e Matheus Vazzoler da Captação de Recursos, Lafaiete Pinheiro da Tecnologia da Informação, Nilzete
+        Falcon de Freitas do Departamento de Patrimônio e Wilians Ramos Silva do Serviço de Apoio.
+      </p>
+      <div style="text-align: right;color:rgb(146, 145, 145)"> 09/01/2018</div>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="desktop">
+    <ion-label style="position:absolute; top:26px; right:110px; font-size:16pt; color: rgb(0, 49, 122)">Outras Notícias</ion-label>
+    <ion-list style="position:absolute; top:80px; right:40px; width:300px; background-color:black">
+      <button class="textoSublinhado" ion-item>
+        <div style="background-color:rgb(252, 235, 235);">
+          <img style="width:100%" src="http://jornaldaqui.com.br/wp-content/uploads/2016/09/doa%C3%A7%C3%A3o-810x470.jpg" />
+          <p class="textoListaNoticia">
+            Noticia blablabla bla ble bleee blibloblu
+          </p>
+          <div style="text-align: right;color:rgb(146, 145, 145)"> 09/01/2018</div>
+        </div>
+      </button>
+      <button class="textoSublinhado" ion-item>
+        <div style="background-color:rgb(252, 235, 235);">
+          <img style="width:100%" src="http://jornaldaqui.com.br/wp-content/uploads/2016/09/doa%C3%A7%C3%A3o-810x470.jpg" />
+          <p class="textoListaNoticia">
+            Noticia blablabla bla ble bleee blibloblu
+          </p>
+          <div style="text-align: right;color:rgb(146, 145, 145)"> 09/01/2018</div>
+        </div>
+      </button>
+      <button class="textoSublinhado" ion-item>
+        <div style="background-color:rgb(252, 235, 235);">
+          <img style="width:100%" src="http://jornaldaqui.com.br/wp-content/uploads/2016/09/doa%C3%A7%C3%A3o-810x470.jpg" />
+          <p class="textoListaNoticia">
+            Noticia blablabla bla ble bleee blibloblu
+          </p>
+          <div style="text-align: right;color:rgb(146, 145, 145)"> 09/01/2018</div>
+        </div>
+      </button>
+    </ion-list>
+  </div>
 
   <div full class="dataDoacao">
     <b>Data prevista para a proxima doação: 22/22/2222</b>
   </div>
-  
+
 </ion-content>

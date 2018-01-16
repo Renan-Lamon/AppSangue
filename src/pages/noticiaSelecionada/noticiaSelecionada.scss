@@ -12,6 +12,8 @@ page-noticiaSelecionada{
     .desktop{
         display: none;
     }
+    
+    
     .dataDoacao{
         position: fixed;
         width: 100%;
@@ -36,7 +38,23 @@ page-noticiaSelecionada{
         .desktop{
             display: inline;
         }
+        .textoNoticia{
+            font-size: 14pt;
+        }
+        .textoListaNoticia{
+            word-wrap: break-word;
+            font-size:12pt; 
+            color:rgb(0, 49, 122);
+        }
+        
+        .textoSublinhado:hover{
+            text-decoration: underline rgb(0, 49, 122);
+        }
+        
         .imagemNoticia{
+            position: absolute;
+            top:100px;
+            left:100px;
             width: 700px;
         }
     }
