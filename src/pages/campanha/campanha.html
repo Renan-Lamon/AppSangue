@@ -23,43 +23,47 @@
         </button>
       </div>
     </div>
-    <ion-title class="desktopMenu" >Campanha</ion-title>
+    <ion-title class="desktopMenu">Campanha</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding style="background-color:rgb(252, 235, 235)">
 
-    <button style="color:red; border:1px solid red" ion-button full outline icon-start (click)="chamarCriarCampanha()">
-        <ion-icon name="ios-create-outline"></ion-icon>
-        Criar Campanha
-    </button>
-     
-  <ion-list>
-  <ion-card (click)="chamarCampanhaSelecionada()" style="background-color:rgb(255, 255, 255); border-top:2px solid rgb(255, 0, 0);border-bottom:2px solid rgb(255, 0, 0)"   *ngFor="let c of campanhas">
-    <ion-card-header>
-      {{c.titulo}}
-    </ion-card-header>
+  <button style="color:red; border:1px solid red" ion-button full outline icon-start (click)="chamarCriarCampanha()">
+    <ion-icon name="ios-create-outline"></ion-icon>
+    Criar Campanha
+  </button>
+
   
-    <ion-card-content>
-      <!-- Add card content here! -->
-      <p class="informacoes">
-        <b style="color:red">Sangue:{{c.sangue}}</b>
-        <br/>Local: {{c.hemocentro}} 
-        <br/>Criador: {{c.criador}}
-        <br/>Alvo: {{c.alvo}} 
-        <br/><b>Data Limite: {{c.data}}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-              </b>
-        <span style="right:1px" ><ion-icon style="font-size: 20pt" end name="ios-people">{{c.quantidade}}</ion-icon></span>
-      </p>
-     
-    </ion-card-content>
-  </ion-card>
+    <button style="width:100%; background-color:rgb(252, 235, 235); text-align:left" *ngFor="let c of campanhas">
+      <ion-card (click)="chamarCampanhaSelecionada()" style="background-color:rgb(255, 255, 255); border-top:2px solid rgb(255, 0, 0);border-bottom:2px solid rgb(255, 0, 0)">
+        <ion-card-header>
+          {{c.titulo}}
+        </ion-card-header>
 
-</ion-list>
+        <ion-card-content>
+          <!-- Add card content here! -->
+          <p class="informacoes">
+            <b style="color:red">Sangue:{{c.sangue}}</b>
+            <br/>Local: {{c.hemocentro}}
+            <br/>Criador: {{c.criador}}
+            <br/>Alvo: {{c.alvo}}
+            <br/>
+            <b>Data Limite: {{c.data}}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            </b>
+            <span style="right:1px">
+              <ion-icon style="font-size: 20pt" end name="ios-people">{{c.quantidade}}</ion-icon>
+            </span>
+          </p>
 
-<div full class="dataDoacao">
-  <b>Data prevista para a proxima doação: 22/22/2222</b>
-</div>
+        </ion-card-content>
+      </ion-card>
+    </button>
+  
+
+  <div full class="dataDoacao">
+    <b>Data prevista para a proxima doação: 22/22/2222</b>
+  </div>
 
 </ion-content>
