@@ -138,7 +138,9 @@ page-hemocentroSelecionado {
         font-size: 16pt;
         text-align: center;
     }
-    
+    .botoes{
+        text-align:center;  
+    }
 
     
 
@@ -255,6 +257,7 @@ page-hemocentroSelecionado {
         }
         .botoes{
             text-align:center;
+            font-size: 12pt;    
         }
     }
     
@@ -270,10 +273,7 @@ page-hemocentroSelecionado {
     .imagemPerfil:hover{
         border: 1px solid white;
     }
-    .botoes{
-        position: relative;
-        top:10px;
-    }
+    
 
     .rank{
         position: absolute;

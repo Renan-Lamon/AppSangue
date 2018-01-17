@@ -1,4 +1,28 @@
 page-campanhaSelecionada {
+    .campanhaTitulo{
+        text-align: center;
+        font-size: 11pt;
+        font-weight: bold;
+    }
+    .campanhaTexto{
+        font-size:11pt;
+    }
+    .informacoes{
+        border-radius:4px;height:250px;
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        box-shadow:4px 4px 4px #CCCCCC; 
+        background-color:white; 
+        border:1px solid rgb(255, 0, 0); 
+        font-size:11pt;
+    }
+    .mapa{
+        left:37%; 
+        top:620px; 
+        font-size: 10pt;
+        position:absolute;
+        width:150px;
+    }
     .botoesMenu{
         color:white;
     }
@@ -13,6 +37,24 @@ page-campanhaSelecionada {
         display: none;
     }
     @media (min-width: 1000px) {
+        .campanhaTitulo{
+            text-align: center;
+            font-size: 12pt;
+            font-weight: bold;
+        }
+        .campanhaTexto{
+            font-size:12pt;
+        }
+        .informacoes{
+            border-radius:4px;height:250px;
+            -moz-border-radius:4px;
+            -webkit-border-radius:4px;
+            box-shadow:4px 4px 4px #CCCCCC; 
+            background-color:white; 
+            border:1px solid rgb(255, 0, 0); 
+            font-size:12pt;
+        }
+
         .desktopMenu{
             display: none;
         }
@@ -21,6 +63,14 @@ page-campanhaSelecionada {
         }
         .desktop{
             display: inline;
+        }
+
+        .mapa{
+            left:37%; 
+            top:580px;
+            font-size: 10pt; 
+            position:absolute;
+            width:150px;
         }
     }
     .dataDoacao{

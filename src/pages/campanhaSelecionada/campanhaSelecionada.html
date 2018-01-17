@@ -38,15 +38,15 @@
     Convidar Amigos
   </button>
   <ion-list>
-    <ion-card  style="background-color:rgb(255, 255, 255); border-top:2px solid rgb(255, 0, 0);border-bottom:2px solid rgb(255, 0, 0)"
+    <ion-card  style="background-color:rgb(255, 255, 255); border-top:2px solid rgb(255, 0, 0);border-bottom:2px solid rgb(255, 0, 0);"
       *ngFor="let c of campanhas">
-      <ion-card-header style="text-align: center;">
+      <ion-card-header class="campanhaTitulo">
         {{c.titulo}}
       </ion-card-header>
 
       <ion-card-content>
         <!-- Add card content here! -->
-        <p style="font-size:11pt">
+        <p class="campanhaTexto">
           <b style="color:red">Sangue:{{c.sangue}}</b>
           <br/>
           <b>Local:</b> {{c.hemocentro}}
@@ -67,10 +67,7 @@
       </ion-card-content>
     </ion-card>
 
-    <div style="border-radius:4px;height:250px;
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    box-shadow:4px 4px 4px #CCCCCC; background-color:white; border:1px solid rgb(255, 0, 0)">
+    <div class="informacoes">
       <p style="text-align: center;">
         <b>Informações sobre o Local</b>
       </p>
@@ -80,7 +77,7 @@
         <br/>
         <span style="font-weight: bold;">Endereço:</span> Rua Anacleto Ramos, 55 Ferroviários - cep 29308-020 Cachoeiro de Itapemirim/ES - Telefone:(28) 3526.6166
       </p>
-      <div style="left:37%; top:620px; position:absolute;width:150px;">
+      <div class="mapa">
         <button style="left:20%" ion-button icon-only>
           <ion-icon name="pin"> </ion-icon>
         </button>
