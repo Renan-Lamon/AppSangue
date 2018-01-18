@@ -18,6 +18,7 @@ import { GrupoPage } from '../pages/grupo/grupo';
 import { CampanhaSelecionadaPage } from '../pages/campanhaSelecionada/campanhaSelecionada';
 import { HemocentroSelecionadoPage } from '../pages/hemocentroSelecionado/hemocentroSelecionado';
 import { NoticiaSelecionadaPage } from '../pages/noticiaSelecionada/noticiaSelecionada';
+import { RankPage } from '../pages/rank/rank';
 
 
 
@@ -36,7 +37,8 @@ import { NoticiaSelecionadaPage } from '../pages/noticiaSelecionada/noticiaSelec
     GrupoPage,
     CampanhaSelecionadaPage,
     HemocentroSelecionadoPage,
-    NoticiaSelecionadaPage
+    NoticiaSelecionadaPage,
+    RankPage
     
       
   ],
@@ -59,7 +61,8 @@ import { NoticiaSelecionadaPage } from '../pages/noticiaSelecionada/noticiaSelec
     GrupoPage,
     CampanhaSelecionadaPage,
     HemocentroSelecionadoPage,
-    NoticiaSelecionadaPage
+    NoticiaSelecionadaPage,
+    RankPage
  
   ],
   providers: [

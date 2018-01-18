@@ -6,6 +6,7 @@ import {AgendamentoPage} from '../agendamento/agendamento';
 import { CampanhaPage } from '../campanha/campanha';
 import { HemocentroPage } from '../hemocentro/hemocentro';
 import { InformacaoPage } from '../informacao/informacao';
+import { RankPage } from '../rank/rank';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -44,6 +45,9 @@ export class HomePage {
   }
   chamarAgendamentoPush(){
     this.navCtrl.push(AgendamentoPage);
+  }
+  chamarRankPush(){
+    this.navCtrl.push(RankPage);
   }
   
 }
