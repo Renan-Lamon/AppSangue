@@ -19,23 +19,23 @@ page-rank {
         font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     }
 
-    #customers {
+    #posicao {
         font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
         border-collapse: collapse;
         width: 100%;
     }
     
-    #customers td, #customers th {
+    #posicao td, #posicao th {
         border: 1px solid #ddd;
         font-size: 12pt;
         padding: 8px;
     }
     
-    #customers tr:nth-child(even){background-color: #f2f2f2;}
+    #posicao tr:nth-child(even){background-color: #f2f2f2;}
     
-    #customers tr:hover {background-color: #ddd;}
+    #posicao tr:hover {background-color: #ddd;}
     
-    #customers th {
+    #posicao th {
         padding-top: 12px;
         padding-bottom: 12px;
         text-align: left;
@@ -53,7 +53,7 @@ page-rank {
         .desktop{
             display: inline;
         }
-        #customers td, #customers th {
+        #posicao td, #posicao th {
             border: 1px solid #ddd;
             font-size: 14pt;
             padding: 8px;

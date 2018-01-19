@@ -12,6 +12,15 @@ page-hemocentro {
     .desktop{
         display: none;
     }
+
+    .item{
+        color:#920000; 
+        background-color:rgb(252, 235, 235);
+    }
+    .item:hover{
+        background-color: #ddd;
+    }
+
     @media (min-width: 1000px) {
         .desktopMenu{
             display: none;
@@ -21,6 +30,11 @@ page-hemocentro {
         }
         .desktop{
             display: inline;
+        }
+        .item{
+            color:#920000; 
+            background-color:rgb(252, 235, 235);
+            font-size:14pt;
         }
     }
     .dataDoacao{
