@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpModule} from "@angular/http";
+import { HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
@@ -19,6 +21,7 @@ import { CampanhaSelecionadaPage } from '../pages/campanhaSelecionada/campanhaSe
 import { HemocentroSelecionadoPage } from '../pages/hemocentroSelecionado/hemocentroSelecionado';
 import { NoticiaSelecionadaPage } from '../pages/noticiaSelecionada/noticiaSelecionada';
 import { RankPage } from '../pages/rank/rank';
+import { RequisicoesHttpProvider } from '../providers/requisicoes-http/requisicoes-http';
 
 
 
@@ -45,6 +48,9 @@ import { RankPage } from '../pages/rank/rank';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule,
+    HttpClientModule
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -68,7 +74,8 @@ import { RankPage } from '../pages/rank/rank';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    RequisicoesHttpProvider
   ]
 })
 export class AppModule {}

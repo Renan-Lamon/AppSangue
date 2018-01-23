@@ -13,9 +13,8 @@ import { HomePage } from '../home/home';
   templateUrl: 'duvida.html'
 })
 export class DuvidaPage {
-
   constructor(public navCtrl: NavController) {
-
+    
   }
 
   chamarHome(){

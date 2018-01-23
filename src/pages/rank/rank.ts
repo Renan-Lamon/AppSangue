@@ -8,15 +8,20 @@ import {AgendamentoPage} from '../agendamento/agendamento';
 import { InformacaoPage } from '../informacao/informacao';
 import { HemocentroPage } from '../hemocentro/hemocentro';
 
+
 @Component({
   selector: 'page-rank',
   templateUrl: 'rank.html'
+  
 })
 export class RankPage {
-  
-  constructor(public navCtrl: NavController) {
-    
+  cu:any;
+  constructor(
+    public navCtrl: NavController
+    ) {
+      
   }
+
 
   chamarHemocentro(){
     this.navCtrl.setRoot(HemocentroPage);
