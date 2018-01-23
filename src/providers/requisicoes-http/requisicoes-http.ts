@@ -9,12 +9,16 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class RequisicoesHttpProvider {
-  
+  urlCampanha:string="http://www.json-generator.com/api/json/get/bUPkvwTMPm?indent=2";
+
   constructor(public http: Http) {
     console.log('Hello RequisicoesHttpProvider Provider');
   }
   
   getTeste3(){
     return this.http.get('http://www.json-generator.com/api/json/get/ckfMJvGVGq?indent=2');
+  }
+  getCampanha(){
+    return this.http.get(this.urlCampanha)
   }
 }

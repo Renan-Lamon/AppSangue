@@ -36,7 +36,7 @@
 
   
     <button style="width:100%; background-color:rgb(252, 235, 235); text-align:left" *ngFor="let c of campanhas">
-      <ion-card (click)="chamarCampanhaSelecionada()" style="background-color:rgb(255, 255, 255); border-top:2px solid rgb(255, 0, 0);border-bottom:2px solid rgb(255, 0, 0)">
+      <ion-card (click)="chamarCampanhaSelecionada(c)" style="background-color:rgb(255, 255, 255); border-top:2px solid rgb(255, 0, 0);border-bottom:2px solid rgb(255, 0, 0)">
         <ion-card-header>
           {{c.titulo}}
         </ion-card-header>
@@ -60,7 +60,7 @@
         </ion-card-content>
       </ion-card>
     </button>
-  
+    
 
   <div full class="dataDoacao">
     <b>Data prevista para a proxima doação: 22/22/2222</b>

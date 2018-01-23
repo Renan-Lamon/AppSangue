@@ -38,30 +38,29 @@
     Convidar Amigos
   </button>
   <ion-list>
-    <ion-card  style="background-color:rgb(255, 255, 255); border-top:2px solid rgb(255, 0, 0);border-bottom:2px solid rgb(255, 0, 0);"
-      *ngFor="let c of campanhas">
+    <ion-card  style="background-color:rgb(255, 255, 255); border-top:2px solid rgb(255, 0, 0);border-bottom:2px solid rgb(255, 0, 0);">
       <ion-card-header class="campanhaTitulo">
-        {{c.titulo}}
+        {{campanhas.titulo}}
       </ion-card-header>
 
       <ion-card-content>
         <!-- Add card content here! -->
         <p class="campanhaTexto">
-          <b style="color:red">Sangue:{{c.sangue}}</b>
+          <b style="color:red">Sangue:{{campanhas.sangue}}</b>
           <br/>
-          <b>Local:</b> {{c.hemocentro}}
+          <b>Local:</b> {{campanhas.hemocentro}}
           <br/>
-          <b>Criador:</b> {{c.criador}}
+          <b>Criador:</b> {{campanhas.criador}}
           <br/>
-          <b>Alvo:</b> {{c.alvo}}
+          <b>Alvo:</b> {{campanhas.alvo}}
           <br/>
-          <b>Data Limite:</b> {{c.data}}
+          <b>Data Limite:</b> {{campanhas.data}}
           <br/>
-          <b>Participando da campanha:</b> {{c.quantidade}} pessoas
+          <b>Participando da campanha:</b> {{campanhas.quantidade}} pessoas
           <br/>
           <br/>
           <b style="text-align: center;">Descrição:</b>
-          <br/> {{c.descricao}}
+          <br/> {{campanhas.descricao}}
         </p>
 
       </ion-card-content>
