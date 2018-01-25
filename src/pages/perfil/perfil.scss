@@ -1,0 +1,101 @@
+page-perfil {
+    .botoesMenu{
+        color:white;
+    }
+    
+    .botoesMenu:hover{
+        border:2px solid white;
+    }
+    .botoesMenuSelecionado{
+        color:white;
+        border:2px solid white;
+    }
+    .desktop{
+        display: none;
+    }
+    .botoes{
+        text-align:center;
+        font-size: 13px;
+    }
+ 
+    .itens{
+        background-color:rgb(252, 235, 235);
+    }
+    .item:hover{
+        background-color: #ddd;
+    }
+    .titulo{
+        text-align:center;
+        font-weight:bold; 
+        font-size:13pt; 
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    }
+
+    #posicao {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    #posicao td, #posicao th {
+        border: 1px solid #ddd;
+        font-size: 12pt;
+        padding: 8px;
+    }
+    
+    #posicao tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #posicao tr:hover {background-color: #ddd;}
+    
+    #posicao th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: rgb(252, 128, 128);
+        color: white;
+    }
+
+    @media (min-width: 1000px) {
+        .desktopMenu{
+            display: none;
+        }
+        .tamNav{
+            height:80px;
+        }
+        .desktop{
+            display: inline;
+        }
+        .itens{
+            background-color:rgb(252, 235, 235);
+            font-size: 14pt;
+        }
+        .titulo{
+            text-align:center;
+            font-weight:bold; 
+            font-size:18pt; 
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        }
+        #posicao td, #posicao th {
+            border: 1px solid #ddd;
+            font-size: 14pt;
+            padding: 8px;
+        }
+        .botoes{
+            font-size: 12pt;
+            text-align:center;
+        }
+    }
+    .dataDoacao{
+        position: fixed;
+        width: 100%;
+        height: 20px;
+        font-size: 10pt;
+        font-weight: bold;
+        text-align: center;
+        background-color: rgb(119, 117, 117);
+        color:rgb(255, 255, 255);
+        bottom: 0px;
+        left: 0px;
+        z-index: 10;
+    }
+}

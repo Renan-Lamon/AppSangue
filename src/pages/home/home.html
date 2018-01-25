@@ -30,11 +30,16 @@
 <ion-content padding style="background-color:rgb(252, 235, 235)">
   <div class="div1">
     <!--<ion-img style="" src="../../assets/imgs/colunaPerfil.jpg"></ion-img>-->
-    <ion-img class="imagemPerfil" src={{imagemPerfil}}></ion-img>
+    <button>
+      <ion-img (click)="chamarPerfilPush()" class="imagemPerfil" src={{imagemPerfil}}></ion-img>
+    </button>
+
     <div class="nomeLevelPerfil">
-      <ion-label class="nomePerfil">
-        <b>{{nomeUsuario}}</b>
-      </ion-label>
+      
+        <ion-label (click)="chamarPerfilPush()" class="nomePerfil">
+          <b>{{nomeUsuario}}</b>
+        </ion-label>
+      
 
       <ion-label class="levelUsuario">
         <b>{{levelUsuario}}</b>
@@ -86,7 +91,7 @@
     <div class="desktop">
       <p style="text-align: center;font-size:12pt;font-weight: bold;">Estoque Sanguíneo</p>
       <br/>
-      
+
       <img class="estoque" src="../../assets/imgs/coracaoCritico1.png" />
       <div class="tipoAPositivo">A+</div>
       &nbsp;&nbsp;
@@ -98,7 +103,7 @@
       &nbsp;&nbsp;
       <img class="estoque" src="../../assets/imgs/coracaoCheio1.png" />
       <div class="tipoBNegativo">B-</div>
-      
+
       <img class="estoque" src="../../assets/imgs/coracaoCheio1.png" />
       <div class="tipoABPositivo">AB+</div>
       &nbsp;&nbsp;

@@ -7,6 +7,7 @@ import { CampanhaPage } from '../campanha/campanha';
 import { HemocentroPage } from '../hemocentro/hemocentro';
 import { InformacaoPage } from '../informacao/informacao';
 import { RankPage } from '../rank/rank';
+import { PerfilPage } from '../perfil/perfil';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -49,5 +50,7 @@ export class HomePage {
   chamarRankPush(){
     this.navCtrl.push(RankPage);
   }
-  
+  chamarPerfilPush(){
+    this.navCtrl.push(PerfilPage);
+  }
 }

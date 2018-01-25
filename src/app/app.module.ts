@@ -22,6 +22,7 @@ import { HemocentroSelecionadoPage } from '../pages/hemocentroSelecionado/hemoce
 import { NoticiaSelecionadaPage } from '../pages/noticiaSelecionada/noticiaSelecionada';
 import { RankPage } from '../pages/rank/rank';
 import { RequisicoesHttpProvider } from '../providers/requisicoes-http/requisicoes-http';
+import { PerfilPage } from '../pages/perfil/perfil';
 
 
 
@@ -41,7 +42,8 @@ import { RequisicoesHttpProvider } from '../providers/requisicoes-http/requisico
     CampanhaSelecionadaPage,
     HemocentroSelecionadoPage,
     NoticiaSelecionadaPage,
-    RankPage
+    RankPage,
+    PerfilPage
     
       
   ],
@@ -68,7 +70,8 @@ import { RequisicoesHttpProvider } from '../providers/requisicoes-http/requisico
     CampanhaSelecionadaPage,
     HemocentroSelecionadoPage,
     NoticiaSelecionadaPage,
-    RankPage
+    RankPage,
+    PerfilPage
  
   ],
   providers: [
