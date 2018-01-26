@@ -8,6 +8,7 @@ import { HemocentroPage } from '../hemocentro/hemocentro';
 import { InformacaoPage } from '../informacao/informacao';
 import { RankPage } from '../rank/rank';
 import { PerfilPage } from '../perfil/perfil';
+import { LoginPage } from '../login/login';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -52,5 +53,9 @@ export class HomePage {
   }
   chamarPerfilPush(){
     this.navCtrl.push(PerfilPage);
+  }
+
+  chamarLoginPush(){
+    this.navCtrl.push(LoginPage);
   }
 }

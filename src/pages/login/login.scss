@@ -1,0 +1,67 @@
+page-login {
+    
+    .desktop{
+        display: none;
+    }
+    
+    .botaoEntrar{
+        width: 99%; 
+        left: 10px;
+        top:10px;
+        border-radius: 10px;
+        background-color:rgb(252, 97, 97);
+    }
+    .botaoEntrar:hover{
+        background-color:rgb(255, 65, 65);
+    }
+    .botaoFacebook{
+        width: 99%; 
+        left: 10px;
+        top:10px;
+        border-radius: 10px;
+    }
+    .botaoFacebook:hover{
+        background-color:rgb(62, 62, 255);
+    }
+    
+    
+    
+
+    @media (min-width: 1000px) {
+        .desktopMenu{
+            display: none;
+        }
+        .tamNav{
+            height:80px;
+        }
+        .desktop{
+            display: inline;
+        }
+        .seila{
+            width: 400px;
+            height:400px;
+            left: 50%;
+            top:50%;
+            margin-top: 200px;
+            margin-left:400px;
+        }
+        .input{
+            font-size:16pt;
+        }
+        .botaoEntrar{
+            left: 10px;
+            width: 400px; 
+            border-radius: 10px;
+            background-color:rgb(252, 97, 97);
+        }
+        
+        .botaoFacebook{
+            left: 10px;
+            width: 400px; 
+            border-radius: 10px;
+        }
+        
+    }
+    
+    
+}

@@ -18,7 +18,7 @@
 
 
       <div style="position:absolute;top:17px;right:5px;">
-        <button ion-button icon-only clear>
+        <button (click)="chamarLoginPush()" ion-button icon-only clear>
           <ion-icon style=" color:white; font-size:24pt" name="ios-contact"></ion-icon>
         </button>
       </div>
@@ -41,7 +41,7 @@
         </ion-label>
       
 
-      <ion-label class="levelUsuario">
+      <ion-label (click)="chamarLoginPush()" class="levelUsuario">
         <b>{{levelUsuario}}</b>
       </ion-label>
     </div>

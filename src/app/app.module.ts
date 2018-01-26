@@ -23,6 +23,7 @@ import { NoticiaSelecionadaPage } from '../pages/noticiaSelecionada/noticiaSelec
 import { RankPage } from '../pages/rank/rank';
 import { RequisicoesHttpProvider } from '../providers/requisicoes-http/requisicoes-http';
 import { PerfilPage } from '../pages/perfil/perfil';
+import { LoginPage } from '../pages/login/login';
 
 
 
@@ -43,7 +44,8 @@ import { PerfilPage } from '../pages/perfil/perfil';
     HemocentroSelecionadoPage,
     NoticiaSelecionadaPage,
     RankPage,
-    PerfilPage
+    PerfilPage,
+    LoginPage
     
       
   ],
@@ -71,7 +73,8 @@ import { PerfilPage } from '../pages/perfil/perfil';
     HemocentroSelecionadoPage,
     NoticiaSelecionadaPage,
     RankPage,
-    PerfilPage
+    PerfilPage,
+    LoginPage
  
   ],
   providers: [

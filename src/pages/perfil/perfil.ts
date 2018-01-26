@@ -17,7 +17,7 @@ export class PerfilPage {
   constructor(public navCtrl: NavController) {
     
   }
-
+  
   chamarHemocentro(){
     this.navCtrl.setRoot(HemocentroPage);
   }

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar class="tamNav" color="danger">
+    <div class="desktop">
+      <img style="width:60px;position:absolute; top:13px" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"
+      />
+    </div>
+    <ion-title class="desktopMenu" style="text-align:center">NomeAplicativo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color:rgb(252, 235, 235)">
+
+  <form (ngSubmit)="logar()" class="seila">
+    <ion-list>
+    <ion-item style="background-color:rgb(252, 235, 235)">
+      <ion-input placeholder="juca@email.com" type="email" [(ngModel)]="conta.email" name="email"></ion-input>
+    </ion-item>
+    <ion-item style="background-color:rgb(252, 235, 235)">
+      <ion-input placeholder="Senha" type="password" [(ngModel)]="conta.senha" name="senha"></ion-input>
+    </ion-item>
+    <button class="botaoEntrar" ion-button type="submit" block>Entrar</button>
+    <button class="botaoFacebook" ion-button type="submit" icon-start block>
+        <ion-icon name="logo-facebook"></ion-icon>
+      Entrar pelo Facebook
+    </button>
+  </ion-list>
+    
+    
+  </form>
+    
+
+
+</ion-content>
