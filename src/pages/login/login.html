@@ -11,23 +11,27 @@
 <ion-content padding style="background-color:rgb(252, 235, 235)">
 
   <form (ngSubmit)="logar()" class="seila">
-    <ion-list>
-    <ion-item style="background-color:rgb(252, 235, 235)">
-      <ion-input placeholder="juca@email.com" type="email" [(ngModel)]="conta.email" name="email"></ion-input>
-    </ion-item>
-    <ion-item style="background-color:rgb(252, 235, 235)">
-      <ion-input placeholder="Senha" type="password" [(ngModel)]="conta.senha" name="senha"></ion-input>
-    </ion-item>
-    <button class="botaoEntrar" ion-button type="submit" block>Entrar</button>
-    <button class="botaoFacebook" ion-button type="submit" icon-start block>
-        <ion-icon name="logo-facebook"></ion-icon>
-      Entrar pelo Facebook
-    </button>
-  </ion-list>
-    
-    
-  </form>
-    
 
+    <ion-list>
+      <img style="background-color:rgb(252, 235, 235);width:500px; margin-left:8px" src="http://camaravacaria.rs.gov.br/camara/imagens/20170405_162212_doe-sangue.png"
+      />
+      <input placeholder="exemplo@hotmail.com" type="email" [(ngModel)]="conta.email" name="email" />
+      <input placeholder="Senha" type="password" [(ngModel)]="conta.senha" name="senha" />
+      
+      <button class="botaoEntrar" ion-button type="submit" block>Entrar</button>
+      <button class="botaoFacebook" ion-button type="button" icon-start block>
+        <ion-icon name="logo-facebook"></ion-icon>
+        Entrar pelo Facebook
+      </button>
+
+      <ion-buttons style="padding-top:10px">
+        <button ion-button type="button" clear class="botaoCriar">Registrar-se</button>
+        <button ion-button type="button" clear class="botaoEsqueci">Esqueci minha senha</button>
+      </ion-buttons>
+
+    </ion-list>
+
+
+  </form>
 
 </ion-content>

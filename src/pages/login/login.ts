@@ -9,12 +9,13 @@ import { AlertController } from 'ionic-angular/components/alert/alert-controller
   templateUrl: 'login.html'
 })
 export class LoginPage {
-  conta = {};
+  conta = {email:'',senha:''};
   contaVerificacao = { emailV: 'email@hotmail.com', senhaV: '123' };
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
 
   }
+  
   logar() {
     if (this.conta.email == this.contaVerificacao.emailV 
         && this.conta.senha == this.contaVerificacao.senhaV) {
