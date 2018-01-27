@@ -24,6 +24,7 @@ import { RankPage } from '../pages/rank/rank';
 import { RequisicoesHttpProvider } from '../providers/requisicoes-http/requisicoes-http';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { LoginPage } from '../pages/login/login';
+import { RegistroPage } from '../pages/registro/registro';
 
 
 
@@ -45,7 +46,8 @@ import { LoginPage } from '../pages/login/login';
     NoticiaSelecionadaPage,
     RankPage,
     PerfilPage,
-    LoginPage
+    LoginPage,
+    RegistroPage
     
       
   ],
@@ -74,7 +76,8 @@ import { LoginPage } from '../pages/login/login';
     NoticiaSelecionadaPage,
     RankPage,
     PerfilPage,
-    LoginPage
+    LoginPage,
+    RegistroPage
  
   ],
   providers: [

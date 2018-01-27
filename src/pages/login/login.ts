@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
+import { RegistroPage } from '../registro/registro';
 
 
 @Component({
@@ -27,6 +28,9 @@ export class LoginPage {
   }
   chamarHome() {
     this.navCtrl.setRoot(HomePage);
+  }
+  chamarRegistroPush(){
+    this.navCtrl.push(RegistroPage);
   }
 
   showAlert() {

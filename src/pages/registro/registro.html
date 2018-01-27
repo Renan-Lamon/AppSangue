@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar class="tamNav" color="danger">
+    <div class="desktop">
+      <img style="width:60px;position:absolute; top:13px" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"
+      />
+    </div>
+    <ion-title class="desktopMenu" style="text-align:center">Cadastro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color:rgb(252, 235, 235)">
+  <form (ngSubmit)="logar()" class="seila">
+
+    <ion-list>
+      <div>
+        <label>Nome:</label>
+        <input type="text" [(ngModel)]="conta.nome" name="email" />
+      </div>
+      
+      <div style="padding-top:5px">
+        <label>Sobrenome:</label>
+        <input type="text" [(ngModel)]="conta.sobrenome" name="sobrenome" />
+      </div>
+
+      <div style="padding-top:5px">
+        <label>Email:</label>
+        <input placeholder="exemplo@hotmail.com" type="email" [(ngModel)]="conta.email" name="email" />
+      </div>
+
+      <div style="padding-top:5px">
+        <label>Tipo Sanguineo:</label>
+        <select placeholder="Selecione..." type="select" [(ngModel)]="conta.sangue" name="sangue">
+          <option value="a+">A+</option>
+          <option value="a-">A-</option>
+          <option value="b+">B+</option>
+          <option value="b-">B-</option>
+          <option value="ab+">AB+</option>
+          <option value="ab-">AB-</option>
+          <option value="o+">O+</option>
+          <option value="o-">O-</option>
+        </select>
+      </div>
+
+    </ion-list>
+
+  </form>
+
+</ion-content>
