@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
+import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 
 
 @Component({
@@ -8,19 +8,33 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'registro.html'
 })
 export class RegistroPage {
-  conta = {email:'',senha:''};
-  contaVerificacao = { emailV: 'email@hotmail.com', senhaV: '123' };
-  constructor(public navCtrl: NavController) {
+  conta = {};
+
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController) {
 
   }
-  
-  logar() {
-    if (this.conta.email == this.contaVerificacao.emailV 
-        && this.conta.senha == this.contaVerificacao.senhaV) {
-      
-    } else {
-      
-      console.log(this.conta);
-    }
+
+
+  cadastrar() {
+    this.mensagemConfirmacao();
+
+  }
+
+  mensagemConfirmacao() {
+    let alert = this.alertCtrl.create({
+      title: 'Conta criada!',
+      subTitle: 'Sua conta está pronta para uso.',
+      buttons: [
+        {
+          text: 'OK',
+          handler: () => {
+            this.navCtrl.pop();
+          }
+        }
+
+      ]
+    });
+    alert.present();
+    return alert;
   }
 }

@@ -26,6 +26,7 @@ import { PerfilPage } from '../pages/perfil/perfil';
 import { LoginPage } from '../pages/login/login';
 import { RegistroPage } from '../pages/registro/registro';
 
+import{Facebook} from '@ionic-native/facebook';
 
 
 @NgModule({
@@ -84,7 +85,8 @@ import { RegistroPage } from '../pages/registro/registro';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RequisicoesHttpProvider
+    RequisicoesHttpProvider,
+    Facebook
   ]
 })
 export class AppModule {}

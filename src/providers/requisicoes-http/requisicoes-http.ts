@@ -1,6 +1,7 @@
 import{Http, Response} from "@angular/http";
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
+import { Facebook, FacebookLoginResponse } from "@ionic-native/facebook";
 /*
   Generated class for the RequisicoesHttpProvider provider.
 
@@ -11,7 +12,7 @@ import 'rxjs/add/operator/map';
 export class RequisicoesHttpProvider {
   urlCampanha:string="http://www.json-generator.com/api/json/get/bUPkvwTMPm?indent=2";
 
-  constructor(public http: Http) {
+  constructor(public http: Http, public fb: Facebook) {
     console.log('Hello RequisicoesHttpProvider Provider');
   }
   
@@ -21,4 +22,11 @@ export class RequisicoesHttpProvider {
   getCampanha(){
     return this.http.get(this.urlCampanha)
   }
+
+  logarFacebook(){
+    return this.fb.login(['public_profile', 'user_friends', 'email'])
+    .then((res: FacebookLoginResponse) => console.log('Logged into Facebook!', res))
+    .catch(e => console.log('Error logging into Facebook', e));
+  }
+  
 }
