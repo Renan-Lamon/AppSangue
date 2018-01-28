@@ -23,11 +23,6 @@
       </div>
 
       <div style="padding-top:5px">
-        <label>Email:</label>
-        <input placeholder="exemplo@hotmail.com" type="email" [(ngModel)]="conta.email" name="email" />
-      </div>
-
-      <div style="padding-top:5px">
         <label>Tipo Sanguineo:</label>
         <select placeholder="Selecione..." type="select" [(ngModel)]="conta.sangue" name="sangue">
           <option value="a+">A+</option>
@@ -41,8 +36,39 @@
         </select>
       </div>
 
+      <div style="padding-top:5px">
+        <label>Hemocentro que deseja acompanhar:</label>
+        <select placeholder="Selecione..." type="select" [(ngModel)]="conta.hemocentro" name="hemocentro">
+          <option value="santacasa">Santa Casa</option>
+          <option value="hospitalevangelico">Hospital Evangélico</option>
+        </select>
+      </div>
+
+      <div style="padding-top:5px">
+        <label>Email:</label>
+        <input placeholder="exemplo@hotmail.com" type="email" [(ngModel)]="conta.email" name="email" />
+      </div>
+      
+      <div style="padding-top:5px">
+        <label>Senha:</label>
+        <input placeholder="Informe a senha" type="password" [(ngModel)]="conta.senha" name="senha" />
+      </div>
+
+      <div style="padding-top:5px">
+        <label>Confirmar Senha:</label>
+        <input placeholder="Informe a senha novamente" type="password" [(ngModel)]="conta.senhaC" name="senhaC" />
+      </div>
+
+      <div style="padding-top:5px">
+        <button class="botaoCadastro" ion-button type="submit" block>Concluir Cadastro</button>
+      </div>
+      
     </ion-list>
-
+    <br/>
+  <br/>
+  <br/>
+  <br/>
+  
   </form>
-
+  
 </ion-content>

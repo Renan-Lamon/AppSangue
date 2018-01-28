@@ -25,14 +25,15 @@ page-registro {
         text-decoration: underline;
     }
 
-    .botaoEntrar{
+    .botaoCadastro{
         width: 99%; 
+        height: 40px;
         left: 10px;
         top:10px;
         border-radius: 10px;
         background-color:rgb(252, 97, 97);
     }
-    .botaoEntrar:hover{
+    .botaoCadastro:hover{
         background-color:rgb(255, 65, 65);
     }
     .botaoFacebook{
@@ -90,11 +91,16 @@ page-registro {
             margin-left:-200px;
         }
         .input{
-            font-size:16pt;
+            font-size:14pt;
         }
-        .botaoEntrar{
+        label{
+            font-size: 16pt;
+        }
+        .botaoCadastro{
             left: 10px;
-            width: 400px; 
+            width: 400px;
+            height: 50px; 
+            font-size:14pt;
             border-radius: 10px;
             background-color:rgb(252, 97, 97);
         }
