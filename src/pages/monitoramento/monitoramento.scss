@@ -1,0 +1,147 @@
+page-monitoramento {
+    
+    .desktop{
+        display: none;
+    }
+    .seila{
+        
+        margin-top: 20px;
+        width: 100%;
+        
+    }
+    
+    .botaoEsqueci{
+        text-align: right;
+        color:rgb(255, 57, 57);
+        font-size:10pt;
+    }
+    .botaoCriar{
+        color:rgb(255, 57, 57);
+        text-align: left;
+        font-size: 10pt;
+    }
+    .botaoEsqueci:hover{
+        text-decoration: underline;
+    }
+    .botaoCriar:hover{
+        text-decoration: underline;
+    }
+
+    .botao{
+        text-align: center;
+        width: 120px; 
+        height: 40px;
+        left: 10px;
+        top:10px;
+        border-radius: 10px;
+        background-color:rgb(252, 97, 97);
+    }
+    .botao:hover{
+        background-color:rgb(255, 65, 65);
+    }
+    
+    label{
+        
+        padding:5px; 
+        margin:5px; 
+        font-size:13pt;
+    }
+    input, select{
+        border: 2px solid #ccc;
+        padding: 10px;
+        width: 80px;
+        font-size:12pt;
+        outline: none;
+        margin-left: 10px;
+        margin-top: 5px;
+        border-radius: 3px;
+      }
+    textarea{
+        border: 2px solid #ccc;
+        padding: 10px;
+        width: 100%;
+        font-size:12pt;
+        outline: none;
+        display: block;
+        margin-left: 10px;
+        margin-top: 5px;
+        border-radius: 3px;
+    }
+      textarea:focus{
+        border: 2px solid rgb(255, 156, 156);
+      }
+      input:focus{
+        border: 2px solid rgb(255, 156, 156);
+      }
+      select:focus{
+        border: 2px solid rgb(255, 156, 156);
+      }
+
+      .titulo{
+          font-size:15pt;
+      }
+      
+      
+
+    @media (min-width: 1000px) {
+        .desktopMenu{
+            display: none;
+        }
+        .tamNav{
+            height:80px;
+        }
+        .desktop{
+            display: inline;
+        }
+        .seila{
+            position: absolute;
+            width: 600px;
+            height:400px;
+            left: 50%;
+            margin-top: 50px;
+            margin-left:-200px;
+        }
+        .input{
+            font-size:14pt;
+        }
+        label{
+            font-size: 16pt;
+        }
+        .botao{
+            text-align: center;
+            width: 120px; 
+            height: 40px;
+            left: 10px;
+            top:10px;
+            border-radius: 10px;
+            background-color:rgb(252, 97, 97);
+        }
+        .botao:hover{
+            background-color:rgb(255, 65, 65);
+        }
+        
+
+        input, select{
+            border: 2px solid #ccc;
+            padding: 10px;
+            width: 90px;
+            font-size:15pt;
+            outline: none;
+           
+            margin: 10px;
+            border-radius: 3px;
+          }
+          
+          input:focus{
+            border: 2px solid rgb(255, 156, 156);
+          }
+          
+          
+        
+        .titulo{
+            font-size:18pt;
+        }
+    }
+    
+    
+}

@@ -27,6 +27,7 @@ import { LoginPage } from '../pages/login/login';
 import { RegistroPage } from '../pages/registro/registro';
 
 import{Facebook} from '@ionic-native/facebook';
+import { MonitoramentoPage } from '../pages/monitoramento/monitoramento';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import{Facebook} from '@ionic-native/facebook';
     RankPage,
     PerfilPage,
     LoginPage,
-    RegistroPage
+    RegistroPage,
+    MonitoramentoPage
     
       
   ],
@@ -78,7 +80,8 @@ import{Facebook} from '@ionic-native/facebook';
     RankPage,
     PerfilPage,
     LoginPage,
-    RegistroPage
+    RegistroPage,
+    MonitoramentoPage
  
   ],
   providers: [

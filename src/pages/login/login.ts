@@ -5,6 +5,7 @@ import { AlertController } from 'ionic-angular/components/alert/alert-controller
 import { RegistroPage } from '../registro/registro';
 import { LoadingController } from 'ionic-angular';
 import { RequisicoesHttpProvider } from '../../providers/requisicoes-http/requisicoes-http';
+import { MonitoramentoPage } from '../monitoramento/monitoramento';
 
 @Component({
   selector: 'page-login',
@@ -66,5 +67,9 @@ export class LoginPage {
       buttons: ['OK']
     });
     alert.present();
+  }
+
+  monitoramento(){
+    this.navCtrl.push(MonitoramentoPage);
   }
 }

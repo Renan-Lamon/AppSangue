@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-navbar class="tamNav" color="danger">
+    <div class="desktop">
+      <img style="width:60px;position:absolute; top:13px" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"
+      />
+    </div>
+    <ion-title class="desktopMenu" style="text-align:center">Cadastro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color:rgb(252, 235, 235)">
+  <form (ngSubmit)="cadastrar()" class="seila">
+
+    <ion-list>
+      <label class="titulo">Sintomas após a tranfusão: </label>
+      <br/>
+      <br/>
+      <br/>
+      <div style="padding-top:10px">
+        <label>Ficou com febre?</label>
+        <select placeholder="Selecione..." type="select" [(ngModel)]="monitoramento.febre" name="febre">
+          <option value="true">Sim</option>
+          <option value="false">Não</option>
+        </select>
+      </div>
+
+      <div style="padding-top:10px">
+        <label>Dores no corpo?</label>
+        <select placeholder="Selecione..." type="select" [(ngModel)]="monitoramento.dor" name="dor">
+          <option value="true">Sim</option>
+          <option value="false">Não</option>
+        </select>
+      </div>
+
+      <div style="padding-top:10px">
+        <label>Irritações na pele?</label>
+        <select placeholder="Selecione..." type="select" [(ngModel)]="monitoramento.irritacao" name="irritacao">
+          <option value="true">Sim</option>
+          <option value="false">Não</option>
+        </select>
+      </div>
+
+      <div style="padding-top:20px">
+        <label>Observações extras:</label>
+        <textarea rows="4" cols="50" [(ngModel)]="monitoramento.observacao" name="observacao">
+        </textarea>
+      </div>
+
+
+
+      <div style="padding-top:10px">
+        <ion-buttons>
+          <button class="botao" ion-button type="submit" >Enviar</button>
+          &nbsp; &nbsp;&nbsp;
+          <button class="botao" ion-button type="button" >Cancelar</button>
+        </ion-buttons>
+      </div>
+
+    </ion-list>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+  </form>
+
+</ion-content>
