@@ -15,31 +15,38 @@ import { MonitoramentoPage } from '../monitoramento/monitoramento';
   ]
 })
 export class LoginPage {
-  conta = {email:'',senha:''};
-  contaVerificacao = { emailV: 'email@hotmail.com', senhaV: '123' };
+  conta = { email: '', senha: '' };
+  public contaVerificacao: { email: '', senha: '', cod: 4 };
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,
-              private loading: LoadingController, private req: RequisicoesHttpProvider) {
+    private loading: LoadingController, private req: RequisicoesHttpProvider) {
 
   }
-  
-  logarFacebook(){
+
+  logarFacebook() {
     this.req.logarFacebook()
-    .then(()=>{
-      this.navCtrl.setRoot(HomePage);
-    });
+      .then(() => {
+        this.navCtrl.setRoot(HomePage);
+      });
   }
 
   logar() {
-    if (this.conta.email == this.contaVerificacao.emailV 
-        && this.conta.senha == this.contaVerificacao.senhaV) {
+    this.req.getLogin()
+      .map(res => res.json())
+      .subscribe(data => {
+        this.contaVerificacao = data;
+        if (this.conta.email == this.contaVerificacao.email
+          && this.conta.senha == this.contaVerificacao.senha) {
           this.loadingLogar();
-          
-      
-    } else {
-      this.showAlert();
-      console.log(this.conta);
-    }
+        } else {
+          this.showAlert();
+          console.log(this.conta);
+        }
+
+      });
+
+
+
   }
   loadingLogar() {
     let loader = this.loading.create({
@@ -51,12 +58,12 @@ export class LoginPage {
       this.chamarHome();
     }, 1000);
   }
-  
+
 
   chamarHome() {
     this.navCtrl.setRoot(HomePage);
   }
-  chamarRegistroPush(){
+  chamarRegistroPush() {
     this.navCtrl.push(RegistroPage);
   }
 
@@ -69,7 +76,7 @@ export class LoginPage {
     alert.present();
   }
 
-  monitoramento(){
+  monitoramento() {
     this.navCtrl.push(MonitoramentoPage);
   }
 }

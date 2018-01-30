@@ -11,6 +11,7 @@ import { Facebook, FacebookLoginResponse } from "@ionic-native/facebook";
 @Injectable()
 export class RequisicoesHttpProvider {
   urlCampanha:string="http://www.json-generator.com/api/json/get/bUPkvwTMPm?indent=2";
+  urlLogin: string="http://localhost:8081/WSappSangue/webresources/login";
 
   constructor(public http: Http, public fb: Facebook) {
     console.log('Hello RequisicoesHttpProvider Provider');
@@ -21,6 +22,9 @@ export class RequisicoesHttpProvider {
   }
   getCampanha(){
     return this.http.get(this.urlCampanha)
+  }
+  getLogin(){
+    return this.http.get(this.urlLogin);
   }
 
   logarFacebook(){
