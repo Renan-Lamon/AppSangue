@@ -16,7 +16,7 @@ import { MonitoramentoPage } from '../monitoramento/monitoramento';
 })
 export class LoginPage {
   conta = { email: '', senha: '' };
-  public contaVerificacao: { email: '', senha: '', cod: 4 };
+  public codUsuario:string;
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,
     private loading: LoadingController, private req: RequisicoesHttpProvider) {
@@ -31,16 +31,15 @@ export class LoginPage {
   }
 
   logar() {
-    this.req.getLogin()
+    this.req.getLogin(this.conta.email,this.conta.senha)
       .map(res => res.json())
       .subscribe(data => {
-        this.contaVerificacao = data;
-        if (this.conta.email == this.contaVerificacao.email
-          && this.conta.senha == this.contaVerificacao.senha) {
+        this.codUsuario = data;
+        
+        if (this.codUsuario != '666') {
           this.loadingLogar();
         } else {
-          this.showAlert();
-          console.log(this.conta);
+          this.showAlert();  
         }
 
       });
