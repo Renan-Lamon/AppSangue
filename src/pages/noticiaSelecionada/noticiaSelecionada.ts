@@ -13,7 +13,7 @@ import { InformacaoPage } from '../informacao/informacao';
   templateUrl: 'noticiaSelecionada.html'
 })
 export class NoticiaSelecionadaPage {
-  a = new HomePage(this.navCtrl);
+  
   constructor(public navCtrl: NavController) {
     
   }
@@ -36,8 +36,5 @@ export class NoticiaSelecionadaPage {
     this.navCtrl.setRoot(IdentificadorPage);
   }
 
-  testeClasse(){
-    let cu = new HomePage(this.navCtrl);
-    cu.imagemPerfil = 'shdushd';
-  }
+  
 }

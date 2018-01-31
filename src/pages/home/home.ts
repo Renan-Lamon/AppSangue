@@ -9,18 +9,42 @@ import { InformacaoPage } from '../informacao/informacao';
 import { RankPage } from '../rank/rank';
 import { PerfilPage } from '../perfil/perfil';
 import { LoginPage } from '../login/login';
+import { NavParams } from 'ionic-angular/navigation/nav-params';
+import { RequisicoesHttpProvider } from '../../providers/requisicoes-http/requisicoes-http';
+
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  providers: [
+    RequisicoesHttpProvider
+  ]
 })
 export class HomePage {
-  imagemPerfil:String = "../../assets/imgs/imagemPerfil1.jpg";
-  nomeUsuario:String = "Juca Cabuloso da Silva";
-  nomeHemocentro:String = "Santa Casa";
-  levelUsuario:String = "Lv20  (100/350)";
-  
-  constructor(public navCtrl: NavController) {  
+  public imagemPerfil:String = "../../assets/imgs/imagemPerfil1.jpg";
+  public nomeUsuario:String = "Juca Cabuloso da Silva";
+  public nomeHemocentro:String = "Santa Casa";
+  public levelUsuario:String = "Lv20  (100/350)";
+  public codUsuario:number;
+
+  constructor(public navCtrl: NavController,
+              public parametro: NavParams,
+              private req: RequisicoesHttpProvider) {  
+            
+    this.codUsuario = parametro.get('codUsuario');
+    this.DadosDoUsuario();
     
+  }
+
+  DadosDoUsuario() {
+    this.req.getDadosUsuario(this.codUsuario)
+      .map(res => res.json())
+      .subscribe(data => {
+        //Setando dados do usuario na tela
+        this.nomeUsuario = data.nome;
+        this.nomeHemocentro=data.hemocentroFavorito;
+
+      });
+
   }
 
   chamarCampanha(){

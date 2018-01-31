@@ -16,7 +16,7 @@ import { MonitoramentoPage } from '../monitoramento/monitoramento';
 })
 export class LoginPage {
   conta = { email: '', senha: '' };
-  public codUsuario:string;
+  public codUsuario: string;
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,
     private loading: LoadingController, private req: RequisicoesHttpProvider) {
@@ -31,19 +31,22 @@ export class LoginPage {
   }
 
   logar() {
-    this.req.getLogin(this.conta.email,this.conta.senha)
-      .map(res => res.json())
-      .subscribe(data => {
-        this.codUsuario = data;
-        
-        if (this.codUsuario != '666') {
-          this.loadingLogar();
-        } else {
-          this.showAlert();  
-        }
+    if (this.conta.email == '' || this.conta.senha == '') {
+      this.showAlertEmailOUSenhaVazio();
+    } else {
+      this.req.getLogin(this.conta.email, this.conta.senha)
+        .map(res => res.json())
+        .subscribe(data => {
+          this.codUsuario = data;
 
-      });
+          if (this.codUsuario != '666') {
+            this.loadingLogar();
+          } else {
+            this.showAlertUsuarioIncorreto();
+          }
 
+        });
+    }
 
 
   }
@@ -60,16 +63,24 @@ export class LoginPage {
 
 
   chamarHome() {
-    this.navCtrl.setRoot(HomePage);
+    this.navCtrl.setRoot(HomePage, { 'codUsuario': this.codUsuario });
   }
   chamarRegistroPush() {
     this.navCtrl.push(RegistroPage);
   }
 
-  showAlert() {
+  showAlertUsuarioIncorreto() {
     let alert = this.alertCtrl.create({
       title: 'Email ou Senha incorretos!',
-      subTitle: 'Certifique-se de ter inserido os dados corretamente. Caso não tenha uma conta, clique em REGISTRAR-SE.',
+      subTitle: 'Certifique-se de ter inserido os dados corretamente. Caso não tenha uma conta, clique em <b>REGISTRAR-SE</b>.',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
+  showAlertEmailOUSenhaVazio() {
+    let alert = this.alertCtrl.create({
+      title: 'Dados não preenchidos!',
+      subTitle: 'Certifique-se de ter inserido todos os dados necessarios.',
       buttons: ['OK']
     });
     alert.present();
