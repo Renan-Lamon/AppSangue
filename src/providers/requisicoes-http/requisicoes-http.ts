@@ -13,6 +13,8 @@ export class RequisicoesHttpProvider {
   urlCampanha:string="http://www.json-generator.com/api/json/get/bUPkvwTMPm?indent=2";
   urlLogin: string="http://localhost:8081/WSappSangue/webresources/login/autentificacao";
   urlDadosUsuario:string="http://localhost:8081/WSappSangue/webresources/login/dadosUsuario";
+  urlDadosEstoque:string="http://localhost:8081/WSappSangue/webresources/estoque/estoqueHemocentro";
+  
   constructor(public http: Http, public fb: Facebook) {
     console.log('Hello RequisicoesHttpProvider Provider');
   }
@@ -20,11 +22,17 @@ export class RequisicoesHttpProvider {
   getTeste3(){
     return this.http.get('http://www.json-generator.com/api/json/get/ckfMJvGVGq?indent=2');
   }
+
   getCampanha(){
     return this.http.get(this.urlCampanha)
   }
+
   getLogin(email:string, senha:string){
     return this.http.get(this.urlLogin+'/'+email+'/'+senha);
+  }
+
+  getDadosEstoque(hemocentroFavorito:string){
+    return this.http.get(this.urlDadosEstoque+'/'+hemocentroFavorito);
   }
 
   getDadosUsuario(cod:number){

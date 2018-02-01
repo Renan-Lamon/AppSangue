@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {IdentificadorPage} from '../identificador/identificador';
-import {NoticiaPage} from '../noticia/noticia';
-import {AgendamentoPage} from '../agendamento/agendamento';
+import { IdentificadorPage } from '../identificador/identificador';
+import { NoticiaPage } from '../noticia/noticia';
+import { AgendamentoPage } from '../agendamento/agendamento';
 import { CampanhaPage } from '../campanha/campanha';
 import { HemocentroPage } from '../hemocentro/hemocentro';
 import { InformacaoPage } from '../informacao/informacao';
@@ -20,19 +20,28 @@ import { RequisicoesHttpProvider } from '../../providers/requisicoes-http/requis
   ]
 })
 export class HomePage {
-  public imagemPerfil:String = "../../assets/imgs/imagemPerfil1.jpg";
-  public nomeUsuario:String = "Juca Cabuloso da Silva";
-  public nomeHemocentro:String = "Santa Casa";
-  public levelUsuario:String = "Lv20  (100/350)";
-  public codUsuario:number;
+  public imagemPerfil: string = "../../assets/imgs/imagemPerfil1.jpg";
+  public nomeUsuario: string = "Juca Cabuloso da Silva";
+  public nomeHemocentro: string = "Hospital Evangélico";
+  public levelUsuario: string = "Lv20  (100/350)";
+  public codUsuario: number;
+  public APositivoSituacao:string;
+  public ANegativoSituacao:string;
+  public BPositivoSituacao:string;
+  public BNegativoSituacao:string;
+  public ABPositivoSituacao:string;
+  public ABNegativoSituacao:string;
+  public OPositivoSituacao:string;
+  public ONegativoSituacao:string;
 
   constructor(public navCtrl: NavController,
-              public parametro: NavParams,
-              private req: RequisicoesHttpProvider) {  
-            
+    public parametro: NavParams,
+    private req: RequisicoesHttpProvider) {
+
     this.codUsuario = parametro.get('codUsuario');
     this.DadosDoUsuario();
-    
+    this.DadosEstoqueSangue();
+
   }
 
   DadosDoUsuario() {
@@ -41,45 +50,84 @@ export class HomePage {
       .subscribe(data => {
         //Setando dados do usuario na tela
         this.nomeUsuario = data.nome;
-        this.nomeHemocentro=data.hemocentroFavorito;
+        this.nomeHemocentro = data.hemocentroFavorito;
 
       });
 
   }
+  DadosEstoqueSangue() {
+    this.req.getDadosEstoque(this.nomeHemocentro)
+      .map(res => res.json())
+      .subscribe(data => {
+        //percorrendo todos os objetos da lista e pegando a situação do 
+        //estoque para cada tipo Sanguineo, ex:A+ = critico
+        //por algum motivo é preciso criar uma variavel intermediaria pra montar o endereco da imagem
+        //sem ela da erro, por isso criei a variavel situacao;
+        let situacao:string;
+        for (var itemEstoque of data) {
+          if(itemEstoque.tipoSangue == 'A+'){
+            situacao=itemEstoque.situacao; 
+            this.APositivoSituacao = "../../assets/imgs/"+situacao+".png"; 
+          }else if(itemEstoque.tipoSangue == 'A-'){
+            situacao=itemEstoque.situacao;
+            this.ANegativoSituacao = "../../assets/imgs/"+situacao+".png"; 
+          }else if(itemEstoque.tipoSangue == 'B+'){
+            situacao=itemEstoque.situacao; 
+            this.BPositivoSituacao = "../../assets/imgs/"+situacao+".png"; 
+          }else if(itemEstoque.tipoSangue == 'B-'){
+            situacao=itemEstoque.situacao; 
+            this.BNegativoSituacao = "../../assets/imgs/"+situacao+".png"; 
+          }else if(itemEstoque.tipoSangue == 'AB+'){
+            situacao=itemEstoque.situacao; 
+            this.ABPositivoSituacao = "../../assets/imgs/"+situacao+".png"; 
+          }else if(itemEstoque.tipoSangue == 'AB-'){
+            situacao=itemEstoque.situacao; 
+            this.ABNegativoSituacao = "../../assets/imgs/"+situacao+".png"; 
+          }else if(itemEstoque.tipoSangue == 'O+'){
+            situacao=itemEstoque.situacao; 
+            this.OPositivoSituacao = "../../assets/imgs/"+situacao+".png"; 
+          }else if(itemEstoque.tipoSangue == 'O-'){
+            situacao=itemEstoque.situacao; 
+            this.ONegativoSituacao = "../../assets/imgs/"+situacao+".png"; 
+          }
+        }
+      });
 
-  chamarCampanha(){
+  }
+
+  chamarCampanha() {
     this.navCtrl.setRoot(CampanhaPage);
   }
-  chamarHemocentro(){
+  chamarHemocentro() {
     this.navCtrl.setRoot(HemocentroPage);
   }
-  chamarNoticia(){
+  chamarNoticia() {
     this.navCtrl.setRoot(NoticiaPage);
   }
-  chamarAgendamento(){
+  chamarAgendamento() {
     this.navCtrl.setRoot(AgendamentoPage);
   }
-  chamarInformacoes(){
+  chamarInformacoes() {
     this.navCtrl.setRoot(InformacaoPage);
   }
-  chamarIdentificador(){
+  chamarIdentificador() {
     this.navCtrl.setRoot(IdentificadorPage);
   }
-  
-  chamarNoticiaPush(){
+
+  chamarNoticiaPush() {
     this.navCtrl.push(NoticiaPage);
   }
-  chamarAgendamentoPush(){
+  chamarAgendamentoPush() {
     this.navCtrl.push(AgendamentoPage);
   }
-  chamarRankPush(){
+  chamarRankPush() {
     this.navCtrl.push(RankPage);
   }
-  chamarPerfilPush(){
+  chamarPerfilPush() {
     this.navCtrl.push(PerfilPage);
   }
 
-  chamarLoginPush(){
+  chamarLoginPush() {
     this.navCtrl.push(LoginPage);
   }
 }
