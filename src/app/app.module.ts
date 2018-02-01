@@ -28,6 +28,7 @@ import { RegistroPage } from '../pages/registro/registro';
 
 import{Facebook} from '@ionic-native/facebook';
 import { MonitoramentoPage } from '../pages/monitoramento/monitoramento';
+import { DadosUsuarioProvider } from '../providers/dados-usuario/dados-usuario';
 
 
 @NgModule({
@@ -89,7 +90,8 @@ import { MonitoramentoPage } from '../pages/monitoramento/monitoramento';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RequisicoesHttpProvider,
-    Facebook
+    Facebook,
+    DadosUsuarioProvider
   ]
 })
 export class AppModule {}

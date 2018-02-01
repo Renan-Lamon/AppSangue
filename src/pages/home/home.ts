@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { IdentificadorPage } from '../identificador/identificador';
 import { NoticiaPage } from '../noticia/noticia';
@@ -11,6 +11,8 @@ import { PerfilPage } from '../perfil/perfil';
 import { LoginPage } from '../login/login';
 import { NavParams } from 'ionic-angular/navigation/nav-params';
 import { RequisicoesHttpProvider } from '../../providers/requisicoes-http/requisicoes-http';
+import { DadosUsuarioProvider } from '../../providers/dados-usuario/dados-usuario';
+
 
 @Component({
   selector: 'page-home',
@@ -19,6 +21,8 @@ import { RequisicoesHttpProvider } from '../../providers/requisicoes-http/requis
     RequisicoesHttpProvider
   ]
 })
+
+@Injectable()
 export class HomePage {
   public imagemPerfil: string = "../../assets/imgs/imagemPerfil1.jpg";
   public nomeUsuario: string = "Juca Cabuloso da Silva";
@@ -36,9 +40,11 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,
     public parametro: NavParams,
-    private req: RequisicoesHttpProvider) {
+    private req: RequisicoesHttpProvider,
+    public providerCod: DadosUsuarioProvider) {
 
-    this.codUsuario = parametro.get('codUsuario');
+    this.codUsuario = this.providerCod.getCod();
+
     this.DadosDoUsuario();
     this.DadosEstoqueSangue();
 
@@ -93,6 +99,10 @@ export class HomePage {
         }
       });
 
+  }
+
+  getCodUsuario(){
+    return this.codUsuario;
   }
 
   chamarCampanha() {

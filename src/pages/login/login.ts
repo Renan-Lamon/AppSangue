@@ -6,6 +6,7 @@ import { RegistroPage } from '../registro/registro';
 import { LoadingController } from 'ionic-angular';
 import { RequisicoesHttpProvider } from '../../providers/requisicoes-http/requisicoes-http';
 import { MonitoramentoPage } from '../monitoramento/monitoramento';
+import { DadosUsuarioProvider } from '../../providers/dados-usuario/dados-usuario';
 
 @Component({
   selector: 'page-login',
@@ -19,7 +20,8 @@ export class LoginPage {
   public codUsuario: string;
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,
-    private loading: LoadingController, private req: RequisicoesHttpProvider) {
+    private loading: LoadingController, private req: RequisicoesHttpProvider,
+    public providerCod:DadosUsuarioProvider) {
 
   }
 
@@ -38,7 +40,8 @@ export class LoginPage {
         .map(res => res.json())
         .subscribe(data => {
           this.codUsuario = data;
-
+          this.providerCod.setCod(data);
+          
           if (this.codUsuario != '666') {
             this.loadingLogar();
           } else {

@@ -7,15 +7,16 @@ import {NoticiaPage} from '../noticia/noticia';
 import {AgendamentoPage} from '../agendamento/agendamento';
 import { InformacaoPage } from '../informacao/informacao';
 import { HomePage } from '../home/home';
+import { DadosUsuarioProvider } from '../../providers/dados-usuario/dados-usuario';
 
 @Component({
   selector: 'page-hemocentro',
-  templateUrl: 'hemocentro.html'
+  templateUrl: 'hemocentro.html',
 })
 export class HemocentroPage {
   searchQuery: string = '';
   items: string[];
-  
+  seila:number;
   constructor(public navCtrl: NavController) {
     this.initializeItems();
   }
@@ -27,6 +28,7 @@ export class HemocentroPage {
     ];
   }
 
+  
   getItems(ev: any) {
     // Reset items back to all of the items
     this.initializeItems();
