@@ -16,7 +16,8 @@ import { DadosUsuarioProvider } from '../../providers/dados-usuario/dados-usuari
 export class HemocentroPage {
   searchQuery: string = '';
   items: string[];
-  seila:number;
+  
+  
   constructor(public navCtrl: NavController) {
     this.initializeItems();
   }
@@ -63,7 +64,7 @@ export class HemocentroPage {
     this.navCtrl.setRoot(IdentificadorPage);
   }
 
-  chamarHemocentroSelecionado(){
-    this.navCtrl.push(HemocentroSelecionadoPage);
+  chamarHemocentroSelecionado(itemSelecionado:any){
+    this.navCtrl.push(HemocentroSelecionadoPage,{'hemocentroSelecionado': itemSelecionado});
   }
 }

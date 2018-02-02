@@ -41,6 +41,12 @@ page-home {
     }
     .botoes{
         text-align:center;
+        border-radius: 10px;
+        background-color:rgb(252, 97, 97);
+        height: 35px;
+    }
+    .botoes:hover{
+        background-color:rgb(255, 34, 34);
     }
 
     .tituloAtualizacao{
@@ -358,6 +364,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d0101', end
         .botoes{
             font-size: 12pt;
             text-align:center;
+            border-radius: 10px;
+            background-color:rgb(252, 97, 97);
         }
         .estoque{
             position: relative;

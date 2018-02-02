@@ -25,8 +25,8 @@ import { DadosUsuarioProvider } from '../../providers/dados-usuario/dados-usuari
 @Injectable()
 export class HomePage {
   public imagemPerfil: string = "../../assets/imgs/imagemPerfil1.jpg";
-  public nomeUsuario: string = "Juca Cabuloso da Silva";
-  public nomeHemocentro: string = "Hospital Evangélico";
+  public nomeUsuario: string;
+  public nomeHemocentro: string;
   public levelUsuario: string = "Lv20  (100/350)";
   public codUsuario: number;
   public APositivoSituacao:string;
@@ -45,18 +45,19 @@ export class HomePage {
 
     this.codUsuario = this.providerCod.getCod();
 
-    this.DadosDoUsuario();
-    this.DadosEstoqueSangue();
-
+    this.DadosDoUsuarioEstoque();
+    
   }
 
-  DadosDoUsuario() {
+  DadosDoUsuarioEstoque() {
     this.req.getDadosUsuario(this.codUsuario)
       .map(res => res.json())
       .subscribe(data => {
         //Setando dados do usuario na tela
         this.nomeUsuario = data.nome;
         this.nomeHemocentro = data.hemocentroFavorito;
+        //carregando dados do estoque
+        this.DadosEstoqueSangue();
 
       });
 
