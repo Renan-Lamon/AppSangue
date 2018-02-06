@@ -22,7 +22,7 @@ export class LoginPage {
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,
     private loading: LoadingController, private req: RequisicoesHttpProvider,
     public providerCod:DadosUsuarioProvider) {
-
+      
   }
 
   logarFacebook() {
@@ -30,6 +30,9 @@ export class LoginPage {
       .then(() => {
         this.navCtrl.setRoot(HomePage);
       });
+  }
+  logarFacebook2(){
+    this.req.logarFacebook2();
   }
 
   logar() {
