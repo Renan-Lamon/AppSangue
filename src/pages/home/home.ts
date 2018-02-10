@@ -24,6 +24,7 @@ import { DadosUsuarioProvider } from '../../providers/dados-usuario/dados-usuari
 
 @Injectable()
 export class HomePage {
+  public dadosFB:any;
   public imagemPerfil: string = "../../assets/imgs/imagemPerfil1.jpg";
   public nomeUsuario: string;
   public nomeHemocentro: string;
@@ -41,10 +42,11 @@ export class HomePage {
   constructor(public navCtrl: NavController,
     public parametro: NavParams,
     private req: RequisicoesHttpProvider,
-    public providerCod: DadosUsuarioProvider) {
-
-    this.codUsuario = this.providerCod.getCod();
-
+    public providerDados: DadosUsuarioProvider) {
+  
+    this.codUsuario = this.providerDados.getCod();
+    this.dadosFB = this.providerDados.getDadosFB();
+    
     this.DadosDoUsuarioEstoque();
     
   }
@@ -74,28 +76,28 @@ export class HomePage {
         for (var itemEstoque of data) {
           if(itemEstoque.tipoSangue == 'A+'){
             situacao=itemEstoque.situacao; 
-            this.APositivoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.APositivoSituacao = "assets/imgs/"+situacao+".png"; 
           }else if(itemEstoque.tipoSangue == 'A-'){
             situacao=itemEstoque.situacao;
-            this.ANegativoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.ANegativoSituacao = "assets/imgs/"+situacao+".png"; 
           }else if(itemEstoque.tipoSangue == 'B+'){
             situacao=itemEstoque.situacao; 
-            this.BPositivoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.BPositivoSituacao = "assets/imgs/"+situacao+".png"; 
           }else if(itemEstoque.tipoSangue == 'B-'){
             situacao=itemEstoque.situacao; 
-            this.BNegativoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.BNegativoSituacao = "assets/imgs/"+situacao+".png"; 
           }else if(itemEstoque.tipoSangue == 'AB+'){
             situacao=itemEstoque.situacao; 
-            this.ABPositivoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.ABPositivoSituacao = "assets/imgs/"+situacao+".png"; 
           }else if(itemEstoque.tipoSangue == 'AB-'){
             situacao=itemEstoque.situacao; 
-            this.ABNegativoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.ABNegativoSituacao = "assets/imgs/"+situacao+".png"; 
           }else if(itemEstoque.tipoSangue == 'O+'){
             situacao=itemEstoque.situacao; 
-            this.OPositivoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.OPositivoSituacao = "assets/imgs/"+situacao+".png"; 
           }else if(itemEstoque.tipoSangue == 'O-'){
             situacao=itemEstoque.situacao; 
-            this.ONegativoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.ONegativoSituacao = "assets/imgs/"+situacao+".png"; 
           }
         }
       });

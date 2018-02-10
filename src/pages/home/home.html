@@ -31,13 +31,14 @@
   <div class="div1">
     <!--<ion-img style="" src="../../assets/imgs/colunaPerfil.jpg"></ion-img>-->
     <button>
-      <ion-img (click)="chamarPerfilPush()" class="imagemPerfil" src={{imagemPerfil}}></ion-img>
+        <img (click)="chamarPerfilPush()" class="imagemPerfil" [src]="dadosFB.picture" />
+      <!--<ion-img (click)="chamarPerfilPush()" class="imagemPerfil" src={{imagemPerfil}}></ion-img> -->
     </button>
 
     <div class="nomeLevelPerfil">
 
       <ion-label (click)="chamarPerfilPush()" class="nomePerfil">
-        <b>{{nomeUsuario}}</b>
+        <b>{{dadosFB.username}}</b>
       </ion-label>
 
 
@@ -46,7 +47,7 @@
       </ion-label>
     </div>
     <button>
-      <ion-img (click)="chamarRankPush()" class="rank" src="../../assets/imgs/rank1.png"></ion-img>
+      <ion-img (click)="chamarRankPush()" class="rank" src="assets/imgs/rank1.png"></ion-img>
     </button>
   </div>
 
@@ -84,7 +85,7 @@
       <br/>
       <br/>
       <div style="border-top-style: groove; left:200px">
-        <img class="legendaEstoque" src="../../assets/imgs/legendaEstoque.png" />
+        <img class="legendaEstoque" src="assets/imgs/legendaEstoque.png" />
       </div>
     </div>
 
@@ -118,7 +119,7 @@
       <br/>
       <br/>
       <div style="border-top-style: groove;">
-        <img class="legendaEstoque" src="../../assets/imgs/legendaEstoque.png" />
+        <img class="legendaEstoque" src="assets/imgs/legendaEstoque.png" />
       </div>
 
 
@@ -137,7 +138,10 @@
     </ion-buttons>
   </div>
 
-
+  
+    
+    
+    
 
   <br/>
   <br/>

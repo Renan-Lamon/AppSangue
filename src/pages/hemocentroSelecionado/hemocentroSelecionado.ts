@@ -48,28 +48,28 @@ export class HemocentroSelecionadoPage {
         for (var itemEstoque of data) {
           if(itemEstoque.tipoSangue == 'A+'){
             situacao=itemEstoque.situacao; 
-            this.APositivoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.APositivoSituacao = "assets/imgs/"+situacao+".png"; 
           }else if(itemEstoque.tipoSangue == 'A-'){
             situacao=itemEstoque.situacao;
-            this.ANegativoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.ANegativoSituacao = "assets/imgs/"+situacao+".png"; 
           }else if(itemEstoque.tipoSangue == 'B+'){
             situacao=itemEstoque.situacao; 
-            this.BPositivoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.BPositivoSituacao = "assets/imgs/"+situacao+".png"; 
           }else if(itemEstoque.tipoSangue == 'B-'){
             situacao=itemEstoque.situacao; 
-            this.BNegativoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.BNegativoSituacao = "assets/imgs/"+situacao+".png"; 
           }else if(itemEstoque.tipoSangue == 'AB+'){
             situacao=itemEstoque.situacao; 
-            this.ABPositivoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.ABPositivoSituacao = "assets/imgs/"+situacao+".png"; 
           }else if(itemEstoque.tipoSangue == 'AB-'){
             situacao=itemEstoque.situacao; 
-            this.ABNegativoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.ABNegativoSituacao = "assets/imgs/"+situacao+".png"; 
           }else if(itemEstoque.tipoSangue == 'O+'){
             situacao=itemEstoque.situacao; 
-            this.OPositivoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.OPositivoSituacao = "assets/imgs/"+situacao+".png"; 
           }else if(itemEstoque.tipoSangue == 'O-'){
             situacao=itemEstoque.situacao; 
-            this.ONegativoSituacao = "../../assets/imgs/"+situacao+".png"; 
+            this.ONegativoSituacao = "assets/imgs/"+situacao+".png"; 
           }
         }
       });

@@ -10,11 +10,19 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class DadosUsuarioProvider {
   public codUsuario:number;
-  
+  private dadosFB:any;
+
   constructor() {
     console.log('Hello RequisicoesHttpProvider Provider');
   }
   
+  public setDadosFB(dados:any){
+    this.dadosFB=dados;
+  }
+  public getDadosFB(){
+    return this.dadosFB;
+  }
+
   public setCod(cod:number){
     this.codUsuario=cod;
   }

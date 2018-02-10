@@ -7,6 +7,7 @@ import { LoadingController } from 'ionic-angular';
 import { RequisicoesHttpProvider } from '../../providers/requisicoes-http/requisicoes-http';
 import { MonitoramentoPage } from '../monitoramento/monitoramento';
 import { DadosUsuarioProvider } from '../../providers/dados-usuario/dados-usuario';
+import { Facebook, FacebookLoginResponse} from '@ionic-native/facebook';
 
 @Component({
   selector: 'page-login',
@@ -18,21 +19,27 @@ import { DadosUsuarioProvider } from '../../providers/dados-usuario/dados-usuari
 export class LoginPage {
   conta = { email: '', senha: '' };
   public codUsuario: string;
+  public dadosFB:any;
+  public teste:number=0;
+  
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,
     private loading: LoadingController, private req: RequisicoesHttpProvider,
-    public providerCod:DadosUsuarioProvider) {
+    public providerDados:DadosUsuarioProvider, private facebook:Facebook) {
       
   }
 
-  logarFacebook() {
-    this.req.logarFacebook()
-      .then(() => {
-        this.navCtrl.setRoot(HomePage);
+  loginFB() {
+    this.facebook.login(['email', 'public_profile']).then((response: FacebookLoginResponse) => {
+      this.facebook.api('me?fields=id,name,email,first_name,picture.width(720).height(720).as(picture_large)', []).then(profile => {
+        this.dadosFB = {email: profile['email'], first_name: profile['first_name'], picture: profile['picture_large']['data']['url'], username: profile['name']}
+        this.providerDados.setDadosFB(this.dadosFB);
+        this.teste = 1;
+        this.providerDados.setCod(1);
+        this.loadingLogar();
       });
-  }
-  logarFacebook2(){
-    this.req.logarFacebook2();
+    });
+    
   }
 
   logar() {
@@ -43,7 +50,7 @@ export class LoginPage {
         .map(res => res.json())
         .subscribe(data => {
           this.codUsuario = data;
-          this.providerCod.setCod(data);
+          this.providerDados.setCod(data);
           
           if (this.codUsuario != '666') {
             this.loadingLogar();
@@ -66,7 +73,7 @@ export class LoginPage {
       this.chamarHome();
     }, 1000);
   }
-
+  
 
   chamarHome() {
     this.navCtrl.setRoot(HomePage, { 'codUsuario': this.codUsuario });
