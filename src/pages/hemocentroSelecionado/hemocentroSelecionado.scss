@@ -36,9 +36,7 @@ page-hemocentroSelecionado {
          
         z-index: 1; 
     }
-    .botoes{
-        text-align:right;
-    }
+    
     .tipoAPositivo {
         position: absolute;
         top: 95px;
@@ -146,7 +144,13 @@ page-hemocentroSelecionado {
         text-align: center;
     }
     .botoes{
-        text-align:center;  
+        text-align:center;
+        border-radius: 10px;
+        background-color:rgb(252, 97, 97);
+        height: 35px;
+    }
+    .botoes:hover{
+        background-color:rgb(255, 34, 34);
     }
 
     
@@ -313,8 +317,10 @@ page-hemocentroSelecionado {
             z-index: 1; 
         }
         .botoes{
+            font-size: 12pt;
             text-align:center;
-            font-size: 12pt;    
+            border-radius: 10px;
+            background-color:rgb(252, 97, 97);
         }
     }
     

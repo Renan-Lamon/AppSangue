@@ -20,7 +20,6 @@ export class LoginPage {
   conta = { email: '', senha: '' };
   public codUsuario: string;
   public dadosFB:any;
-  public teste:number=0;
   
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,
@@ -32,9 +31,8 @@ export class LoginPage {
   loginFB() {
     this.facebook.login(['email', 'public_profile']).then((response: FacebookLoginResponse) => {
       this.facebook.api('me?fields=id,name,email,first_name,picture.width(720).height(720).as(picture_large)', []).then(profile => {
-        this.dadosFB = {email: profile['email'], first_name: profile['first_name'], picture: profile['picture_large']['data']['url'], username: profile['name']}
+        this.dadosFB = {email: profile['email'], first_name: profile['first_name'], picture: profile['picture_large']['data']['url'], username: profile['name'], id: profile['id']}
         this.providerDados.setDadosFB(this.dadosFB);
-        this.teste = 1;
         this.providerDados.setCod(1);
         this.loadingLogar();
       });

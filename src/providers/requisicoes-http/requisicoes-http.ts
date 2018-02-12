@@ -12,9 +12,9 @@ import { Facebook, FacebookLoginResponse } from "@ionic-native/facebook";
 export class RequisicoesHttpProvider {
   
   urlCampanha:string="http://www.json-generator.com/api/json/get/bUPkvwTMPm?indent=2";
-  urlLogin: string="http://192.168.25.42:8081/WSappSangue/webresources/login/autentificacao";
-  urlDadosUsuario:string="http://192.168.25.42:8081/WSappSangue/webresources/login/dadosUsuario";
-  urlDadosEstoque:string="http://192.168.25.42:8081/WSappSangue/webresources/estoque/estoqueHemocentro";
+  urlLogin: string="http://192.168.25.43:8081/WSappSangue/webresources/login/autentificacao";
+  urlDadosUsuario:string="http://192.168.25.43:8081/WSappSangue/webresources/login/dadosUsuario";
+  urlDadosEstoque:string="http://192.168.25.43:8081/WSappSangue/webresources/estoque/estoqueHemocentro";
   
   constructor(public http: Http, public fb: Facebook) {
     console.log('Hello RequisicoesHttpProvider Provider');

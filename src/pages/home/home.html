@@ -28,9 +28,10 @@
 </ion-header>
 
 <ion-content padding style="background-color:rgb(252, 235, 235)">
+    
   <div class="div1">
     <!--<ion-img style="" src="../../assets/imgs/colunaPerfil.jpg"></ion-img>-->
-    <button>
+    <button *ngIf="dadosFB">
         <img (click)="chamarPerfilPush()" class="imagemPerfil" [src]="dadosFB.picture" />
       <!--<ion-img (click)="chamarPerfilPush()" class="imagemPerfil" src={{imagemPerfil}}></ion-img> -->
     </button>

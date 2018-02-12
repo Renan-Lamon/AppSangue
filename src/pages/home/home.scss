@@ -433,6 +433,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d0101', end
         bottom: 0px;
         left: 0px;
         z-index: 10;
+        -webkit-backface-visibility: hidden;
+
     }
     
     
