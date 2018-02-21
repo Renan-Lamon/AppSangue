@@ -29,6 +29,7 @@ import { RegistroPage } from '../pages/registro/registro';
 import{Facebook} from '@ionic-native/facebook';
 import { MonitoramentoPage } from '../pages/monitoramento/monitoramento';
 import { DadosUsuarioProvider } from '../providers/dados-usuario/dados-usuario';
+import { Badge } from '@ionic-native/badge';
 
 
 @NgModule({
@@ -91,6 +92,7 @@ import { DadosUsuarioProvider } from '../providers/dados-usuario/dados-usuario';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RequisicoesHttpProvider,
     Facebook,
+    Badge,
     DadosUsuarioProvider
   ]
 })

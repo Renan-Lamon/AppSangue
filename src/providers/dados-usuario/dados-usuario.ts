@@ -11,6 +11,7 @@ import { Injectable } from '@angular/core';
 export class DadosUsuarioProvider {
   public codUsuario:number;
   private dadosFB:any;
+  private badge:number = 0;
 
   constructor() {
     console.log('Hello RequisicoesHttpProvider Provider');
@@ -29,6 +30,11 @@ export class DadosUsuarioProvider {
   public getCod(){
     return this.codUsuario;
   }
-
+  public setBadge(badge: number){
+    this.badge = badge;
+  }
+  public getBadge(){
+    return this.badge;
+  }
   
 }

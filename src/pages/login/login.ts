@@ -8,6 +8,7 @@ import { RequisicoesHttpProvider } from '../../providers/requisicoes-http/requis
 import { MonitoramentoPage } from '../monitoramento/monitoramento';
 import { DadosUsuarioProvider } from '../../providers/dados-usuario/dados-usuario';
 import { Facebook, FacebookLoginResponse} from '@ionic-native/facebook';
+import {Badge} from '@ionic-native/badge';
 
 @Component({
   selector: 'page-login',
@@ -20,14 +21,26 @@ export class LoginPage {
   conta = { email: '', senha: '' };
   public codUsuario: string;
   public dadosFB:any;
-  
+  public a:any;
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController,
     private loading: LoadingController, private req: RequisicoesHttpProvider,
-    public providerDados:DadosUsuarioProvider, private facebook:Facebook) {
+    public providerDados:DadosUsuarioProvider, private facebook:Facebook,
+    public badge: Badge) {
       
   }
 
+  testeBadge(){
+    let badgePermissao = this.badge.registerPermission();
+    let badgeAux = this.badge.set(3);
+    let badgeAux2 = this.badge.get();
+    let alert = this.alertCtrl.create({
+      title: 'Dados não preenchidos!'+ badgeAux2,
+      subTitle: 'Certifique-se de ter inserido todos os dados necessarios.',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
   loginFB() {
     this.facebook.login(['email', 'public_profile']).then((response: FacebookLoginResponse) => {
       this.facebook.api('me?fields=id,name,email,first_name,picture.width(720).height(720).as(picture_large)', []).then(profile => {
@@ -39,6 +52,7 @@ export class LoginPage {
     });
     
   }
+   
 
   logar() {
     if (this.conta.email == '' || this.conta.senha == '') {

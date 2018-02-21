@@ -14,6 +14,7 @@
         <button (click)="chamarAgendamento()" ion-button clear class="botoesMenu">AGENDAR DOAÇÃO</button>
         <button (click)="chamarInformacoes()" ion-button clear class="botoesMenu">INFORMAÇÕES GERAIS</button>
         <button (click)="chamarIdentificador()" ion-button clear class="botoesMenu">MEU IDENTIFICADOR</button>
+        <button ion-button clear class="botoesMenu">Registrar Doação</button>
       </div>
 
 
@@ -38,7 +39,7 @@
 
     <div class="nomeLevelPerfil">
 
-      <ion-label (click)="chamarPerfilPush()" class="nomePerfil">
+      <ion-label *ngIf="dadosFB" (click)="chamarPerfilPush()" class="nomePerfil">
         <b>{{dadosFB.username}}</b>
       </ion-label>
 

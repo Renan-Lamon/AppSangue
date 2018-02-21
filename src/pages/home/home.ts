@@ -12,6 +12,7 @@ import { LoginPage } from '../login/login';
 import { NavParams } from 'ionic-angular/navigation/nav-params';
 import { RequisicoesHttpProvider } from '../../providers/requisicoes-http/requisicoes-http';
 import { DadosUsuarioProvider } from '../../providers/dados-usuario/dados-usuario';
+import { Badge } from '@ionic-native/badge';
 
 
 @Component({
@@ -38,15 +39,19 @@ export class HomePage {
   public ABNegativoSituacao:string;
   public OPositivoSituacao:string;
   public ONegativoSituacao:string;
+  
 
   constructor(public navCtrl: NavController,
     public parametro: NavParams,
     private req: RequisicoesHttpProvider,
-    public providerDados: DadosUsuarioProvider) {
+    public providerDados: DadosUsuarioProvider,
+    public badge: Badge) {
   
     this.codUsuario = this.providerDados.getCod();
     this.dadosFB = this.providerDados.getDadosFB();
+    this.badge.set(1);
     
+    console.log(this.badge.get());
     this.DadosDoUsuarioEstoque();
     
   }
