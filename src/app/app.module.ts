@@ -31,6 +31,10 @@ import { MonitoramentoPage } from '../pages/monitoramento/monitoramento';
 import { DadosUsuarioProvider } from '../providers/dados-usuario/dados-usuario';
 import { Badge } from '@ionic-native/badge';
 
+import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { RegistrarDoacaoPage } from '../pages/registrarDoacao/registrarDoacao';
+
 
 @NgModule({
   declarations: [
@@ -52,7 +56,8 @@ import { Badge } from '@ionic-native/badge';
     PerfilPage,
     LoginPage,
     RegistroPage,
-    MonitoramentoPage
+    MonitoramentoPage,
+    RegistrarDoacaoPage
     
       
   ],
@@ -60,7 +65,8 @@ import { Badge } from '@ionic-native/badge';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxQRCodeModule
     
   ],
   bootstrap: [IonicApp],
@@ -83,7 +89,8 @@ import { Badge } from '@ionic-native/badge';
     PerfilPage,
     LoginPage,
     RegistroPage,
-    MonitoramentoPage
+    MonitoramentoPage,
+    RegistrarDoacaoPage
  
   ],
   providers: [
@@ -93,7 +100,8 @@ import { Badge } from '@ionic-native/badge';
     RequisicoesHttpProvider,
     Facebook,
     Badge,
-    DadosUsuarioProvider
+    DadosUsuarioProvider,
+    BarcodeScanner
   ]
 })
 export class AppModule {}

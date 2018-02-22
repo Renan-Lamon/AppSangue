@@ -13,6 +13,7 @@ import { NavParams } from 'ionic-angular/navigation/nav-params';
 import { RequisicoesHttpProvider } from '../../providers/requisicoes-http/requisicoes-http';
 import { DadosUsuarioProvider } from '../../providers/dados-usuario/dados-usuario';
 import { Badge } from '@ionic-native/badge';
+import { RegistrarDoacaoPage } from '../registrarDoacao/registrarDoacao';
 
 
 @Component({
@@ -115,6 +116,9 @@ export class HomePage {
 
   chamarCampanha() {
     this.navCtrl.setRoot(CampanhaPage);
+  }
+  chamarRegistrarDoacao(){
+    this.navCtrl.setRoot(RegistrarDoacaoPage);
   }
   chamarHemocentro() {
     this.navCtrl.setRoot(HemocentroPage);

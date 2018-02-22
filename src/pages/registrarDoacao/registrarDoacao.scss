@@ -1,0 +1,53 @@
+page-registrarDoacao {
+    .botoesMenu{
+        color:white;
+    }
+    .botoesMenu:hover{
+        border:2px solid white;
+    }
+    .botoesMenuSelecionado{
+        color:white;
+        border:2px solid white;
+    }
+    .desktop{
+        display: none;
+    }
+
+    .item{
+        color:#920000; 
+        background-color:rgb(252, 235, 235);
+    }
+    .item:hover{
+        background-color: #ddd;
+    }
+
+    @media (min-width: 1000px) {
+        .desktopMenu{
+            display: none;
+        }
+        .tamNav{
+            height:80px;
+        }
+        .desktop{
+            display: inline;
+        }
+        .item{
+            color:#920000; 
+            background-color:rgb(252, 235, 235);
+            font-size:14pt;
+        }
+    }
+    .dataDoacao{
+        position: fixed;
+        width: 100%;
+        height: 20px;
+        font-size: 10pt;
+        font-weight: bold;
+        text-align: center;
+        background-color: rgb(119, 117, 117);
+        color:rgb(255, 255, 255);
+        bottom: 0px;
+        left: 0px;
+        z-index: 10;
+    }
+}
