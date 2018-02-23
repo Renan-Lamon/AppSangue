@@ -11,6 +11,7 @@ import { IdentificadorPage } from '../pages/identificador/identificador';
 import { AgendamentoPage } from '../pages/agendamento/agendamento';
 import { CampanhaPage } from '../pages/campanha/campanha';
 import { LoginPage } from '../pages/login/login';
+import { RegistrarDoacaoPage } from '../pages/registrarDoacao/registrarDoacao';
 
 
 @Component({
@@ -18,7 +19,7 @@ import { LoginPage } from '../pages/login/login';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  rootPage: any = LoginPage;
+  rootPage: any = RegistrarDoacaoPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -33,7 +34,8 @@ export class MyApp {
       { title: 'Notícias', component: NoticiaPage },
       { title: 'Agendamento de Doação', component: AgendamentoPage },
       { title: 'Identificador Digital', component: IdentificadorPage },
-      { title: 'Informações Gerais', component: InformacaoPage }
+      { title: 'Informações Gerais', component: InformacaoPage },
+      { title: 'Registrar Doação', component: RegistrarDoacaoPage }
     ];
 
   }

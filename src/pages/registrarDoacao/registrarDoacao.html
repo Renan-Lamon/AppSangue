@@ -14,7 +14,7 @@
         <button (click)="chamarAgendamento()" ion-button clear class="botoesMenu">AGENDAR DOAÇÃO</button>
         <button (click)="chamarInformacoes()" ion-button clear class="botoesMenu">INFORMAÇÕES GERAIS</button>
         <button (click)="chamarIdentificador()" ion-button clear class="botoesMenu">MEU IDENTIFICADOR</button>
-        <button ion-button clear class="botoesMenu  botoesMenuSelecionado">Registrar Doação</button>
+        <button ion-button clear class="botoesMenu  botoesMenuSelecionado">MINHAS DOAÇÕES</button>
       </div>
 
 
@@ -24,30 +24,76 @@
         </button>
       </div>
     </div>
-    <ion-title class="desktopMenu" >Hemocentro</ion-title>
+    <ion-title class="desktopMenu" >Minhas Doações</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding style="background-color:rgb(252, 235, 235)">
+  <!-- CRIAR QR CODE
   <ion-item>
     <ion-input type="text" placeholder="MY QR Code data" [(ngModel)]="qrData">
     </ion-input>
   </ion-item>
   <button ion-button full icon-left (click)="createCode()"><ion-icon name="barcode"></ion-icon>Create Code</button>
-  <button ion-button full icon-left (click)="scanCode()" color="secondary"><ion-icon name="qr-scanner"></ion-icon>Scan Code</button>
-  
   <ion-card  *ngIf="createdCode">
     <ngx-qrcode style="font-size:20px" [qrc-value]="createdCode"></ngx-qrcode>
     <ion-card-content>
       <p>Value: {{ createdCode }}</p>
     </ion-card-content>
   </ion-card>
+  -->
+  <br/>
 
+  <div>
+    <ion-label class="titulo">Minhas Doações</ion-label>
+    <br/>
+  </div>
+  <table id="posicao">
+    <tr>
+      <th></th>
+      <th>Data</th>
+      <th>Local</th>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>23/02/2018</td>
+      <td>Hospital Evangélico</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>23/10/2017</td>
+      <td>Santa Casa</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>23/06/2017</td>
+      <td>Santa Casa</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>23/01/2017</td>
+      <td>Hospital Evangélico</td>
+    </tr>
+  </table>
+  <br/>
+  <br/>
+  <button class="botaoRegistrar" ion-button full icon-left (click)="scanCode()" color="botaoHover"><ion-icon name="qr-scanner"></ion-icon>Registrar nova doação</button>
+  
+  <div class="question">
+      <input type="checkbox" id="question-1">
+      <label for="question-1" >Como registrar minha doação?</label>
+      <div class="answer">
+        Para registrar a doação basta após doar procurar no hemocentro uma imagem de um <a icon-only href="#" onclick="window.open('https://pt.wikipedia.org/wiki/C%C3%B3digo_QR', '_system', 'location=yes'); return false;">
+          QR CODE
+          </a> fazer a leitura do mesmo através do botão acima.
+      </div>
+    </div>
+  <!-- Leitura QR CODE -->
   <ion-card *ngIf="scannedCode">
-    <ion-card-content>
-      Result from Scan: {{ scannedCode }}
-    </ion-card-content>
-  </ion-card>
+      <ion-card-content>
+        Result from Scan: {{ scannedCode }}
+      </ion-card-content>
+    </ion-card>
 
   <div full class="dataDoacao">
     <b>Data prevista para a proxima doação: 22/22/2222</b>

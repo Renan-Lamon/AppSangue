@@ -12,14 +12,63 @@ page-registrarDoacao {
     .desktop{
         display: none;
     }
+    .botaoRegistrar{
+        background-color:rgb(252, 97, 97);
+    }
 
-    .item{
-        color:#920000; 
-        background-color:rgb(252, 235, 235);
+    .question {
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+        padding-top:50px;
+      }
+      
+      .question input,
+      .question .answer { display: none }
+      
+      .question label {
+        font-size: 12pt;
+        display: inline-block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        width: 100%;
+        
+      }
+      
+      .question input:checked ~ .answer {
+        display: block
+      }
+
+    .titulo{
+        text-align:center;
+        font-weight:bold; 
+        font-size:18pt; 
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     }
-    .item:hover{
-        background-color: #ddd;
+
+    #posicao {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
     }
+    
+    #posicao td, #posicao th {
+        border: 1px solid #ddd;
+        font-size: 12pt;
+        padding: 8px;
+    }
+    
+    #posicao tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #posicao tr:hover {background-color: #ddd;}
+    
+    #posicao th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: rgb(252, 128, 128);
+        color: white;
+    }
+
 
     @media (min-width: 1000px) {
         .desktopMenu{
@@ -31,10 +80,36 @@ page-registrarDoacao {
         .desktop{
             display: inline;
         }
-        .item{
-            color:#920000; 
-            background-color:rgb(252, 235, 235);
-            font-size:14pt;
+        .question {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            padding-top:100px;
+          }
+
+        .question label {
+            font-size: 14pt;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            width: 100%;
+            
+          }
+          
+          .question input:checked ~ .answer {
+            font-size: 13pt;
+            display: block
+          }
+
+        #posicao td, #posicao th {
+            border: 1px solid #ddd;
+            font-size: 14pt;
+            padding: 8px;
+        }
+        .titulo{
+            text-align:center;
+            font-weight:bold; 
+            font-size:20pt; 
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
         }
     }
     .dataDoacao{
