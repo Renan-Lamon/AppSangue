@@ -6,6 +6,7 @@ import {AgendamentoPage} from '../agendamento/agendamento';
 import { HemocentroPage } from '../hemocentro/hemocentro';
 import { InformacaoPage } from '../informacao/informacao';
 import { HomePage } from '../home/home';
+import { RegistrarDoacaoPage } from '../registrarDoacao/registrarDoacao';
 
 @Component({
   selector: 'page-criarCampanha',
@@ -17,6 +18,9 @@ export class criarCampanhaPage {
 
   }
 
+  chamarRegistrarDoacao(){
+    this.navCtrl.setRoot(RegistrarDoacaoPage);
+  }
   chamarHome(){
     this.navCtrl.setRoot(HomePage);
   }

@@ -12,6 +12,7 @@ import { HomePage } from '../home/home';
 import { Http, Response } from "@angular/http";
 import 'rxjs/add/operator/map';
 import { RequisicoesHttpProvider } from '../../providers/requisicoes-http/requisicoes-http';
+import { RegistrarDoacaoPage } from '../registrarDoacao/registrarDoacao';
 
 @Component({
   selector: 'page-noticia',
@@ -39,6 +40,10 @@ export class NoticiaPage {
       .subscribe(data => {
         this.pessoas = data;
       });
+  }
+
+  chamarRegistrarDoacao(){
+    this.navCtrl.setRoot(RegistrarDoacaoPage);
   }
   chamarHome() {
     this.navCtrl.setRoot(HomePage);

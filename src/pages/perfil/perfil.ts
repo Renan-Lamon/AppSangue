@@ -7,6 +7,7 @@ import {NoticiaPage} from '../noticia/noticia';
 import {AgendamentoPage} from '../agendamento/agendamento';
 import { InformacaoPage } from '../informacao/informacao';
 import { HemocentroPage } from '../hemocentro/hemocentro';
+import { RegistrarDoacaoPage } from '../registrarDoacao/registrarDoacao';
 
 @Component({
   selector: 'page-perfil',
@@ -18,6 +19,9 @@ export class PerfilPage {
     
   }
   
+  chamarRegistrarDoacao(){
+    this.navCtrl.setRoot(RegistrarDoacaoPage);
+  }
   chamarHemocentro(){
     this.navCtrl.setRoot(HemocentroPage);
   }

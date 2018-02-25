@@ -8,6 +8,7 @@ import {AgendamentoPage} from '../agendamento/agendamento';
 import { InformacaoPage } from '../informacao/informacao';
 import { HomePage } from '../home/home';
 import { DadosUsuarioProvider } from '../../providers/dados-usuario/dados-usuario';
+import { RegistrarDoacaoPage } from '../registrarDoacao/registrarDoacao';
 
 @Component({
   selector: 'page-hemocentro',
@@ -45,6 +46,9 @@ export class HemocentroPage {
     }
   }
 
+  chamarRegistrarDoacao(){
+    this.navCtrl.setRoot(RegistrarDoacaoPage);
+  }
   chamarHome(){
     this.navCtrl.setRoot(HomePage);
   }

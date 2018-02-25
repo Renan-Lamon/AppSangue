@@ -8,6 +8,7 @@ import { InformacaoPage } from '../informacao/informacao';
 import { HomePage } from '../home/home';
 import { RequisicoesHttpProvider } from '../../providers/requisicoes-http/requisicoes-http';
 import { NavParams } from 'ionic-angular/navigation/nav-params';
+import { RegistrarDoacaoPage } from '../registrarDoacao/registrarDoacao';
 
 @Component({
   selector: 'page-hemocentroSelecionado',
@@ -76,6 +77,9 @@ export class HemocentroSelecionadoPage {
 
   }
 
+  chamarRegistrarDoacao(){
+    this.navCtrl.setRoot(RegistrarDoacaoPage);
+  }
   chamarHome(){
     this.navCtrl.setRoot(HomePage);
   }

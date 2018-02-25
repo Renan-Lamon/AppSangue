@@ -6,6 +6,7 @@ import { CampanhaPage } from '../campanha/campanha';
 import {IdentificadorPage} from '../identificador/identificador';
 import {AgendamentoPage} from '../agendamento/agendamento';
 import { InformacaoPage } from '../informacao/informacao';
+import { RegistrarDoacaoPage } from '../registrarDoacao/registrarDoacao';
 
 
 @Component({
@@ -16,6 +17,10 @@ export class NoticiaSelecionadaPage {
   
   constructor(public navCtrl: NavController) {
     
+  }
+  
+  chamarRegistrarDoacao(){
+    this.navCtrl.setRoot(RegistrarDoacaoPage);
   }
   chamarHome(){
     this.navCtrl.setRoot(HomePage);

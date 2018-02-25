@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {IdentificadorPage} from '../identificador/identificador';
-import {NoticiaPage} from '../noticia/noticia';
-import {AgendamentoPage} from '../agendamento/agendamento';
+import { IdentificadorPage } from '../identificador/identificador';
+import { NoticiaPage } from '../noticia/noticia';
+import { AgendamentoPage } from '../agendamento/agendamento';
 import { HemocentroPage } from '../hemocentro/hemocentro';
 import { InformacaoPage } from '../informacao/informacao';
 import { HomePage } from '../home/home';
 import { NavParams } from 'ionic-angular/navigation/nav-params';
+import { RegistrarDoacaoPage } from '../registrarDoacao/registrarDoacao';
 
 @Component({
   selector: 'page-campanhaSelecionada',
@@ -16,28 +17,32 @@ export class CampanhaSelecionadaPage {
   campanhas: any;
 
   constructor(public navCtrl: NavController,
-              public parametro: NavParams) {
+    public parametro: NavParams) {
     this.campanhas = parametro.get('campanhas');
-    
+
   }
 
-   chamarHome(){
+
+  chamarRegistrarDoacao() {
+    this.navCtrl.setRoot(RegistrarDoacaoPage);
+  }
+  chamarHome() {
     this.navCtrl.setRoot(HomePage);
   }
-  chamarHemocentro(){
+  chamarHemocentro() {
     this.navCtrl.setRoot(HemocentroPage);
   }
-  chamarNoticia(){
+  chamarNoticia() {
     this.navCtrl.setRoot(NoticiaPage);
   }
-  chamarAgendamento(){
+  chamarAgendamento() {
     this.navCtrl.setRoot(AgendamentoPage);
   }
-  chamarInformacoes(){
+  chamarInformacoes() {
     this.navCtrl.setRoot(InformacaoPage);
   }
-  chamarIdentificador(){
+  chamarIdentificador() {
     this.navCtrl.setRoot(IdentificadorPage);
   }
-  
+
 }

@@ -7,6 +7,7 @@ import {IdentificadorPage} from '../identificador/identificador';
 import {NoticiaPage} from '../noticia/noticia';
 import {AgendamentoPage} from '../agendamento/agendamento';
 import { HomePage } from '../home/home';
+import { RegistrarDoacaoPage } from '../registrarDoacao/registrarDoacao';
 
 @Component({
   selector: 'page-informacao',
@@ -18,6 +19,9 @@ export class InformacaoPage {
 
   }
 
+  chamarRegistrarDoacao(){
+    this.navCtrl.setRoot(RegistrarDoacaoPage);
+  }
   chamarHome(){
     this.navCtrl.setRoot(HomePage);
   }

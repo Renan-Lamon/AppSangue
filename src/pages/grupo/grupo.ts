@@ -6,6 +6,7 @@ import {NoticiaPage} from '../noticia/noticia';
 import { HemocentroPage } from '../hemocentro/hemocentro';
 import { InformacaoPage } from '../informacao/informacao';
 import { HomePage } from '../home/home';
+import { RegistrarDoacaoPage } from '../registrarDoacao/registrarDoacao';
 
 @Component({
   selector: 'page-grupo',
@@ -22,6 +23,9 @@ export class GrupoPage {
     ];  
   }
 
+  chamarRegistrarDoacao(){
+    this.navCtrl.setRoot(RegistrarDoacaoPage);
+  }
   chamarHome(){
     this.navCtrl.setRoot(HomePage);
   }
