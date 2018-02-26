@@ -36,6 +36,19 @@ page-campanhaSelecionada {
     .desktop{
         display: none;
     }
+    .dataDoacao{
+        position: fixed;
+        width: 100%;
+        height: 20px;
+        font-size: 10pt;
+        font-weight: bold;
+        text-align: center;
+        background-color: rgb(119, 117, 117);
+        color:rgb(255, 255, 255);
+        bottom: 0px;
+        left: 0px;
+        z-index: 10;
+    }
     @media (min-width: 1000px) {
         .campanhaTitulo{
             text-align: center;
@@ -72,19 +85,20 @@ page-campanhaSelecionada {
             position:absolute;
             width:150px;
         }
+        .dataDoacao{
+            position: fixed;
+            width: 100%;
+            height: 30px;
+            font-size: 13pt;
+            font-weight: bold;
+            text-align: center;
+            background-color: rgb(119, 117, 117);
+            color:rgb(255, 255, 255);
+            bottom: 0px;
+            left: 0px;
+            z-index: 10;
+        }
     }
-    .dataDoacao{
-        position: fixed;
-        width: 100%;
-        height: 20px;
-        font-size: 10pt;
-        font-weight: bold;
-        text-align: center;
-        background-color: rgb(119, 117, 117);
-        color:rgb(255, 255, 255);
-        bottom: 0px;
-        left: 0px;
-        z-index: 10;
-    }
+    
     
 }

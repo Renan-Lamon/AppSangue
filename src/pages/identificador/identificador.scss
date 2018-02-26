@@ -12,6 +12,21 @@ page-identificador {
     .desktop{
         display: none;
     }
+
+    .dataDoacao{
+        position: fixed;
+        width: 100%;
+        height: 20px;
+        font-size: 10pt;
+        font-weight: bold;
+        text-align: center;
+        background-color: rgb(119, 117, 117);
+        color:rgb(255, 255, 255);
+        bottom: 0px;
+        left: 0px;
+        z-index: 10;
+    }
+
     @media (min-width: 1000px) {
         .desktopMenu{
             display: none;
@@ -21,6 +36,19 @@ page-identificador {
         }
         .desktop{
             display: inline;
+        }
+        .dataDoacao{
+            position: fixed;
+            width: 100%;
+            height: 30px;
+            font-size: 13pt;
+            font-weight: bold;
+            text-align: center;
+            background-color: rgb(119, 117, 117);
+            color:rgb(255, 255, 255);
+            bottom: 0px;
+            left: 0px;
+            z-index: 10;
         }
     }
     
@@ -43,17 +71,5 @@ page-identificador {
         top:50px;
 
     }
-    .dataDoacao{
-        position: fixed;
-        width: 100%;
-        height: 20px;
-        font-size: 10pt;
-        font-weight: bold;
-        text-align: center;
-        background-color: rgb(119, 117, 117);
-        color:rgb(255, 255, 255);
-        bottom: 0px;
-        left: 0px;
-        z-index: 10;
-    }
+    
 }

@@ -198,6 +198,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d0101', end
         box-shadow:4px 4px 4px #CCCCCC;  
     }
 
+    .dataDoacao{
+        position: fixed;
+        width: 100%;
+        height: 20px;
+        font-size: 10pt;
+        font-weight: bold;
+        text-align: center;
+        background-color: rgb(119, 117, 117);
+        color:rgb(255, 255, 255);
+        bottom: 0px;
+        left: 0px;
+        z-index: 10;
+    }
+
     @media (max-width: 400px) {
         .div2{
             position:relative;
@@ -411,33 +425,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d0101', end
             color: yellow;
             left:102px;
         }
+        .dataDoacao{
+            position: fixed;
+            width: 100%;
+            height: 30px;
+            font-size: 13pt;
+            font-weight: bold;
+            text-align: center;
+            background-color: rgb(119, 117, 117);
+            color:rgb(255, 255, 255);
+            bottom: 0px;
+            left: 0px;
+            z-index: 10;
+        }
 
     }
-    
-    
-    
-    
-
-    
-    
-    
-    .dataDoacao{
-        position: fixed;
-        width: 100%;
-        height: 20px;
-        font-size: 10pt;
-        font-weight: bold;
-        text-align: center;
-        background-color: rgb(119, 117, 117);
-        color:rgb(255, 255, 255);
-        bottom: 0px;
-        left: 0px;
-        z-index: 10;
-        -webkit-backface-visibility: hidden;
-
-    }
-    
-    
-    
+      
     
 }
