@@ -17,7 +17,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 })
 export class RegistrarDoacaoPage {
   qrData = null;
-  createdCode = null;
+  createdCode: Array<{ nome: string, campanha: any, quantidade: number, privado:boolean,data:string, horario:string, cod: number }>;
   scannedCode = null;
   searchQuery: string = '';
   items: string[];
@@ -28,7 +28,10 @@ export class RegistrarDoacaoPage {
   }
 
   createCode() {
-    this.createdCode = this.qrData;
+    
+    this.createdCode= [
+      { nome: 'Seila1', campanha:'',quantidade: 5,privado:true,data:'2015-08-01',horario:'09:32', cod: 1}
+    ];
   }
  
   scanCode() {
