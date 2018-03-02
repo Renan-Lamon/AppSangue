@@ -14,7 +14,7 @@
         <button (click)="chamarAgendamento()" ion-button clear class="botoesMenu">AGENDAR DOAÇÃO</button>
         <button (click)="chamarInformacoes()" ion-button clear class="botoesMenu">INFORMAÇÕES GERAIS</button>
         <button (click)="chamarIdentificador()" ion-button clear class="botoesMenu">MEU IDENTIFICADOR</button>
-        <button (click)="chamarRegistrarDoacao()"ion-button clear class="botoesMenu">MINHAS DOAÇÕES</button>
+        <button (click)="chamarRegistrarDoacao()" ion-button clear class="botoesMenu">MINHAS DOAÇÕES</button>
       </div>
 
 
@@ -24,73 +24,131 @@
         </button>
       </div>
     </div>
-    <ion-title class="desktopMenu" >Criar Campanha</ion-title>
+    <ion-title class="desktopMenu">Criar Campanha</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding style="background-color:rgb(252, 235, 235)">
+  <div class="desktopMenu">
+    <ion-list >
+      <ion-item style="background-color:rgb(252, 235, 235)">
+        <ion-label style="color:red">Título:</ion-label>
+        <ion-input [(ngModel)]="titulo" placeholder="Título da campanha"></ion-input>
+      </ion-item>
 
-  <ion-list>
-    <ion-item style="background-color:rgb(252, 235, 235)">
-      <ion-label style="color:red">Título:</ion-label>
-      <ion-input [(ngModel)]="titulo" placeholder="Título da campanha"></ion-input>
-    </ion-item>
+      <ion-item style="background-color:rgb(252, 235, 235)">
+        <ion-label style="color:red">Tipo Sanguíneo:</ion-label>
+        <ion-select [(ngModel)]="tipoSangue">
+          <ion-option value="qualquer" selected="true">Qualquer</ion-option>
+          <ion-option value="Ap">A+</ion-option>
+          <ion-option value="An">A-</ion-option>
+          <ion-option value="Bp">B+</ion-option>
+          <ion-option value="Bn">B-</ion-option>
+          <ion-option value="ABp">AB+</ion-option>
+          <ion-option value="ABn">AB-</ion-option>
+          <ion-option value="Op">O+</ion-option>
+          <ion-option value="On">O-</ion-option>
+        </ion-select>
+      </ion-item>
 
-    <ion-item style="background-color:rgb(252, 235, 235)">
-      <ion-label style="color:red">Tipo Sanguíneo:</ion-label>
-      <ion-select [(ngModel)]="tipoSangue">
-        <ion-option value="qualquer" selected="true">Qualquer</ion-option>
-        <ion-option value="Ap">A+</ion-option>
-        <ion-option value="An">A-</ion-option>
-        <ion-option value="Bp">B+</ion-option>
-        <ion-option value="Bn">B-</ion-option>
-        <ion-option value="ABp">AB+</ion-option>
-        <ion-option value="ABn">AB-</ion-option>
-        <ion-option value="Op">O+</ion-option>
-        <ion-option value="On">O-</ion-option>
-      </ion-select>
-    </ion-item>
+      <ion-item style="background-color:rgb(252, 235, 235)">
+        <ion-label style="color:red">Local:</ion-label>
+        <ion-select [(ngModel)]="local">
+          <ion-option value="santaCasa" selected="true">Santa Casa</ion-option>
+          <ion-option value="hospitalH">Hospital Evangélico</ion-option>
+        </ion-select>
+      </ion-item>
 
-    <ion-item style="background-color:rgb(252, 235, 235)">
-      <ion-label style="color:red">Local:</ion-label>
-      <ion-select [(ngModel)]="local">
-        <ion-option value="santaCasa" selected="true">Santa Casa</ion-option>
-        <ion-option value="hospitalH">Hospital Evangélico</ion-option>
-      </ion-select>
-    </ion-item>
+      <ion-item style="background-color:rgb(252, 235, 235)">
+        <ion-label style="color:red">Date</ion-label>
+        <ion-datetime [(ngModel)]="data" displayFormat="DD/MM/YYYY" min="2018" max="2018"></ion-datetime>
+      </ion-item>
 
-    <ion-item style="background-color:rgb(252, 235, 235)">
-      <ion-label style="color:red">Date</ion-label>
-      <ion-datetime [(ngModel)]="data" displayFormat="DD/MM/YYYY" min="2018" max="2018"></ion-datetime>
-    </ion-item>
+      <ion-item style="background-color:rgb(252, 235, 235)">
+        <ion-label style="color:red">Algum alvo específico?</ion-label>
+        <ion-select [(ngModel)]="alvo">
+          <ion-option value="comAlvo">Sim</ion-option>
+          <ion-option value="semAlvo" selected="true">Não</ion-option>
+        </ion-select>
+      </ion-item>
 
-    <ion-item style="background-color:rgb(252, 235, 235)">
-      <ion-label style="color:red">Algum alvo específico?</ion-label>
-      <ion-select [(ngModel)]="alvo">
-        <ion-option value="comAlvo">Sim</ion-option>
-        <ion-option value="semAlvo" selected="true">Não</ion-option>
-      </ion-select>
-    </ion-item>
+      <div *ngIf="alvo=='comAlvo'">
+        <ion-item style="background-color:rgb(252, 235, 235)">
+          <ion-input [(ngModel)]="nomeAlvo" placeholder="Nome da pessoa alvo"></ion-input>
+        </ion-item>
+      </div>
 
-    <div  *ngIf="alvo=='comAlvo'" >
-    <ion-item style="background-color:rgb(252, 235, 235)">
-        <ion-input [(ngModel)]="nomeAlvo" placeholder="Nome da pessoa alvo"></ion-input>
-    </ion-item>
-    </div>
-
-    <ion-item style="background-color:rgb(252, 235, 235)">
+      <ion-item style="background-color:rgb(252, 235, 235)">
         <ion-label style="color:red; font-size:12pt" stacked>Descrição:</ion-label>
         <br/>
-      <ion-textarea [(ngModel)]="descricao" placeholder="Descrição do motivo da campanha"></ion-textarea>
-    </ion-item>
+        <ion-textarea [(ngModel)]="descricao" placeholder="Descrição do motivo da campanha"></ion-textarea>
+      </ion-item>
 
-  </ion-list>
+    </ion-list>
 
-  
-  <button style="color:red; border:1px solid red; font-size:10pt" ion-button full outline icon-start (click)="adicionarCampanha(titulo, tipoSangue, local, data, alvo, nomeAlvo, descricao)">
-    <ion-icon name="ios-create-outline"></ion-icon>
-    Criar Campanha
-  </button>
+    <button style="color:red; border:1px solid red; font-size:10pt" ion-button full outline icon-start (click)="adicionarCampanha(titulo, tipoSangue, local, data, alvo, nomeAlvo, descricao)">
+      <ion-icon name="ios-create-outline"></ion-icon>
+      Criar Campanha
+    </button>
+  </div>
+
+  <form (ngSubmit)="criarCampanha()" class="desktop seila">
+    <div>
+      <label>Título:</label>
+      <input type="text" [(ngModel)]="campanha.titulo" name="titulo" />
+    </div>
+
+    <div style="padding-top:5px">
+      <label>Tipo Sanguineo:</label>
+      <select placeholder="Selecione..." type="select" [(ngModel)]="campanha.tipoSangue" name="tipoSangue">
+        <option value="a+">A+</option>
+        <option value="a-">A-</option>
+        <option value="b+">B+</option>
+        <option value="b-">B-</option>
+        <option value="ab+">AB+</option>
+        <option value="ab-">AB-</option>
+        <option value="o+">O+</option>
+        <option value="o-">O-</option>
+      </select>
+    </div>
+
+    <div style="padding-top:5px">
+      <label>Local:</label>
+      <select placeholder="Selecione..." type="select" [(ngModel)]="campanha.local" name="local">
+        <option value="santacasa">Santa Casa</option>
+        <option value="hospitalevangelico">Hospital Evangélico</option>
+      </select>
+    </div>
+
+    <div style="padding-top:5px">
+      <label>Algum alvo específico?</label>
+      <select placeholder="Selecione..." type="select" [(ngModel)]="campanha.alvo" name="alvo">
+        <option value="comAlvo">Sim</option>
+        <option value="semAlvo" selected="true">Não</option>
+      </select>
+    </div>
+
+    <div *ngIf="campanha.alvo=='comAlvo'" style="padding-top:5px">
+      <label>Nome da pessoa alvo:</label>
+      <input placeholder="Nome da pessoa alvo" type="text" [(ngModel)]="campanha.nomeAlvo" name="nomeAlvo" />
+    </div>
+
+    <div style="padding-top:5px">
+      <label>Descrição:</label>
+      <textarea rows="4" placeholder="Informe o motivo da campanha..." [(ngModel)]="campanha.descricao" name="descricao"></textarea>
+    </div>
+
+    <div style="padding-top:5px">
+      <button class="botaoCadastro" ion-button type="submit" color="botaoHover" block>Criar Campanha</button>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+  </form>
+
+
 
   <div full class="dataDoacao">
     <b>Data prevista para a proxima doação: 22/22/2222</b>

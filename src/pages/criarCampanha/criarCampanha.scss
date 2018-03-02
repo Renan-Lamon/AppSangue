@@ -25,7 +25,7 @@ page-criarCampanha {
         left: 0px;
         z-index: 10;
     }
-      
+    
     @media (min-width: 1000px) {
         .desktopMenu{
             display: none;
@@ -49,6 +49,48 @@ page-criarCampanha {
             left: 0px;
             z-index: 10;
         }
+        .botaoCadastro{
+            left: 10px;
+            width: 400px;
+            height: 50px; 
+            font-size:14pt;
+            border-radius: 10px;
+            background-color:rgb(252, 97, 97);
+        }
+        .seila{
+            position: absolute;
+            width: 400px;
+            height:400px;
+            left: 50%;
+            margin-top: 50px;
+            margin-left:-200px;
+        }
+        input, select, textarea{
+            position: relative;
+            border: 2px solid #ccc;
+            padding: 10px;
+            width: 400px;
+            font-size:16pt;
+            outline: none;
+            display: block;
+            margin-left: 10px;
+            margin-top: 5px;
+            border-radius: 3px;
+          }
+          label{ 
+            padding:5px; 
+            margin:5px; 
+            font-size:16pt;
+          }
+          input:focus{
+            border: 2px solid rgb(255, 156, 156);
+          }
+          select:focus{
+            border: 2px solid rgb(255, 156, 156);
+          }
+          textarea:focus{
+            border: 2px solid rgb(255, 156, 156);
+          }
     }
     
 }
