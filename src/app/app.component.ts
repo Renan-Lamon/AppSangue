@@ -19,7 +19,7 @@ import { RegistrarDoacaoPage } from '../pages/registrarDoacao/registrarDoacao';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  rootPage: any = RegistrarDoacaoPage;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 

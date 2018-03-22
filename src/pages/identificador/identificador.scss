@@ -1,13 +1,17 @@
 page-identificador {
+    .divBotoesMenu{
+        text-align:center;
+        font: 17px/34px Teste2;
+    }
     .botoesMenu{
         color:white;
     }
     .botoesMenu:hover{
-        border:2px solid white;
+        border-bottom:3px solid white;
     }
     .botoesMenuSelecionado{
         color:white;
-        border:2px solid white;
+        border-bottom:3px solid white;
     }
     .desktop{
         display: none;

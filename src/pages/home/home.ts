@@ -14,6 +14,7 @@ import { RequisicoesHttpProvider } from '../../providers/requisicoes-http/requis
 import { DadosUsuarioProvider } from '../../providers/dados-usuario/dados-usuario';
 import { Badge } from '@ionic-native/badge';
 import { RegistrarDoacaoPage } from '../registrarDoacao/registrarDoacao';
+import { Facebook } from '@ionic-native/facebook';
 
 
 @Component({
@@ -46,7 +47,7 @@ export class HomePage {
     public parametro: NavParams,
     private req: RequisicoesHttpProvider,
     public providerDados: DadosUsuarioProvider,
-    public badge: Badge) {
+    public badge: Badge, public FB:Facebook) {
   
     this.codUsuario = this.providerDados.getCod();
     this.dadosFB = this.providerDados.getDadosFB();
@@ -57,6 +58,7 @@ export class HomePage {
     
   }
 
+ 
   DadosDoUsuarioEstoque() {
     this.req.getDadosUsuario(this.codUsuario)
       .map(res => res.json())
