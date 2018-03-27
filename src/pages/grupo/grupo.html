@@ -14,7 +14,7 @@
         <button ion-button clear class="botoesMenu botoesMenuSelecionado">AGENDAR DOAÇÃO</button>
         <button (click)="chamarInformacoes()" ion-button clear class="botoesMenu">INFORMAÇÕES GERAIS</button>
         <button (click)="chamarIdentificador()" ion-button clear class="botoesMenu">MEU IDENTIFICADOR</button>
-        <button (click)="chamarRegistrarDoacao()"ion-button clear class="botoesMenu">MINHAS DOAÇÕES</button>
+        <button (click)="chamarRegistrarDoacao()" ion-button clear class="botoesMenu">MINHAS DOAÇÕES</button>
       </div>
 
 
@@ -24,32 +24,32 @@
         </button>
       </div>
     </div>
-    <ion-title class="desktopMenu" >Criar Grupo</ion-title>
+    <ion-title class="desktopMenu">Criar Grupo</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding style="background-color:rgb(252, 235, 235)">
-  <ion-list>
-    <ion-item style="background-color:rgb(252, 235, 235)">
+  <ion-list style="padding-left:10px">
+    <ion-item class="itemNome">
       <ion-label style="color:red">Nome:</ion-label>
       <ion-input [(ngModel)]="nomeGrupo" placeholder="Nome do Grupo"></ion-input>
     </ion-item>
+    <br/>
+    <br/>
+    <ion-list class="listRadio" radio-group>
+      <fieldset>
+        <legend class="legendaRadio">Tipo de Grupo:</legend>
+        <br/>
+        <ion-item style="background-color:rgb(252, 235, 235);">
+          <ion-label>Aberto para todos da campanha</ion-label>
+          <ion-radio checked="true" value="aberto"></ion-radio>
+        </ion-item>
 
-    <ion-list style="background-color:rgb(252, 235, 235)" radio-group>
-      <ion-list-header style="font-size:12pt;color:red;background-color:rgb(252, 235, 235)">
-        Tipo de Grupo
-      </ion-list-header>
-      <div style="width:400px">
-      <ion-item style="background-color:rgb(252, 235, 235);">
-        <ion-label>Aberto para todos da campanha</ion-label>
-        <ion-radio checked="true" value="aberto"></ion-radio>
-      </ion-item>
-
-      <ion-item style="background-color:rgb(252, 235, 235)">
-        <ion-label>Privado</ion-label>
-        <ion-radio value="privado"></ion-radio>
-      </ion-item>
-    </div>
+        <ion-item style="background-color:rgb(252, 235, 235)">
+          <ion-label>Privado</ion-label>
+          <ion-radio value="privado"></ion-radio>
+        </ion-item>
+      </fieldset>
     </ion-list>
   </ion-list>
 

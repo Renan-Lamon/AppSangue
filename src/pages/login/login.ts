@@ -53,7 +53,9 @@ export class LoginPage {
     
   }
    
-
+  logarSemConta(){
+    this.navCtrl.setRoot(HomePage);
+  }
   logar() {
     if (this.conta.email == '' || this.conta.senha == '') {
       this.showAlertEmailOUSenhaVazio();
@@ -72,7 +74,17 @@ export class LoginPage {
 
         });
     }
+  }
 
+  logarReuniao(){
+    if (this.conta.email == '' || this.conta.senha == '') {
+      this.showAlertEmailOUSenhaVazio();
+    } else if (this.conta.email == "teste@hotmail.com" && this.conta.senha == "123"){
+      this.providerDados.setCod(1);
+      this.loadingLogar();
+    }else {
+      this.showAlertUsuarioIncorreto();
+    }
 
   }
   loadingLogar() {

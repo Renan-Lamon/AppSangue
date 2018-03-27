@@ -11,8 +11,8 @@ import { Facebook, FacebookLoginResponse } from "@ionic-native/facebook";
 @Injectable()
 export class RequisicoesHttpProvider {
   
-  urlCampanha:string="http://www.json-generator.com/api/json/get/bUPkvwTMPm?indent=2";
-  urlLogin: string="http://192.168.25.42:8081/WSappSangue/webresources/login/autentificacao";
+  urlCampanha:string="http://www.json-generator.com/api/json/get/ceXlnuglvm?indent=2";
+  urlLogin: string="http://www.json-generator.com/api/json/get/cpdYBbJDSa?indent=2";
   urlDadosUsuario:string="http://192.168.25.42:8081/WSappSangue/webresources/login/dadosUsuario";
   urlDadosEstoque:string="http://192.168.25.42:8081/WSappSangue/webresources/estoque/estoqueHemocentro";
   
@@ -31,9 +31,13 @@ export class RequisicoesHttpProvider {
   getLogin(email:string, senha:string){
     return this.http.get(this.urlLogin+'/'+email+'/'+senha);
   }
-
+  
   getDadosEstoque(hemocentroFavorito:string){
     return this.http.get(this.urlDadosEstoque+'/'+hemocentroFavorito);
+  }
+  //REUNIAO
+  getDadosEstoqueREUNIAO(){
+    return this.http.get("http://www.json-generator.com/api/json/get/cpWAsrvmXm?indent=2");
   }
 
   getDadosUsuario(cod:number){

@@ -14,7 +14,7 @@
         <button (click)="chamarAgendamento()" ion-button clear class="botoesMenu">AGENDAR DOAÇÃO</button>
         <button (click)="chamarInformacoes()" ion-button clear class="botoesMenu">INFORMAÇÕES GERAIS</button>
         <button (click)="chamarIdentificador()" ion-button clear class="botoesMenu">MEU IDENTIFICADOR</button>
-        <button (click)="chamarRegistrarDoacao()"ion-button clear class="botoesMenu">MINHAS DOAÇÕES</button>
+        <button (click)="chamarRegistrarDoacao()" ion-button clear class="botoesMenu">MINHAS DOAÇÕES</button>
       </div>
 
 
@@ -29,14 +29,14 @@
 </ion-header>
 
 <ion-content padding style="background-color:rgb(252, 235, 235)">
-    
+
   <div class="div1">
     <!--<ion-img style="" src="../../assets/imgs/colunaPerfil.jpg"></ion-img>-->
     <button *ngIf="dadosFB">
-        <img (click)="chamarPerfilPush()" class="imagemPerfil" [src]="dadosFB.picture" />
+      <img (click)="chamarPerfilPush()" class="imagemPerfil" [src]="dadosFB.picture" />
       <!--<ion-img (click)="chamarPerfilPush()" class="imagemPerfil" src={{imagemPerfil}}></ion-img> -->
     </button>
-    <ion-img  *ngIf="!dadosFB" (click)="chamarPerfilPush()" class="imagemPerfil" src={{imagemPerfil}}></ion-img> 
+    <ion-img *ngIf="!dadosFB" (click)="chamarPerfilPush()" class="imagemPerfil" src={{imagemPerfil}}></ion-img>
     <div class="nomeLevelPerfil">
 
       <ion-label *ngIf="dadosFB" (click)="chamarPerfilPush()" class="nomePerfil">
@@ -60,6 +60,8 @@
     <p class="cor">{{nomeHemocentro}}</p>
     <p class="tituloAtualizacao">Atualizado em: 20/01/2018</p>
   </div>
+
+  <!-- DESABILITANDO POR CAUSA DA REUNIAO
   <div class="divEstoque ">
     <div class="desktopMenu">
       <p style="text-align: center;font-size:12pt;font-weight: bold;">Estoque Sanguíneo</p>
@@ -131,24 +133,96 @@
     </div>
 
   </div>
+-->
+  <div class="divEstoque ">
+    <div class="desktopMenu">
+      <p style="text-align: center;font-size:12pt;font-weight: bold;">Estoque Sanguíneo</p>
+      <br/>
+      <img class="estoque" src="assets/imgs/satisfatorio.png" />
+      <div class="tipoAPositivo">A+</div>
+      &nbsp;&nbsp;&nbsp;
+      <img class="estoque" src="assets/imgs/satisfatorio.png" />
+      <div class="tipoANegativo">A-</div>
+      &nbsp;&nbsp;&nbsp;
+      <img class="estoque" src="assets/imgs/critico.png" />
+      <div class="tipoBPositivo">B+</div>
+
+      <img class="estoque" src="assets/imgs/baixo.png" />
+      <div class="tipoBNegativo">B-</div>
+      &nbsp;&nbsp;&nbsp;
+      <img class="estoque" src="assets/imgs/critico.png" />
+      <div class="tipoABPositivo">AB+</div>
+      &nbsp;&nbsp;&nbsp;
+      <img class="estoque" src="assets/imgs/satisfatorio.png" />
+      <div class="tipoABNegativo">AB-</div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <img class="estoque" src="assets/imgs/critico.png" />
+      <div class="tipoOPositivo">O+</div>
+      &nbsp;&nbsp;&nbsp;
+      <img class="estoque" src="assets/imgs/critico.png" />
+      <div class="tipoONegativo">O-</div>
+      <br/>
+      <br/>
+      <div style="border-top-style: groove; left:200px">
+        <img class="legendaEstoque" src="assets/imgs/legendaEstoque.png" />
+      </div>
+    </div>
+
+    <div class="desktop">
+      <p style="text-align: center;font-size:12pt;font-weight: bold;">Estoque Sanguíneo</p>
+      <br/>
+
+      <img class="estoque" src="assets/imgs/satisfatorio.png" />
+      <div class="tipoAPositivo">A+</div>
+      &nbsp;&nbsp;
+      <img class="estoque" src="assets/imgs/satisfatorio.png" />
+      <div class="tipoANegativo">A-</div>
+      &nbsp;&nbsp;
+      <img class="estoque" src="assets/imgs/critico.png" />
+      <div class="tipoBPositivo">B+</div>
+      &nbsp;&nbsp;
+      <img class="estoque" src="assets/imgs/baixo.png" />
+      <div class="tipoBNegativo">B-</div>
+
+      <img class="estoque" src="assets/imgs/critico.png" />
+      <div class="tipoABPositivo">AB+</div>
+      &nbsp;&nbsp;
+      <img class="estoque" src="assets/imgs/satisfatorio.png" />
+      <div class="tipoABNegativo">AB-</div>
+      &nbsp;&nbsp;
+      <img class="estoque" src="assets/imgs/critico.png" />
+      <div class="tipoOPositivo">O+</div>
+      &nbsp;&nbsp;
+      <img class="estoque" src="assets/imgs/critico.png" />
+      <div class="tipoONegativo">O-</div>
+      <br/>
+      <br/>
+      <div style="border-top-style: groove;">
+        <img class="legendaEstoque" src="assets/imgs/legendaEstoque.png" />
+      </div>
+
+
+    </div>
+
+  </div>
 
   <br/>
   <br/>
 
   <div>
     <ion-buttons style="text-align:center">
-      <button class="botoes" ion-button color="botaoHover"  (click)="chamarAgendamento()">Agendar Doação</button>
+      <button class="botoes" ion-button color="botaoHover" (click)="chamarAgendamento()">Agendar Doação</button>
       &nbsp; &nbsp;
-      <button class="botoes" ion-button color="botaoHover"  (click)="chamarNoticia()">Ver Notícias</button>
+      <button class="botoes" ion-button color="botaoHover" (click)="chamarNoticia()">Ver Notícias</button>
     </ion-buttons>
 
-    <button ion-button (click)="testeConvite()">testando convite</button>
+    <!--<button ion-button (click)="testeConvite()">testando convite</button>-->
   </div>
 
-  
-    
-    
-    
+
+
+
+
 
   <br/>
   <br/>

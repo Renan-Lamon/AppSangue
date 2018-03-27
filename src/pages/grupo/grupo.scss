@@ -1,4 +1,15 @@
 page-grupo {
+    .itemNome{
+        background-color:rgb(252, 235, 235); 
+        font-size:12pt;
+    }
+    .legendaRadio{
+        color:red;
+        font-size: 12pt; 
+    }
+    .listRadio{
+        background-color:rgb(252, 235, 235); 
+    }
     .divBotoesMenu{
         text-align:center;
         font: 17px/34px Teste2;
@@ -32,6 +43,18 @@ page-grupo {
     }
     
     @media (min-width: 1000px) {
+        .itemNome{
+            background-color:rgb(252, 235, 235); 
+            font-size:14pt;
+        }
+        .listRadio{
+            background-color:rgb(252, 235, 235); 
+            width: 400px;
+        }
+        .legendaRadio{
+            color:red; 
+            font-size: 14pt;
+        }
         .desktopMenu{
             display: none;
         }

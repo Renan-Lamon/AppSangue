@@ -29,7 +29,7 @@ import { Facebook } from '@ionic-native/facebook';
 export class HomePage {
   public dadosFB:any;
   public imagemPerfil: string = "../../assets/imgs/imagemPerfil1.jpg";
-  public nomeUsuario: string;
+  public nomeUsuario: string = "Renan Lamon";
   public nomeHemocentro: string;
   public levelUsuario: string = "Lv20  (100/350)";
   public codUsuario: number;
@@ -72,6 +72,8 @@ export class HomePage {
       });
 
   }
+  
+
   DadosEstoqueSangue() {
     this.req.getDadosEstoque(this.nomeHemocentro)
       .map(res => res.json())
