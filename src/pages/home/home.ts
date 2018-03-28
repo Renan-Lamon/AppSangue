@@ -30,7 +30,7 @@ export class HomePage {
   public dadosFB:any;
   public imagemPerfil: string = "../../assets/imgs/imagemPerfil1.jpg";
   public nomeUsuario: string = "Renan Lamon";
-  public nomeHemocentro: string;
+  public nomeHemocentro: string = "Santa Casa";
   public levelUsuario: string = "Lv20  (100/350)";
   public codUsuario: number;
   public APositivoSituacao:string;
