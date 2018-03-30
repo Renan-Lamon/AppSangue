@@ -3,8 +3,8 @@
 
 from flask import Flask, render_template
 from flask_cors import CORS
-from usuario import usuario
-import banco_de_dados
+from views.usuario import usuario
+from bd import banco_de_dados
 
 app = Flask(__name__)
 

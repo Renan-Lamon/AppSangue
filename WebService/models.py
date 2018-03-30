@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 #-*- coding: utf-8 -*-
-from banco_de_dados import BaseModel
+from bd import banco_de_dados 
 from peewee import *
 import datetime 
 
 
-class Usuario(BaseModel):
+class Usuario(banco_de_dados.BaseModel):
     nome = CharField()
     email = CharField(unique=True)
     tipoSanguineo = CharField()

@@ -2,8 +2,10 @@
 #-*- coding: utf-8 -*-
 
 from peewee import *
+import os.path
+pasta_bd = os.path.dirname(os.path.realpath(__file__))
 
-db = SqliteDatabase('app-sangue.db')
+db = SqliteDatabase(os.path.join(pasta_bd, 'app-sangue.db'))
 
 class BaseModel(Model):
     class Meta:

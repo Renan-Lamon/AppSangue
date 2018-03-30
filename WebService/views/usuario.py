@@ -2,10 +2,10 @@
 #-*- coding: utf-8 -*-
 
 from flask import Blueprint, render_template, jsonify, request
-from models import Usuario
+from WebService.models import Usuario 
+#import Usuario
 from peewee import DoesNotExist
 from playhouse.shortcuts import model_to_dict
-
 
 usuario = Blueprint('usuario', __name__, template_folder='templates')
 
