@@ -17,12 +17,22 @@ def login():
         try:
             user = Usuario.get(email=email,senha=senha)
             return jsonify(model_to_dict(user))
-
         except DoesNotExist:
             return jsonify({"error":"Usuário/Senha incorreta"})
     else:
         return jsonify({"error":"metodo de acesso incorreto"})
     
+
+@usuario.route('/dados')
+def dados():
+    codigo = request.args.get('cod','')
+
+    try:
+       user = Usuario.get(cod=codigo)
+       return jsonify(model_to_dict(user))
+    except DoesNotExist:
+        return jsonify({"error":u"Não existe usuário com cod="+codigo})
+
 
 # vim: set ts=4 sw=4 sts=4 expandtab:
 
