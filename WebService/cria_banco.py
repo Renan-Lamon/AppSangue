@@ -17,7 +17,7 @@ if __name__ == "__main__":
         email="renan@hotmail",
         data_nascimento= datetime(1998,1,1), 
         nome="Renan Lamon",
-        hemocentroFavorito = "Hospital Evang\u00e9lico",
+        hemocentroFavorito = u"Hospital Evangélico",
         tipoSanguineo = "A+",
         cod = 1,
         senha = "123"
