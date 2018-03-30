@@ -6,6 +6,7 @@
 *.log
 *.pyc
 *.tmp
+*.db
 *.tmp.*
 log.txt
 *.sublime-project
