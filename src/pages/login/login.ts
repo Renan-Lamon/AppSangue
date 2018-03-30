@@ -31,7 +31,7 @@ export class LoginPage {
   }
 
   testeBadge(){
-    let badgePermissao = this.badge.registerPermission();
+    //let badgePermissao = this.badge.requestPermission();
     let badgeAux = this.badge.set(3);
     let badgeAux2 = this.badge.get();
     let alert = this.alertCtrl.create({
@@ -63,10 +63,10 @@ export class LoginPage {
       this.req.getLogin(this.conta.email, this.conta.senha)
         .map(res => res.json())
         .subscribe(data => {
-          this.codUsuario = data;
-          this.providerDados.setCod(data);
-          
-          if (this.codUsuario != '666') {
+          this.codUsuario = data.cod;
+          this.providerDados.setCod(data.cod);
+          console.log("Resposta login:",data)
+          if (this.codUsuario != undefined) {
             this.loadingLogar();
           } else {
             this.showAlertUsuarioIncorreto();
