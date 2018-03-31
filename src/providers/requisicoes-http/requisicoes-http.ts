@@ -1,4 +1,4 @@
-import{Http, Response} from "@angular/http";
+import{Http, Response, URLSearchParams  } from "@angular/http";
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { Facebook, FacebookLoginResponse } from "@ionic-native/facebook";
@@ -12,14 +12,18 @@ import { Facebook, FacebookLoginResponse } from "@ionic-native/facebook";
 export class RequisicoesHttpProvider {
   
   urlCampanha:string="http://www.json-generator.com/api/json/get/ceXlnuglvm?indent=2";
-  urlLogin: string="http://www.json-generator.com/api/json/get/cpdYBbJDSa?indent=2";
-  urlDadosUsuario:string="http://192.168.25.42:8081/WSappSangue/webresources/login/dadosUsuario";
-  urlDadosEstoque:string="http://192.168.25.42:8081/WSappSangue/webresources/estoque/estoqueHemocentro";
+  urlLogin: string="http://sangue.wancharle.com.br/usuario/login/";
+  urlDadosUsuario:string="http://sangue.wancharle.com.br/usuario/dados/";
+  urlDadosEstoque:string="http://sangue.wancharle.com.br/hemocentro/estoque/";
+  urlHemocentros:string="http://sangue.wancharle.com.br/hemocentro/";
   
   constructor(public http: Http, public fb: Facebook) {
     console.log('Hello RequisicoesHttpProvider Provider');
   }
   
+  getHemocentros(){
+    return this.http.get(this.urlHemocentros);
+  }
   getTeste3(){
     return this.http.get('http://www.json-generator.com/api/json/get/ckfMJvGVGq?indent=2');
   }
@@ -29,11 +33,14 @@ export class RequisicoesHttpProvider {
   }
 
   getLogin(email:string, senha:string){
-    return this.http.get(this.urlLogin+'/'+email+'/'+senha);
+    let urlSearchParams = new URLSearchParams();
+    urlSearchParams.append('email', email);
+    urlSearchParams.append('senha',senha );
+     return this.http.post(this.urlLogin,urlSearchParams);
   }
   
-  getDadosEstoque(hemocentroFavorito:string){
-    return this.http.get(this.urlDadosEstoque+'/'+hemocentroFavorito);
+  getDadosEstoque(codHemocentroFavorito:number){
+    return this.http.get(this.urlDadosEstoque+codHemocentroFavorito+"/");
   }
   //REUNIAO
   getDadosEstoqueREUNIAO(){
@@ -41,7 +48,7 @@ export class RequisicoesHttpProvider {
   }
 
   getDadosUsuario(cod:number){
-    return this.http.get(this.urlDadosUsuario+'/'+cod);
+    return this.http.get(this.urlDadosUsuario+'?cod='+cod);
   }
 
   logarFacebook(){

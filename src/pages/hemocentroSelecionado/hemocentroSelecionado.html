@@ -32,7 +32,7 @@
   <div>
     <p class="cor">{{nomeHemocentro}}</p>
   </div>
-  <div style="border-radius:4px;height:250px;
+  <div style="border-radius:4px;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
     box-shadow:4px 4px 4px #CCCCCC; background-color:white; border:1px solid rgb(255, 0, 0)">
@@ -45,155 +45,30 @@
       <br/>
       <span style="font-weight: bold;">Endereço:</span> Rua Anacleto Ramos, 55 Ferroviários - cep 29308-020 Cachoeiro de Itapemirim/ES - Telefone:(28) 3526.6166
     </p>
+
+    <div style="margin:25px auto 5px;text-align:center">
+      <button ion-button icon-only>
+        <ion-icon name="pin"> </ion-icon>
+      </button>
+      <br/>
+      <label style="font-weight: bold">Vizualizar no Mapa</label>
+    </div>
   </div>
-  <div style="left:37%; top:250px; position:absolute;width:150px;">
-    <button style="left:20%" ion-button icon-only>
-      <ion-icon name="pin"> </ion-icon>
-    </button>
-    <br/>
-    <label style="font-weight: bold">Vizualizar no Mapa</label>
-  </div>
-  <br/>
+ <br/>
   <br/>
   <div>
     <p class="tituloAtualizacao">Atualizado em: 20/01/2018</p>
   </div>
-  <!-- DESABILITANDO POR CAUSA DA REUNIAO
+
   <div class="divEstoque ">
-    <div class="desktopMenu">
+    <div class="">
       <p style="text-align: center;font-size:12pt;font-weight: bold;">Estoque Sanguíneo</p>
-      <br/>
-      <img class="estoque"  src={{APositivoSituacao}}/>
-      <div class="tipoAPositivo">A+</div>
-      &nbsp;&nbsp;&nbsp;
-      <img class="estoque" src={{ANegativoSituacao}} />
-      <div class="tipoANegativo">A-</div>
-      &nbsp;&nbsp;&nbsp;
-      <img class="estoque" src={{BPositivoSituacao}} />
-      <div class="tipoBPositivo">B+</div>
-
-      <img class="estoque" src={{BNegativoSituacao}} />
-      <div class="tipoBNegativo">B-</div>
-      &nbsp;&nbsp;&nbsp;
-      <img class="estoque" src={{ABPositivoSituacao}} />
-      <div class="tipoABPositivo">AB+</div>
-      &nbsp;&nbsp;&nbsp;
-      <img class="estoque" src={{ABNegativoSituacao}} />
-      <div class="tipoABNegativo">AB-</div>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <img class="estoque" src={{OPositivoSituacao}}/>
-      <div class="tipoOPositivo">O+</div>
-      &nbsp;&nbsp;&nbsp;
-      <img class="estoque" src={{ONegativoSituacao}} />
-      <div class="tipoONegativo">O-</div>
-      <br/>
-      <br/>
-      <div style="border-top-style: groove; left:200px">
-        <img class="legendaEstoque" src="assets/imgs/legendaEstoque.png" />
+      <div class="coracoes">
+        <div class="coracao" *ngFor="let item of estoques">
+          <img class="estoque" src="assets/imgs/{{item.situacao}}.png" />
+          <div class="tipoSangue tipo{{ item.tipoSangue | tipoSanguineo }}">{{ item.tipoSangue}}</div>
+        </div>
       </div>
-    </div>
-
-    <div class="desktop">
-      <p style="text-align: center;font-size:12pt;font-weight: bold;">Estoque Sanguíneo</p>
-      <br/>
-
-      <img class="estoque"  src={{APositivoSituacao}}/>
-      <div class="tipoAPositivo">A+</div>
-      &nbsp;&nbsp;
-      <img class="estoque"  src={{ANegativoSituacao}} />
-      <div class="tipoANegativo">A-</div>
-      &nbsp;&nbsp;
-      <img class="estoque" src={{BPositivoSituacao}} />
-      <div class="tipoBPositivo">B+</div>
-      &nbsp;&nbsp;
-      <img class="estoque" src={{BNegativoSituacao}}/>
-      <div class="tipoBNegativo">B-</div>
-
-      <img class="estoque" src={{ABPositivoSituacao}} />
-      <div class="tipoABPositivo">AB+</div>
-      &nbsp;&nbsp;
-      <img class="estoque"  src={{ABNegativoSituacao}} />
-      <div class="tipoABNegativo">AB-</div>
-      &nbsp;&nbsp;
-      <img class="estoque" src={{OPositivoSituacao}} />
-      <div class="tipoOPositivo">O+</div>
-      &nbsp;&nbsp;
-      <img class="estoque" src={{ONegativoSituacao}} />
-      <div class="tipoONegativo">O-</div>
-      <br/>
-      <br/>
-      <div style="border-top-style: groove;">
-        <img class="legendaEstoque" src="assets/imgs/legendaEstoque.png" />
-      </div>
-
-
-    </div>
-
-  </div>
--->
-  <div class="divEstoque ">
-    <div class="desktopMenu">
-      <p style="text-align: center;font-size:12pt;font-weight: bold;">Estoque Sanguíneo</p>
-      <br/>
-      <img class="estoque" src="assets/imgs/satisfatorio.png" />
-      <div class="tipoAPositivo">A+</div>
-      &nbsp;&nbsp;&nbsp;
-      <img class="estoque" src="assets/imgs/satisfatorio.png" />
-      <div class="tipoANegativo">A-</div>
-      &nbsp;&nbsp;&nbsp;
-      <img class="estoque" src="assets/imgs/critico.png" />
-      <div class="tipoBPositivo">B+</div>
-
-      <img class="estoque" src="assets/imgs/baixo.png" />
-      <div class="tipoBNegativo">B-</div>
-      &nbsp;&nbsp;&nbsp;
-      <img class="estoque" src="assets/imgs/critico.png" />
-      <div class="tipoABPositivo">AB+</div>
-      &nbsp;&nbsp;&nbsp;
-      <img class="estoque" src="assets/imgs/satisfatorio.png" />
-      <div class="tipoABNegativo">AB-</div>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <img class="estoque" src="assets/imgs/critico.png" />
-      <div class="tipoOPositivo">O+</div>
-      &nbsp;&nbsp;&nbsp;
-      <img class="estoque" src="assets/imgs/critico.png" />
-      <div class="tipoONegativo">O-</div>
-      <br/>
-      <br/>
-      <div style="border-top-style: groove; left:200px">
-        <img class="legendaEstoque" src="assets/imgs/legendaEstoque.png" />
-      </div>
-    </div>
-
-    <div class="desktop">
-      <p style="text-align: center;font-size:12pt;font-weight: bold;">Estoque Sanguíneo</p>
-      <br/>
-
-      <img class="estoque" src="assets/imgs/satisfatorio.png" />
-      <div class="tipoAPositivo">A+</div>
-      &nbsp;&nbsp;
-      <img class="estoque" src="assets/imgs/satisfatorio.png" />
-      <div class="tipoANegativo">A-</div>
-      &nbsp;&nbsp;
-      <img class="estoque" src="assets/imgs/critico.png" />
-      <div class="tipoBPositivo">B+</div>
-      &nbsp;&nbsp;
-      <img class="estoque" src="assets/imgs/baixo.png" />
-      <div class="tipoBNegativo">B-</div>
-
-      <img class="estoque" src="assets/imgs/critico.png" />
-      <div class="tipoABPositivo">AB+</div>
-      &nbsp;&nbsp;
-      <img class="estoque" src="assets/imgs/satisfatorio.png" />
-      <div class="tipoABNegativo">AB-</div>
-      &nbsp;&nbsp;
-      <img class="estoque" src="assets/imgs/critico.png" />
-      <div class="tipoOPositivo">O+</div>
-      &nbsp;&nbsp;
-      <img class="estoque" src="assets/imgs/critico.png" />
-      <div class="tipoONegativo">O-</div>
-      <br/>
-      <br/>
       <div style="border-top-style: groove;">
         <img class="legendaEstoque" src="assets/imgs/legendaEstoque.png" />
       </div>

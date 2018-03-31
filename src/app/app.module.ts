@@ -34,6 +34,7 @@ import { Badge } from '@ionic-native/badge';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { RegistrarDoacaoPage } from '../pages/registrarDoacao/registrarDoacao';
+import { TipoSanguineoPipe} from "./tipo-sanguineo.pipe";
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { RegistrarDoacaoPage } from '../pages/registrarDoacao/registrarDoacao';
     LoginPage,
     RegistroPage,
     MonitoramentoPage,
-    RegistrarDoacaoPage
+    RegistrarDoacaoPage,
+    TipoSanguineoPipe
     
       
   ],
@@ -101,7 +103,8 @@ import { RegistrarDoacaoPage } from '../pages/registrarDoacao/registrarDoacao';
     Facebook,
     Badge,
     DadosUsuarioProvider,
-    BarcodeScanner
+    BarcodeScanner,
+    TipoSanguineoPipe,
   ]
 })
 export class AppModule {}
