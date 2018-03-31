@@ -1,0 +1,13 @@
+Flask==0.12.2
+Flask-Cors==3.0.3
+Jinja2==2.10
+MarkupSafe==1.0
+WTForms==2.1
+Werkzeug==0.14.1
+argparse==1.2.1
+click==6.7
+itsdangerous==0.24
+peewee==3.2.0
+six==1.11.0
+wsgiref==0.1.2
+wtf-peewee==3.0.0
