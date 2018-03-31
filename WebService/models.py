@@ -1,16 +1,30 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 #-*- coding: utf-8 -*-
-from bd import banco_de_dados 
+from bd.banco_de_dados import BaseModel 
 from peewee import *
 import datetime 
 
 
-class Usuario(banco_de_dados.BaseModel):
+
+class Hemocentro(BaseModel):
+    cod = AutoField()
     nome = CharField()
+    atendimento = CharField(null=True)
+    endereco = CharField(null=True)
+    
+
+class EstoqueSangue(BaseModel):
+    hemocentro = ForeignKeyField(Hemocentro, backref='estoqueSangues')
+    tipoSangue = CharField()
+    situacao = CharField(default="Esgotado")
+    situacaoPorcentagem = IntegerField(default=0)
+
+class Usuario(BaseModel):
     email = CharField(unique=True)
-    tipoSanguineo = CharField()
-    hemocentroFavorito = CharField()
-    senha = CharField()
+    nome = CharField()
+    tipoSanguineo = CharField(null=True)
+    hemocentroFavorito = ForeignKeyField(Hemocentro, backref='usuariosQueFavoritaram',null=True)
+    senha = CharField(null=True)
     cod = AutoField()
     data_nascimento = DateTimeField(default=datetime.datetime.now)
 
@@ -20,6 +34,4 @@ class Usuario(banco_de_dados.BaseModel):
         return hoje.year - nascimento.year - ((hoje.month, hoje.day) < (nascimento.month, nascimento.day))
 
 
-
 # vim: set ts=4 sw=4 sts=4 expandtab:
-

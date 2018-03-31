@@ -9,7 +9,7 @@ from playhouse.shortcuts import model_to_dict
 
 usuario = Blueprint('usuario', __name__, template_folder='templates')
 
-@usuario.route('/login',methods=["POST","GET"])
+@usuario.route('/login/',methods=["POST","GET"])
 def login():
     if request.method == 'POST':
         senha = request.form['senha']
@@ -23,7 +23,7 @@ def login():
         return jsonify({"error":"metodo de acesso incorreto"})
     
 
-@usuario.route('/dados')
+@usuario.route('/dados/')
 def dados():
     codigo = request.args.get('cod','')
 

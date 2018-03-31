@@ -4,6 +4,7 @@
 from flask import Flask, render_template
 from flask_cors import CORS
 from views.usuario import usuario
+from views.hemocentro import hemocentro
 from bd import banco_de_dados
 
 app = Flask(__name__)
@@ -13,6 +14,7 @@ CORS(app)
 
 # configura componente usuario
 app.register_blueprint(usuario, url_prefix="/usuario")
+app.register_blueprint(hemocentro, url_prefix="/hemocentro")
 
 # configura banco de dados
 banco_de_dados.configura(app)
