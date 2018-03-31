@@ -12,14 +12,18 @@ import { Facebook, FacebookLoginResponse } from "@ionic-native/facebook";
 export class RequisicoesHttpProvider {
   
   urlCampanha:string="http://www.json-generator.com/api/json/get/ceXlnuglvm?indent=2";
-  urlLogin: string="http://sangue.wancharle.com.br/usuario/login";
-  urlDadosUsuario:string="http://sangue.wancharle.com.br/usuario/dados";
+  urlLogin: string="http://sangue.wancharle.com.br/usuario/login/";
+  urlDadosUsuario:string="http://sangue.wancharle.com.br/usuario/dados/";
   urlDadosEstoque:string="http://sangue.wancharle.com.br/hemocentro/estoque/";
+  urlHemocentros:string="http://sangue.wancharle.com.br/hemocentro/";
   
   constructor(public http: Http, public fb: Facebook) {
     console.log('Hello RequisicoesHttpProvider Provider');
   }
   
+  getHemocentros(){
+    return this.http.get(this.urlHemocentros);
+  }
   getTeste3(){
     return this.http.get('http://www.json-generator.com/api/json/get/ckfMJvGVGq?indent=2');
   }
@@ -35,8 +39,8 @@ export class RequisicoesHttpProvider {
      return this.http.post(this.urlLogin,urlSearchParams);
   }
   
-  getDadosEstoque(hemocentroFavorito:string){
-    return this.http.get(this.urlDadosEstoque+'/'+hemocentroFavorito);
+  getDadosEstoque(codHemocentroFavorito:number){
+    return this.http.get(this.urlDadosEstoque+codHemocentroFavorito+"/");
   }
   //REUNIAO
   getDadosEstoqueREUNIAO(){

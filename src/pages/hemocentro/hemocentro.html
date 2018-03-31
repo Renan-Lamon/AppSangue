@@ -31,8 +31,8 @@
 <ion-content padding style="background-color:rgb(252, 235, 235)">
   <ion-searchbar  (ionInput)="getItems($event)"></ion-searchbar>
   <ion-list>
-    <button (click)="chamarHemocentroSelecionado(item)" class="item" ion-item *ngFor="let item of items">
-      {{ item }}
+    <button (click)="chamarHemocentroSelecionado(item.cod)" class="item" ion-item *ngFor="let item of items">
+      {{ item.nome }}
     </button>
   </ion-list>
  

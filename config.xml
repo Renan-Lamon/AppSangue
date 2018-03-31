@@ -90,4 +90,5 @@
         <variable name="APP_ID" value="563778207317029" />
         <variable name="APP_NAME" value="JESUS" />
     </plugin>
+    <engine name="ios" spec="~4.5.4" />
 </widget>

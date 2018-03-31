@@ -43,6 +43,104 @@ page-home {
          
         z-index: 1; 
     }
+    .coracoes{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        text-align:center;
+        margin-bottom:25px;
+        height:280px;
+    }
+
+    .coracao {
+        width:91px;
+        margin:2px;
+        height:91px;
+    }
+
+.tipoAPositivo {
+        top:-60px;
+        text-align:center;
+ 
+        position: relative;
+        font-size: 25px;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+    .tipoANegativo {
+        top:-60px;
+        position:relative;
+        text-align:center;
+ 
+        font-size: 25px;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+    .tipoBPositivo {
+        top:-60px;
+        text-align:center;
+        position:relative;
+        font-size: 25px;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+    .tipoBNegativo {
+        top:-60px;
+        text-align:center;
+        position:relative;
+        font-size: 25px;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+    .tipoABPositivo {
+        top:-60px;
+        text-align:center;
+        position:relative;
+        font-size: 25px;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+    .tipoABNegativo {
+        top:-60px;
+        text-align:center;
+        position:relative;
+        font-size: 25px;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+    .tipoOPositivo {
+        top:-60px;
+        text-align:center;
+        position:relative;
+        font-size: 25px;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+    .tipoONegativo {
+        top:-60px;
+        text-align:center;
+        position:relative;
+        font-size: 25px;
+        width: 100%;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        z-index: 3;
+    }
+
     .botoes{
         text-align:center;
         border-radius: 10px;
@@ -58,87 +156,7 @@ page-home {
         text-align: center;
     }
 
-    .tipoAPositivo {
-        position: absolute;
-        top: 95px;
-        left: 25px;
-        font-size: 25px;
-        width: 100%;
-        font-weight: bold;
-        color: rgb(0, 0, 0);
-        z-index: 3;
-    }
-    .tipoANegativo {
-        position: absolute;
-        top: 95px;
-        left: 133px;
-        font-size: 25px;
-        width: 100%;
-        font-weight: bold;
-        color: rgb(0, 0, 0);
-        z-index: 3;
-    }
-    .tipoBPositivo {
-        position: absolute;
-        top: 95px;
-        left: 241px;
-        font-size: 25px;
-        width: 100%;
-        font-weight: bold;
-        color: rgb(0, 0, 0);
-        z-index: 3;
-    }
-    .tipoBNegativo {
-        position: absolute;
-        top: 190px;
-        left: 25px;
-        font-size: 25px;
-        width: 100%;
-        font-weight: bold;
-        color: rgb(0, 0, 0);
-        z-index: 3;
-    }
-    .tipoABPositivo {
-        position: absolute;
-        top: 190px;
-        left: 133px;
-        font-size: 25px;
-        width: 100%;
-        font-weight: bold;
-        color: rgb(0, 0, 0);
-        z-index: 3;
-    }
-    .tipoABNegativo {
-        position: absolute;
-        top: 190px;
-        left: 241px;
-        font-size: 25px;
-        width: 100%;
-        font-weight: bold;
-        color: rgb(0, 0, 0);
-        z-index: 3;
-    }
-    .tipoOPositivo {
-        position: absolute;
-        top: 285px;
-        left: 80px;
-        font-size: 25px;
-        width: 100%;
-        font-weight: bold;
-        color: rgb(0, 0, 0);
-        z-index: 3;
-    }
-    .tipoONegativo {
-        position: absolute;
-        top: 285px;
-        left: 188px;
-        font-size: 25px;
-        width: 100%;
-        font-weight: bold;
-        color: rgb(0, 0, 0);
-        z-index: 3;
-    }
-    
+  
     .levelUsuario{
         position: absolute;
         top:60px;
@@ -216,15 +234,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d0101', end
         z-index: 10;
     }
 
-    @media (max-width: 400px) {
-        .div2{
-            position:relative;
-            width: 100%;
-            height: 220px;
-            max-height: 100%; 
-        }
-        
-    }
+  
   
    // @media (max-width: 767px) {
      //   .div2{
@@ -259,14 +269,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d0101', end
         }
         
 
-        .desktopMenu{
-            display: none;
-        }
+     
         .tamNav{
             height:80px;
         }
         .desktop{
-            display: inline;
+            display: block;
         }
         .tituloAtualizacao{
             font-size:10pt; 
@@ -289,120 +297,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d0101', end
         }
         
 
-        .legendaEstoque{
-            position:relative;
-            background-color:rgb(252, 235, 235);
-            width:200px;
-            left:22%;
-            
-            
-        }
+        
 
-        .tipoAPositivo {
-            position: absolute;
-            top: 105px;
-            left: 33px;
-            font-size: 2.0em;
-            width: 100%;
-            font-weight: bold;
-            color: rgb(0, 0, 0);
-            z-index: 3;
-        }
-        .tipoANegativo {
-            position: absolute;
-            top: 230px;
-            left: 173px;
-            font-size: 2.0em;
-            width: 100%;
-            font-weight: bold;
-            color: rgb(0, 0, 0);
-            z-index: 3;
-        }
-        .tipoBPositivo {
-            position: absolute;
-            top: 230px;
-            left: 33px;
-            font-size: 2.0em;
-            width: 100%;
-            font-weight: bold;
-            color: rgb(0, 0, 0);
-            z-index: 3;
-        }
-        .tipoBNegativo {
-            position: absolute;
-            top: 105px;
-            left: 173px;
-            font-size: 2.0em;
-            width: 100%;
-            font-weight: bold;
-            color: rgb(0, 0, 0);
-            z-index: 3;
-        }
-
-        .tipoABPositivo {
-            position: absolute;
-            top: 105px;
-            left: 300px;
-            font-size: 2.0em;
-            width: 100%;
-            font-weight: bold;
-            color: rgb(0, 0, 0);
-            z-index: 3;
-        }
-        .tipoABNegativo {
-            position: absolute;
-            top: 105px;
-            left: 440px;
-            font-size: 2.0em;
-            width: 100%;
-            font-weight: bold;
-            color: rgb(0, 0, 0);
-            z-index: 3;
-        }
-        .tipoOPositivo {
-            position: absolute;
-            top: 230px;
-            left: 300px;
-            font-size: 2.0em;
-            width: 100%;
-            font-weight: bold;
-            color: rgb(0, 0, 0);
-            z-index: 3;
-        }
-        .tipoONegativo {
-            position: absolute;
-            top: 230px;
-            left: 440px;
-            font-size: 2.0em;
-            width: 100%;
-            font-weight: bold;
-            color: rgb(0, 0, 0);
-            z-index: 3;
-        }
-        .botoes{
+       .botoes{
             font-size: 12pt;
             text-align:center;
             border-radius: 10px;
             background-color:rgb(252, 97, 97);
         }
-        .estoque{
-            position: relative;
-            width:120px; 
-            height:120px;
-            background-color: #ffffff;
-            background-color:rgb(252, 235, 235);
-        }
-
-        .divEstoque{
-            position: relative;
-            border-style: groove;
-           
-            margin-left:-266px;
-            left: 50%;
-            width:533px;
-             
-            z-index: 1; 
-        }
+       
         .div1 {
         background: rgba(13,1,1,0.63);
         background: -moz-linear-gradient(45deg, rgba(13,1,1,0.63) 0%, rgba(13,1,1,0.63) 1%, rgba(255,5,5,0.69) 16%, rgba(171,3,3,0.79) 44%, rgba(74,0,0,0.88) 67%, rgba(20,3,7,1) 100%);
